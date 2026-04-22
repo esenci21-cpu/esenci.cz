@@ -3,252 +3,560 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>esenci.cz — Přírodní produkty Rita Drabinová</title>
-  <meta name="description" content="Rita Drabinová — distributor přírodních produktů bewit.love. Esenciální oleje, přírodní kosmetika, proteiny a další produkty šetrné k tělu i přírodě." />
+  <title>esenci.cz — přírodní produkty</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="d27b85f2-d2a8-42a9-81e3-b542b755bde2"></script>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF3E8;
+      color: #3B2A1A;
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      height: 72px;
+      padding: 0 64px;
+      border-bottom: 1px solid #EDE0CC;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .logo-top {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+    }
+    .logo-star { color: #C49A3C; font-size: 10px; }
+    .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-style: italic;
+      font-weight: 700;
+      color: #3B2A1A;
+    }
+    .logo-tld {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: #C49A3C;
+    }
+    .logo-divider {
+      height: 1px;
+      background: #C49A3C;
+      opacity: 0.5;
+    }
+    .logo-sub {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #B8956A;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+    .nav-links a {
+      font-size: 15px;
+      color: #5C3D2E;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: #C49A3C; }
+
+    /* ── Hero ── */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+      background: #FAF3E8;
+      height: 620px;
+      padding: 0 64px;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 500px;
+      flex-shrink: 0;
+    }
+    .label-tag {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #C49A3C;
+      text-transform: uppercase;
+    }
+    .hero-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #3B2A1A;
+      width: 500px;
+    }
+    .hero-sub {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #5C3D2E;
+      width: 460px;
+    }
+    .hero-qr {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #fff;
+      border: 1px solid #EDE0CC;
+      border-radius: 12px;
+      padding: 20px 24px;
+      width: fit-content;
+    }
+    .hero-qr img { width: 96px; height: 96px; object-fit: contain; border-radius: 8px; }
+    .hero-qr-text { display: flex; flex-direction: column; gap: 6px; }
+    .hero-qr-text .qr-line1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #3B2A1A;
+    }
+    .hero-qr-text .qr-line2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #C49A3C;
+    }
+    .hero-qr-text .qr-line3 {
+      font-size: 13px;
+      color: #5C3D2E;
+    }
+
+    .hero-right {
+      flex: 1;
+      height: 520px;
+      border-radius: 20px;
+      background-image: url('./images/generated-1776723064245.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ── Produkty ── */
+    .produkty {
+      display: flex;
+      align-items: center;
+      gap: 64px;
+      background: #fff;
+      padding: 80px 64px;
+    }
+    .prod-left {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      width: 480px;
+      flex-shrink: 0;
+    }
+    .prod-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #3B2A1A;
+    }
+    .section-sub {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #5C3D2E;
+      max-width: 440px;
+    }
+    .prod-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .prod-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #FAF3E8;
+      border-radius: 10px;
+      padding: 14px 20px;
+    }
+    .prod-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background: #C49A3C;
+      flex-shrink: 0;
+    }
+    .prod-item span {
+      font-size: 15px;
+      font-weight: 600;
+      color: #3B2A1A;
+    }
+
+    .prod-right {
+      flex: 1;
+      height: 480px;
+      border-radius: 20px;
+      background-image: url('./images/generated-1776723091775.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ── Proč my ── */
+    .proc-my {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      background: #FAF3E8;
+      padding: 80px 64px;
+    }
+    .proc-title {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .proc-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: #3B2A1A;
+    }
+    .proc-cols {
+      display: flex;
+      gap: 32px;
+    }
+    .proc-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      border-radius: 16px;
+      padding: 40px;
+    }
+    .proc-col.light {
+      background: #fff;
+      border: 1px solid #EDE0CC;
+    }
+    .proc-col.dark {
+      background: #3B2A1A;
+    }
+    .proc-col-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .proc-col.light .proc-col-heading { color: #3B2A1A; }
+    .proc-col.dark .proc-col-heading { color: #FAF3E8; }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .check-mark { font-size: 16px; color: #C49A3C; }
+    .proc-col.light .check-text { font-size: 15px; color: #5C3D2E; }
+    .proc-col.dark .check-text { font-size: 15px; color: #EDE0CC; }
+
+    /* ── QR CTA ── */
+    .qr-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      background: #3B2A1A;
+      padding: 80px 64px;
+      text-align: center;
+    }
+    .qr-cta-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: #FAF3E8;
+    }
+    .qr-cta-sub {
+      font-size: 17px;
+      color: #B8956A;
+    }
+    .qr-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 32px;
+    }
+    .qr-box img { width: 200px; height: 200px; border-radius: 12px; object-fit: contain; }
+    .qr-box-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #3B2A1A;
+    }
+    .btn-gold {
+      display: inline-block;
+      background: #C49A3C;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .btn-gold:hover { opacity: .85; }
+
+    /* ── Kontakt ── */
+    .kontakt {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      background: #fff;
+      padding: 80px 64px;
+      text-align: center;
+    }
+    .kontakt-label { /* reuses .label-tag */ }
+    .kontakt-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: #3B2A1A;
+    }
+    .kontakt-sub {
+      font-size: 16px;
+      color: #5C3D2E;
+    }
+    .kontakt-card {
+      display: flex;
+      border: 1px solid #DDD0BB;
+      border-radius: 20px;
+      background: #FAF3E8;
+      width: 860px;
+      max-width: 100%;
+    }
+    .kontakt-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      padding: 36px 0;
+    }
+    .kontakt-divider {
+      width: 1px;
+      background: #DDD0BB;
+      margin: 20px 0;
+    }
+    .icon-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 26px;
+      background: #C49A3C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon-circle svg { width: 24px; height: 24px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .kontakt-item-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #B8956A;
+      text-transform: uppercase;
+    }
+    .kontakt-item-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #3B2A1A;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #3B2A1A;
+      height: 72px;
+      padding: 0 64px;
+    }
+    .footer-copy { font-size: 13px; color: #B8956A; }
+    .footer-links { display: flex; gap: 32px; }
+    .footer-links a { font-size: 13px; color: #B8956A; text-decoration: none; }
+    .footer-links a:hover { color: #C49A3C; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .navbar, .hero, .produkty, .proc-my, .qr-cta, .kontakt, .footer {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .hero { flex-direction: column; height: auto; padding-top: 48px; padding-bottom: 48px; }
+      .hero-left, .hero-heading, .hero-sub { width: 100%; }
+      .hero-right { width: 100%; height: 280px; }
+      .produkty { flex-direction: column; }
+      .prod-left { width: 100%; }
+      .prod-right { width: 100%; height: 280px; }
+      .proc-cols { flex-direction: column; }
+      .kontakt-card { flex-direction: column; width: 100%; }
+      .kontakt-divider { width: 100%; height: 1px; margin: 0; }
+      .nav-links { gap: 20px; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════
-       NAVBAR
-  ═══════════════════════════════════════════ -->
+  <!-- Navbar -->
   <nav class="navbar">
-    <div class="nav-inner">
-      <a href="#" class="logo">
-        <span class="logo-ornament">✦</span>
-        <span class="logo-text">esenci<span class="logo-dot">.</span>cz</span>
-        <span class="logo-ornament">✦</span>
-        <span class="logo-sub">přírodní produkty</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#hero">Domů</a></li>
-        <li><a href="#produkty">Produkty</a></li>
-        <li><a href="#proc-my">O nás</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+    <div class="logo">
+      <div class="logo-top">
+        <span class="logo-star">✦</span>
+        <span class="logo-name">esenci</span>
+        <span class="logo-tld">.cz</span>
+        <span class="logo-star">✦</span>
+      </div>
+      <div class="logo-divider"></div>
+      <span class="logo-sub">přírodní produkty</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Domů</a>
+      <a href="#produkty">Produkty</a>
+      <a href="#blog">Blog</a>
+      <a href="#kontakt">Kontakt</a>
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════════ -->
-  <section class="hero" id="hero">
-    <div class="hero-inner">
-      <div class="hero-content">
-        <p class="hero-label">bewit.love · přírodní produkty</p>
-        <h1 class="hero-title">Dopřejte si<br /><em>kousek přírody</em><br />domů</h1>
-        <p class="hero-sub">Objevte kvalitní esenciální oleje a přírodní kosmetiku pro vaše zdraví a pohodu.</p>
-        <div class="qr-card">
-          <img src="images/qr.jpg" alt="QR kód na bewit.love" class="qr-img" />
-          <div class="qr-text">
-            <span class="qr-label">Naskenujte a nakupte</span>
-            <span class="qr-highlight">se slevou až 50 %</span>
-            <a href="https://bewit.love" target="_blank" rel="noopener" class="btn-primary">Přejít na bewit.love →</a>
-          </div>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="images/P9OKy.webp" alt="Esenciální oleje a přírodní kosmetika" />
-        <div class="hero-badge">
-          <span class="badge-num">100%</span>
-          <span class="badge-txt">přírodní složení</span>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <span class="label-tag">Přírodní produkty Bewit</span>
+      <h1 class="hero-heading">Dopřejte si kousek přírody domů</h1>
+      <p class="hero-sub">Objevte kvalitní esenciální oleje a přírodní kosmetiku pro vaše zdraví a pohodu.</p>
+      <div class="hero-qr">
+        <img src="./podklady/QR.jpg" alt="QR kód bewit.love" />
+        <div class="hero-qr-text">
+          <span class="qr-line1">Naskenujte a nakupte</span>
+          <span class="qr-line2">se slevou až 50 %</span>
+          <span class="qr-line3">bewit.love</span>
         </div>
       </div>
     </div>
-    <div class="hero-divider">
-      <svg viewBox="0 0 1440 40" preserveAspectRatio="none"><path d="M0,20 Q360,40 720,20 Q1080,0 1440,20 L1440,40 L0,40 Z" fill="#FAF3E8"/></svg>
-    </div>
+    <div class="hero-right" role="img" aria-label="Přírodní produkty"></div>
   </section>
 
-  <!-- ═══════════════════════════════════════════
-       PRODUKTY
-  ═══════════════════════════════════════════ -->
+  <!-- Produkty -->
   <section class="produkty" id="produkty">
-    <div class="section-inner">
-      <div class="produkty-text">
-        <p class="section-label">✦ co nabízíme ✦</p>
-        <h2>Objevte svou<br /><em>esenci</em></h2>
-        <p class="produkty-desc">Vybíráme jen ty nejkvalitnější produkty z dílny bewit.love — s láskou k přírodě a úctou k vašemu tělu.</p>
-        <ul class="produkty-list">
-          <li>
-            <span class="prod-icon">✦</span>
-            <div>
-              <strong>Esenciální oleje</strong>
-              <span>100% čisté, přírodní, terapeutické</span>
-            </div>
-          </li>
-          <li>
-            <span class="prod-icon">✦</span>
-            <div>
-              <strong>Přírodní kosmetika</strong>
-              <span>péče bez zbytečné chemie</span>
-            </div>
-          </li>
-          <li>
-            <span class="prod-icon">✦</span>
-            <div>
-              <strong>Proteiny</strong>
-              <span>výživa z přírody pro váš organismus</span>
-            </div>
-          </li>
-          <li>
-            <span class="prod-icon">✦</span>
-            <div>
-              <strong>Další přírodní produkty</strong>
-              <span>aromaterapie, wellness, zdraví</span>
-            </div>
-          </li>
-        </ul>
-        <a href="https://bewit.love" target="_blank" rel="noopener" class="btn-outline">Prohlédnout celý sortiment →</a>
+    <div class="prod-left">
+      <div class="prod-heading">
+        <span class="label-tag">Sortiment</span>
+        <h2 class="section-heading">Objevte svou esenci</h2>
+        <p class="section-sub">100% přírodní produkty pro vaše zdraví, krásu a pohodu. Vše pečlivě vybrané z nabídky bewit.love.</p>
       </div>
-      <div class="produkty-image">
-        <img src="images/xr2yZ.webp" alt="Přírodní kosmetika a esenciální oleje" />
+      <div class="prod-list">
+        <div class="prod-item"><div class="prod-dot"></div><span>Esenciální oleje</span></div>
+        <div class="prod-item"><div class="prod-dot"></div><span>Přírodní kosmetika</span></div>
+        <div class="prod-item"><div class="prod-dot"></div><span>Proteiny</span></div>
+        <div class="prod-item"><div class="prod-dot"></div><span>Další přírodní produkty</span></div>
+      </div>
+    </div>
+    <div class="prod-right" role="img" aria-label="Přírodní kosmetika"></div>
+  </section>
+
+  <!-- Proč my -->
+  <section class="proc-my">
+    <div class="proc-title">
+      <span class="label-tag">Proč si vybrat nás</span>
+      <h2 class="proc-heading">Příroda jako základ všeho</h2>
+    </div>
+    <div class="proc-cols">
+      <div class="proc-col light">
+        <span class="proc-col-heading">Proč si vybrat nás?</span>
+        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">100% přírodní složení</span></div>
+        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">Šetrné k tělu i přírodě</span></div>
+        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">Ověřená kvalita bewit.love</span></div>
+      </div>
+      <div class="proc-col dark">
+        <span class="proc-col-heading">Co získáte?</span>
+        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">Přístup ke slevám a akcím</span></div>
+        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">Dárek zdarma při prvním nákupu</span></div>
+        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">Slevy až 50 %</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════
-       PROČ MY
-  ═══════════════════════════════════════════ -->
-  <section class="proc-my" id="proc-my">
-    <div class="proc-ornament-top">✦ ─────── ✦ ─────── ✦</div>
-    <div class="section-inner proc-cols">
-      <div class="proc-col proc-col-light">
-        <p class="section-label">✦ náš příslib ✦</p>
-        <h2>Proč si<br /><em>vybrat nás?</em></h2>
-        <ul class="check-list">
-          <li><span class="check">✔</span> 100% přírodní složení</li>
-          <li><span class="check">✔</span> Šetrné k tělu i přírodě</li>
-          <li><span class="check">✔</span> Ověřená kvalita bewit.love</li>
-          <li><span class="check">✔</span> Osobní přístup a poradenství</li>
-          <li><span class="check">✔</span> Rychlé dodání</li>
-        </ul>
-      </div>
-      <div class="proc-divider-vert"></div>
-      <div class="proc-col proc-col-dark">
-        <p class="section-label light">✦ vaše výhody ✦</p>
-        <h2 class="light">Co<br /><em>získáte?</em></h2>
-        <ul class="check-list light">
-          <li><span class="check gold">✔</span> Přístup ke slevám a akcím</li>
-          <li><span class="check gold">✔</span> Dárek zdarma při prvním nákupu</li>
-          <li><span class="check gold">✔</span> Slevy až 50 %</li>
-          <li><span class="check gold">✔</span> Věrnostní program</li>
-          <li><span class="check gold">✔</span> Novinky a tipy na péči o zdraví</li>
-        </ul>
-      </div>
-    </div>
-    <div class="proc-ornament-bot">✦ ─────── ✦ ─────── ✦</div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       QR CTA
-  ═══════════════════════════════════════════ -->
+  <!-- QR CTA -->
   <section class="qr-cta">
-    <div class="section-inner qr-cta-inner">
-      <div class="qr-cta-text">
-        <p class="section-label light">✦ nakupujte jednoduše ✦</p>
-        <h2 class="light">Naskenujte<br /><em>a nakupte</em></h2>
-        <p class="qr-cta-desc">Natural oils &amp; cosmetics<br />scan for up to <strong>50 % off</strong></p>
-        <a href="https://bewit.love" target="_blank" rel="noopener" class="btn-gold">Přejít na bewit.love →</a>
-      </div>
-      <div class="qr-cta-qr">
-        <img src="images/qr.jpg" alt="QR kód na bewit.love" class="qr-large" />
-        <p class="qr-caption">bewit.love</p>
-      </div>
+    <h2 class="qr-cta-heading">Naskenujte a nakupte se slevou až 50 %</h2>
+    <p class="qr-cta-sub">Natural oils &amp; cosmetics — scan for up to 50% off</p>
+    <div class="qr-box">
+      <img src="./podklady/QR.jpg" alt="QR kód pro nákup" />
+      <span class="qr-box-label">bewit.love</span>
     </div>
+    <a href="https://bewit.love/produkt/bewit-baby-sleep-esencialni-olej?i=3fqlzp0xrllj7" class="btn-gold" target="_blank" rel="noopener">Přejít na bewit.love →</a>
   </section>
 
-  <!-- ═══════════════════════════════════════════
-       KONTAKT
-  ═══════════════════════════════════════════ -->
+  <!-- Kontakt -->
   <section class="kontakt" id="kontakt">
-    <div class="section-inner kontakt-inner">
-      <p class="section-label">✦ kontakt ✦</p>
-      <h2><em>Rita Drabinová</em></h2>
-      <p class="kontakt-sub">Váš průvodce světem přírodních produktů bewit.love</p>
-      <div class="kontakt-karta">
-        <div class="kontakt-item">
-          <div class="kontakt-icon-wrap">
-            <svg class="kontakt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.22 2 2 0 012 .02h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
-            </svg>
-          </div>
-          <div class="kontakt-data">
-            <span class="kontakt-label">Telefon</span>
-            <a href="tel:+420604272227" class="kontakt-val">604 27 22 27</a>
-          </div>
+    <span class="label-tag">Kontakt</span>
+    <h2 class="kontakt-name">Jmeno</h2>
+    <p class="kontakt-sub">Váš průvodce světem přírodních produktů bewit.love</p>
+    <div class="kontakt-card">
+      <div class="kontakt-item">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81 19.79 19.79 0 01.06 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
         </div>
-        <div class="kontakt-sep"></div>
-        <div class="kontakt-item">
-          <div class="kontakt-icon-wrap">
-            <svg class="kontakt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-          </div>
-          <div class="kontakt-data">
-            <span class="kontakt-label">E-mail</span>
-            <a href="mailto:rita@esenci.cz" class="kontakt-val">rita@esenci.cz</a>
-          </div>
+        <span class="kontakt-item-label">Telefon</span>
+        <span class="kontakt-item-value">telefon</span>
+      </div>
+      <div class="kontakt-divider"></div>
+      <div class="kontakt-item">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
-        <div class="kontakt-sep"></div>
-        <div class="kontakt-item">
-          <div class="kontakt-icon-wrap">
-            <svg class="kontakt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-            </svg>
-          </div>
-          <div class="kontakt-data">
-            <span class="kontakt-label">Web</span>
-            <a href="https://www.esenci.cz" class="kontakt-val">www.esenci.cz</a>
-          </div>
+        <span class="kontakt-item-label">E-mail</span>
+        <a class="kontakt-item-value" href="mailto:info@esenci.cz">info@esenci.cz</a>
+      </div>
+      <div class="kontakt-divider"></div>
+      <div class="kontakt-item">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
         </div>
+        <span class="kontakt-item-label">Web</span>
+        <a class="kontakt-item-value" href="https://www.esenci.cz" target="_blank" rel="noopener">www.esenci.cz</a>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════ -->
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <span class="logo-ornament">✦</span>
-        <span class="logo-text">esenci<span class="logo-dot">.</span>cz</span>
-        <span class="logo-ornament">✦</span>
-      </div>
-      <p class="footer-copy">© 2026 esenci.cz · Rita Drabinová · Distributor <a href="https://bewit.love" target="_blank" rel="noopener">bewit.love</a></p>
-      <nav class="footer-nav">
-        <a href="#">Blog</a>
-        <a href="#">Ochrana soukromí</a>
-        <a href="https://bewit.love" target="_blank" rel="noopener">bewit.love</a>
-      </nav>
-      <div class="footer-qr">
-        <img src="images/qr.jpg" alt="QR bewit.love" />
-        <span>skenuj &amp; nakupuj</span>
-      </div>
+    <span class="footer-copy">© 2026 esenci.cz · Rita Drabinová</span>
+    <div class="footer-links">
+      <a href="#blog" id="blog">Blog</a>
+      <a href="#">Ochrana soukromí</a>
     </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const links  = document.querySelector('.nav-links');
-    if (toggle) toggle.addEventListener('click', () => links.classList.toggle('open'));
-
-    // Smooth close on link click
-    document.querySelectorAll('.nav-links a').forEach(a =>
-      a.addEventListener('click', () => links.classList.remove('open'))
-    );
-  </script>
 </body>
 </html>
