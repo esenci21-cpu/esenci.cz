@@ -3,558 +3,602 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>esenci.cz — přírodní produkty</title>
+  <title>Esence z přírody — přírodní produkty bewit.love</title>
+  <meta name="description" content="Přírodní podpora pro chvíle, kdy potřebujete zastavit, načerpat se a vrátit k sobě. Esenciální oleje a přírodní kosmetika bewit.love." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d27b85f2-d2a8-42a9-81e3-b542b755bde2"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #FAF3E8;
-      color: #3B2A1A;
+    :root {
+      --cream:    #F7F3ED;
+      --cream-dk: #EDE8DF;
+      --sage:     #7D8C6A;
+      --sage-lt:  #A8B896;
+      --sage-dk:  #5C6B4D;
+      --dark:     #2D2A24;
+      --brown:    #6B5F4E;
+      --border:   #DDD8CF;
+      --white:    #FDFAF6;
+      --font-h:   'Playfair Display', Georgia, serif;
+      --font-b:   'Inter', system-ui, sans-serif;
+      --max:      1200px;
     }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-b);
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── Buttons ── */
+    .btn-sage {
+      display: inline-block;
+      background: var(--sage);
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-sage:hover { background: var(--sage-dk); transform: translateY(-1px); }
+
+    .btn-outline-sage {
+      display: inline-block;
+      border: 1.5px solid var(--sage);
+      color: var(--sage-dk);
+      padding: 0.65rem 1.75rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .btn-outline-sage:hover { background: var(--sage); color: #fff; }
 
     /* ── Navbar ── */
     .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247,243,237,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: #fff;
-      height: 72px;
-      padding: 0 64px;
-      border-bottom: 1px solid #EDE0CC;
     }
-
     .logo {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      line-height: 1.1;
     }
-    .logo-top {
-      display: flex;
-      align-items: flex-end;
-      gap: 6px;
-    }
-    .logo-star { color: #C49A3C; font-size: 10px; }
-    .logo-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-style: italic;
+    .logo-main {
+      font-family: var(--font-h);
+      font-size: 1.4rem;
       font-weight: 700;
-      color: #3B2A1A;
-    }
-    .logo-tld {
-      font-family: 'Playfair Display', serif;
-      font-size: 15px;
-      font-style: italic;
-      color: #C49A3C;
-    }
-    .logo-divider {
-      height: 1px;
-      background: #C49A3C;
-      opacity: 0.5;
+      color: var(--dark);
+      letter-spacing: -0.01em;
     }
     .logo-sub {
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      color: #B8956A;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 500;
     }
-
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 36px;
+      gap: 2rem;
+      list-style: none;
     }
     .nav-links a {
-      font-size: 15px;
-      color: #5C3D2E;
-      text-decoration: none;
+      font-size: 0.88rem;
+      color: var(--brown);
+      font-weight: 400;
+      transition: color 0.2s;
+      position: relative;
     }
-    .nav-links a:hover { color: #C49A3C; }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 0; height: 1px;
+      background: var(--sage);
+      transition: width 0.25s;
+    }
+    .nav-links a:hover { color: var(--sage-dk); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px; height: 1.5px;
+      background: var(--dark);
+    }
 
     /* ── Hero ── */
     .hero {
+      min-height: 580px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 48px;
-      background: #FAF3E8;
-      height: 620px;
-      padding: 0 64px;
+      background: var(--cream);
       overflow: hidden;
+      position: relative;
     }
-
-    .hero-left {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      width: 500px;
-      flex-shrink: 0;
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B9D77' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
     }
-    .label-tag {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      color: #C49A3C;
+    .hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-    }
-    .hero-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: 52px;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #3B2A1A;
-      width: 500px;
-    }
-    .hero-sub {
-      font-size: 17px;
-      line-height: 1.6;
-      color: #5C3D2E;
-      width: 460px;
-    }
-    .hero-qr {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: #fff;
-      border: 1px solid #EDE0CC;
-      border-radius: 12px;
-      padding: 20px 24px;
-      width: fit-content;
-    }
-    .hero-qr img { width: 96px; height: 96px; object-fit: contain; border-radius: 8px; }
-    .hero-qr-text { display: flex; flex-direction: column; gap: 6px; }
-    .hero-qr-text .qr-line1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 15px;
-      font-weight: 700;
-      color: #3B2A1A;
-    }
-    .hero-qr-text .qr-line2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 15px;
-      font-weight: 700;
-      color: #C49A3C;
-    }
-    .hero-qr-text .qr-line3 {
-      font-size: 13px;
-      color: #5C3D2E;
-    }
-
-    .hero-right {
-      flex: 1;
-      height: 520px;
-      border-radius: 20px;
-      background-image: url('./images/generated-1776723064245.png');
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* ── Produkty ── */
-    .produkty {
-      display: flex;
-      align-items: center;
-      gap: 64px;
-      background: #fff;
-      padding: 80px 64px;
-    }
-    .prod-left {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      width: 480px;
-      flex-shrink: 0;
-    }
-    .prod-heading {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .section-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #3B2A1A;
-    }
-    .section-sub {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #5C3D2E;
-      max-width: 440px;
-    }
-    .prod-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .prod-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: #FAF3E8;
-      border-radius: 10px;
-      padding: 14px 20px;
-    }
-    .prod-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 5px;
-      background: #C49A3C;
-      flex-shrink: 0;
-    }
-    .prod-item span {
-      font-size: 15px;
+      color: var(--sage);
       font-weight: 600;
-      color: #3B2A1A;
+      margin-bottom: 1rem;
     }
-
-    .prod-right {
-      flex: 1;
-      height: 480px;
-      border-radius: 20px;
-      background-image: url('./images/generated-1776723091775.png');
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* ── Proč my ── */
-    .proc-my {
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
-      background: #FAF3E8;
-      padding: 80px 64px;
-    }
-    .proc-title {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .proc-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: 40px;
+    .hero-title {
+      font-family: var(--font-h);
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
       font-weight: 700;
-      color: #3B2A1A;
+      color: var(--dark);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
     }
-    .proc-cols {
-      display: flex;
-      gap: 32px;
+    .hero-title em {
+      font-style: italic;
+      color: var(--sage);
     }
-    .proc-col {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      border-radius: 16px;
-      padding: 40px;
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--brown);
+      line-height: 1.75;
+      max-width: 440px;
+      margin-bottom: 2rem;
+      font-weight: 300;
     }
-    .proc-col.light {
-      background: #fff;
-      border: 1px solid #EDE0CC;
+    .hero-image {
+      position: relative;
     }
-    .proc-col.dark {
-      background: #3B2A1A;
+    .hero-image img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 2rem 2rem 8rem 2rem;
+      box-shadow: 0 20px 60px rgba(45,42,36,0.15);
     }
-    .proc-col-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
+    .hero-badge {
+      position: absolute;
+      bottom: 2.5rem;
+      left: -1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 30px rgba(45,42,36,0.1);
+    }
+    .hero-badge-num {
+      display: block;
+      font-family: var(--font-h);
+      font-size: 1.8rem;
       font-weight: 700;
+      color: var(--sage);
+      line-height: 1;
     }
-    .proc-col.light .proc-col-heading { color: #3B2A1A; }
-    .proc-col.dark .proc-col-heading { color: #FAF3E8; }
-
-    .check-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    .hero-badge-txt {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brown);
+      opacity: 0.8;
     }
-    .check-mark { font-size: 16px; color: #C49A3C; }
-    .proc-col.light .check-text { font-size: 15px; color: #5C3D2E; }
-    .proc-col.dark .check-text { font-size: 15px; color: #EDE0CC; }
 
-    /* ── QR CTA ── */
-    .qr-cta {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 32px;
-      background: #3B2A1A;
-      padding: 80px 64px;
+    /* ── CO TU NAJDETE ── */
+    .najdete {
+      padding: 6rem 0;
+      background: var(--white);
+    }
+    .section-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .section-header {
       text-align: center;
+      margin-bottom: 3.5rem;
     }
-    .qr-cta-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: var(--font-h);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
       font-weight: 700;
-      color: #FAF3E8;
+      color: var(--dark);
     }
-    .qr-cta-sub {
-      font-size: 17px;
-      color: #B8956A;
-    }
-    .qr-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      background: #fff;
-      border-radius: 20px;
-      padding: 32px;
-    }
-    .qr-box img { width: 200px; height: 200px; border-radius: 12px; object-fit: contain; }
-    .qr-box-label {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: #3B2A1A;
-    }
-    .btn-gold {
-      display: inline-block;
-      background: #C49A3C;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 700;
-      padding: 16px 40px;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: opacity .2s;
-    }
-    .btn-gold:hover { opacity: .85; }
+    .section-title em { font-style: italic; color: var(--sage); }
 
-    /* ── Kontakt ── */
-    .kontakt {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
-      background: #fff;
-      padding: 80px 64px;
+    .najdete-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .najdete-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 2rem 1.5rem;
       text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
     }
-    .kontakt-label { /* reuses .label-tag */ }
-    .kontakt-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 44px;
-      font-weight: 700;
-      color: #3B2A1A;
+    .najdete-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(125,140,106,0.15);
     }
-    .kontakt-sub {
-      font-size: 16px;
-      color: #5C3D2E;
-    }
-    .kontakt-card {
-      display: flex;
-      border: 1px solid #DDD0BB;
-      border-radius: 20px;
-      background: #FAF3E8;
-      width: 860px;
-      max-width: 100%;
-    }
-    .kontakt-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      flex: 1;
-      padding: 36px 0;
-    }
-    .kontakt-divider {
-      width: 1px;
-      background: #DDD0BB;
-      margin: 20px 0;
-    }
-    .icon-circle {
-      width: 52px;
-      height: 52px;
-      border-radius: 26px;
-      background: #C49A3C;
+    .card-icon {
+      width: 60px; height: 60px;
+      margin: 0 auto 1.25rem;
+      background: linear-gradient(135deg, var(--sage-lt), var(--sage));
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 1.5rem;
     }
-    .icon-circle svg { width: 24px; height: 24px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .kontakt-item-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      color: #B8956A;
-      text-transform: uppercase;
-    }
-    .kontakt-item-value {
-      font-family: 'Playfair Display', serif;
-      font-size: 17px;
+    .card-title {
+      font-family: var(--font-h);
+      font-size: 0.9rem;
       font-weight: 700;
-      color: #3B2A1A;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 0.6rem;
     }
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--brown);
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* ── PROČ TO DĚLÁM ── */
+    .proc {
+      padding: 6rem 0;
+      background: var(--cream);
+    }
+    .proc-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .proc-image img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 2rem 8rem 2rem 2rem;
+      box-shadow: 0 16px 50px rgba(45,42,36,0.12);
+    }
+    .proc-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .proc-title {
+      font-family: var(--font-h);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .proc-title em { font-style: italic; color: var(--sage); }
+    .proc-text {
+      font-size: 0.95rem;
+      color: var(--brown);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    /* ── VYBERTE SI ── */
+    .vyber {
+      padding: 6rem 0;
+      background: var(--sage-dk);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .vyber::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: -80px;
+      width: 300px; height: 300px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .vyber::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -60px;
+      width: 250px; height: 250px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .vyber .section-label { color: rgba(255,255,255,0.6); }
+    .vyber .section-title { color: #fff; margin-bottom: 0.75rem; }
+    .vyber-sub {
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+    }
+    .vyber-cards {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .vyber-chip {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .vyber-chip:hover {
+      background: rgba(255,255,255,0.25);
+    }
+    .btn-white {
+      display: inline-block;
+      background: #fff;
+      color: var(--sage-dk);
+      padding: 0.85rem 2.5rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-white:hover { background: var(--cream); transform: translateY(-1px); }
 
     /* ── Footer ── */
     .footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #3B2A1A;
-      height: 72px;
-      padding: 0 64px;
+      background: var(--dark);
+      padding: 2.5rem 0;
+      text-align: center;
     }
-    .footer-copy { font-size: 13px; color: #B8956A; }
-    .footer-links { display: flex; gap: 32px; }
-    .footer-links a { font-size: 13px; color: #B8956A; text-decoration: none; }
-    .footer-links a:hover { color: #C49A3C; }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .footer-logo {
+      font-family: var(--font-h);
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--cream);
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: rgba(247,243,237,0.5);
+    }
+    .footer-copy a { color: var(--sage-lt); transition: color 0.2s; }
+    .footer-copy a:hover { color: var(--sage); }
+    .footer-nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .footer-nav a {
+      font-size: 0.78rem;
+      color: rgba(247,243,237,0.45);
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: var(--sage-lt); }
+
+    /* ── Botanical deco ── */
+    .deco {
+      position: absolute;
+      opacity: 0.08;
+      pointer-events: none;
+      user-select: none;
+    }
 
     /* ── Responsive ── */
-    @media (max-width: 900px) {
-      .navbar, .hero, .produkty, .proc-my, .qr-cta, .kontakt, .footer {
-        padding-left: 24px;
-        padding-right: 24px;
-      }
-      .hero { flex-direction: column; height: auto; padding-top: 48px; padding-bottom: 48px; }
-      .hero-left, .hero-heading, .hero-sub { width: 100%; }
-      .hero-right { width: 100%; height: 280px; }
-      .produkty { flex-direction: column; }
-      .prod-left { width: 100%; }
-      .prod-right { width: 100%; height: 280px; }
-      .proc-cols { flex-direction: column; }
-      .kontakt-card { flex-direction: column; width: 100%; }
-      .kontakt-divider { width: 100%; height: 1px; margin: 0; }
-      .nav-links { gap: 20px; }
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-image { order: -1; }
+      .hero-image img { height: 380px; }
+      .hero-badge { left: 1rem; }
+      .najdete-grid { grid-template-columns: repeat(2, 1fr); }
+      .proc-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(247,243,237,0.98); border-bottom: 1px solid var(--border); padding: 1rem 2rem; gap: 1rem; }
+      .nav-links.open { display: flex; }
+      .navbar { position: relative; }
+      .nav-toggle { display: flex; }
+      .najdete-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 2.2rem; }
+      .section-inner { padding: 0 1.25rem; }
+      .najdete, .proc, .vyber { padding: 4rem 0; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <nav class="navbar">
-    <div class="logo">
-      <div class="logo-top">
-        <span class="logo-star">✦</span>
-        <span class="logo-name">esenci</span>
-        <span class="logo-tld">.cz</span>
-        <span class="logo-star">✦</span>
-      </div>
-      <div class="logo-divider"></div>
-      <span class="logo-sub">přírodní produkty</span>
-    </div>
-    <div class="nav-links">
-      <a href="#">Domů</a>
-      <a href="#produkty">Produkty</a>
-      <a href="#blog">Blog</a>
-      <a href="#kontakt">Kontakt</a>
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-main">Esence</span>
+        <span class="logo-sub">z přírody</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Domů</a></li>
+        <li><a href="#najdete">Nabídka</a></li>
+        <li><a href="#proc">O mně</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-left">
-      <span class="label-tag">Přírodní produkty Bewit</span>
-      <h1 class="hero-heading">Dopřejte si kousek přírody domů</h1>
-      <p class="hero-sub">Objevte kvalitní esenciální oleje a přírodní kosmetiku pro vaše zdraví a pohodu.</p>
-      <div class="hero-qr">
-        <img src="./images/qr.jpg" alt="QR kód bewit.love" />
-        <div class="hero-qr-text">
-          <span class="qr-line1">Naskenujte a nakupte</span>
-          <span class="qr-line2">se slevou až 50 %</span>
-          <span class="qr-line3">bewit.love</span>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-label">bewit.love · přírodní produkty</p>
+        <h1 class="hero-title">Esence<br /><em>z přírody</em></h1>
+        <p class="hero-desc">Přírodní podpora pro chvíle, kdy potřebujete zastavit, načerpat se a vrátit k sobě. Esenciální oleje pro přirozené příjemnosti, načerpání a vnitřní klid.</p>
+        <a href="https://bewit.love" target="_blank" rel="noopener" class="btn-sage">Prozkoumejte sortiment</a>
+      </div>
+      <div class="hero-image">
+        <img src="./images/P9OKy.webp" alt="Esenciální oleje a přírodní kosmetika" />
+        <div class="hero-badge">
+          <span class="hero-badge-num">100%</span>
+          <span class="hero-badge-txt">přírodní složení</span>
         </div>
       </div>
     </div>
-    <div class="hero-right" role="img" aria-label="Přírodní produkty"></div>
   </section>
 
-  <!-- Produkty -->
-  <section class="produkty" id="produkty">
-    <div class="prod-left">
-      <div class="prod-heading">
-        <span class="label-tag">Sortiment</span>
-        <h2 class="section-heading">Objevte svou esenci</h2>
-        <p class="section-sub">100% přírodní produkty pro vaše zdraví, krásu a pohodu. Vše pečlivě vybrané z nabídky bewit.love.</p>
+  <!-- CO TU NAJDETE -->
+  <section class="najdete" id="najdete">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">sortiment</p>
+        <h2 class="section-title">Co tu <em>najdete</em></h2>
       </div>
-      <div class="prod-list">
-        <div class="prod-item"><div class="prod-dot"></div><span>Esenciální oleje</span></div>
-        <div class="prod-item"><div class="prod-dot"></div><span>Přírodní kosmetika</span></div>
-        <div class="prod-item"><div class="prod-dot"></div><span>Proteiny</span></div>
-        <div class="prod-item"><div class="prod-dot"></div><span>Další přírodní produkty</span></div>
-      </div>
-    </div>
-    <div class="prod-right" role="img" aria-label="Přírodní kosmetika"></div>
-  </section>
-
-  <!-- Proč my -->
-  <section class="proc-my">
-    <div class="proc-title">
-      <span class="label-tag">Proč si vybrat nás</span>
-      <h2 class="proc-heading">Příroda jako základ všeho</h2>
-    </div>
-    <div class="proc-cols">
-      <div class="proc-col light">
-        <span class="proc-col-heading">Proč si vybrat nás?</span>
-        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">100% přírodní složení</span></div>
-        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">Šetrné k tělu i přírodě</span></div>
-        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">Ověřená kvalita bewit.love</span></div>
-      </div>
-      <div class="proc-col dark">
-        <span class="proc-col-heading">Co získáte?</span>
-        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">Přístup ke slevám a akcím</span></div>
-        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">Dárek zdarma při prvním nákupu</span></div>
-        <div class="check-item"><span class="check-mark">✔</span><span class="check-text">Slevy až 50 %</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QR CTA -->
-  <section class="qr-cta">
-    <h2 class="qr-cta-heading">Naskenujte a nakupte se slevou až 50 %</h2>
-    <p class="qr-cta-sub">Natural oils &amp; cosmetics — scan for up to 50% off</p>
-    <div class="qr-box">
-      <img src="./images/qr.jpg" alt="QR kód pro nákup" />
-      <span class="qr-box-label">bewit.love</span>
-    </div>
-    <a href="https://bewit.love/produkt/bewit-baby-sleep-esencialni-olej?i=3fqlzp0xrllj7" class="btn-gold" target="_blank" rel="noopener">Přejít na bewit.love →</a>
-  </section>
-
-  <!-- Kontakt -->
-  <section class="kontakt" id="kontakt">
-    <span class="label-tag">Kontakt</span>
-    <h2 class="kontakt-name">Jmeno</h2>
-    <p class="kontakt-sub">Váš průvodce světem přírodních produktů bewit.love</p>
-    <div class="kontakt-card">
-      <div class="kontakt-item">
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81 19.79 19.79 0 01.06 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+      <div class="najdete-grid">
+        <div class="najdete-card">
+          <div class="card-icon">🌿</div>
+          <h3 class="card-title">Vůně a příroda</h3>
+          <p class="card-desc">Esenciální oleje a přírodní vůně pro každou náladu a příležitost</p>
         </div>
-        <span class="kontakt-item-label">Telefon</span>
-        <span class="kontakt-item-value">telefon</span>
-      </div>
-      <div class="kontakt-divider"></div>
-      <div class="kontakt-item">
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <div class="najdete-card">
+          <div class="card-icon">🌙</div>
+          <h3 class="card-title">Spánek a zklidnění</h3>
+          <p class="card-desc">Uklidněte mysl a dopřejte tělu zasloužený hluboký odpočinek</p>
         </div>
-        <span class="kontakt-item-label">E-mail</span>
-        <a class="kontakt-item-value" href="mailto:info@esenci.cz">info@esenci.cz</a>
-      </div>
-      <div class="kontakt-divider"></div>
-      <div class="kontakt-item">
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <div class="najdete-card">
+          <div class="card-icon">✨</div>
+          <h3 class="card-title">Ženský vitální energie</h3>
+          <p class="card-desc">Přirozená energie, rovnováha a vitalita pro každý den</p>
         </div>
-        <span class="kontakt-item-label">Web</span>
-        <a class="kontakt-item-value" href="https://www.esenci.cz" target="_blank" rel="noopener">www.esenci.cz</a>
+        <div class="najdete-card">
+          <div class="card-icon">🤍</div>
+          <h3 class="card-title">Emoce a rovnováha</h3>
+          <p class="card-desc">Podpora emoční pohody, klidu a vnitřní harmonie</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- PROČ TO DĚLÁM -->
+  <section class="proc" id="proc">
+    <div class="proc-inner">
+      <div class="proc-image">
+        <img src="./images/xr2yZ.webp" alt="Přírodní produkty bewit.love" />
+      </div>
+      <div class="proc-text-wrap">
+        <p class="proc-label">můj příběh</p>
+        <h2 class="proc-title">Proč to <em>dělám</em></h2>
+        <p class="proc-text">Esenciální oleje vstoupily do mého života ve chvíli, kdy jsem je nejvíce potřebovala. Rychle jsem objevila jejich sílu — nejen jako vůni, ale jako skutečnou přírodní podporu pro tělo i mysl.</p>
+        <p class="proc-text">Věřím, že příroda má odpověď na mnohé. Proto sdílím produkty bewit.love — protože vím, jak moc pomáhají. Ráda vás provedu světem esencí a pomůžu najít to, co je právě pro vás.</p>
+        <a href="#kontakt" class="btn-outline-sage">Napište mi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VYBERTE SI -->
+  <section class="vyber" id="kontakt">
+    <div class="section-inner">
+      <p class="section-label">pro každého něco</p>
+      <h2 class="section-title">Vyberte si podle toho,<br /><em>co právě cítíte</em></h2>
+      <p class="vyber-sub">Tady nejde o výkon ani dokonalost. Jde o to najít sebe — a být v pohodě.</p>
+      <div class="vyber-cards">
+        <span class="vyber-chip">Potřebuji klid</span>
+        <span class="vyber-chip">Chci více energie</span>
+        <span class="vyber-chip">Špatně spím</span>
+        <span class="vyber-chip">Hledám rovnováhu</span>
+        <span class="vyber-chip">Chci zhubnout</span>
+        <span class="vyber-chip">Potřebuji detox</span>
+      </div>
+      <a href="https://bewit.love" target="_blank" rel="noopener" class="btn-white">Prozkoumat sortiment →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <span class="footer-copy">© 2026 esenci.cz · Rita Drabinová</span>
-    <div class="footer-links">
-      <a href="#blog" id="blog">Blog</a>
-      <a href="#">Ochrana soukromí</a>
+    <div class="footer-inner">
+      <span class="footer-logo">Esence z přírody</span>
+      <p class="footer-copy">© 2026 esenci.cz · Distributor <a href="https://bewit.love" target="_blank" rel="noopener">bewit.love</a></p>
+      <nav class="footer-nav">
+        <a href="#">Blog</a>
+        <a href="#">Ochrana soukromí</a>
+        <a href="https://bewit.love" target="_blank" rel="noopener">bewit.love</a>
+      </nav>
     </div>
   </footer>
 
