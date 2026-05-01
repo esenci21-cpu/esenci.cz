@@ -300,9 +300,9 @@ a { text-decoration: none; color: inherit; }
 }
 .produkt-badge-label {
   font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--brown);
-  opacity: 0.85;
+  font-weight: 600;
+  color: var(--dark);
+  opacity: 1;
   text-align: center;
   max-width: 120px;
   line-height: 1.3;
