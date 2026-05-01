@@ -471,7 +471,7 @@ a { text-decoration: none; color: inherit; }
   color: #3B2A1A;
   opacity: 1;
   margin-bottom: 0.75rem;
-  font-weight: 700;
+  font-weight: 300;
 }
 .footer-heart { font-size: 1rem; color: var(--orange); opacity: 0.6; }
 .footer-copy {
