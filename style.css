@@ -399,9 +399,9 @@ a { text-decoration: none; color: inherit; }
 }
 .vyber-desc {
   font-size: 1.05rem;
-  color: var(--brown);
+  color: var(--dark);
   line-height: 1.6;
-  opacity: 0.85;
+  opacity: 1;
   flex: 1;
 }
 
