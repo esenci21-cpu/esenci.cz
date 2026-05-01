@@ -158,7 +158,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 1.25rem;
 }
 .hero-desc {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--brown);
   line-height: 1.75;
   max-width: 420px;
@@ -220,14 +220,14 @@ a { text-decoration: none; color: inherit; }
   flex-shrink: 0;
 }
 .kat-title {
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--dark);
 }
 .kat-desc {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   color: var(--brown);
   line-height: 1.5;
   opacity: 0.85;
@@ -256,7 +256,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 1rem;
 }
 .naucte-desc {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--brown);
   line-height: 1.8;
   font-weight: 300;
@@ -324,7 +324,7 @@ a { text-decoration: none; color: inherit; }
   border-radius: 0.75rem;
 }
 .produkt-popis {
-  font-size: 1.02rem;
+  font-size: 1.15rem;
   color: var(--brown);
   line-height: 1.7;
   margin-bottom: 1rem;
@@ -335,7 +335,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
-  font-size: 0.98rem;
+  font-size: 1.08rem;
   color: var(--dark);
 }
 .check-dot {
@@ -397,7 +397,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--dark);
 }
 .vyber-desc {
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   color: var(--brown);
   line-height: 1.6;
   opacity: 0.85;
@@ -437,7 +437,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 0.75rem;
 }
 .poznamka-text {
-  font-size: 1.0rem;
+  font-size: 1.12rem;
   color: var(--brown);
   line-height: 1.75;
   font-weight: 300;
