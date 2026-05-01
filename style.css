@@ -315,12 +315,12 @@ a { text-decoration: none; color: inherit; }
 }
 .produkt-layout {
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 240px 1fr;
   gap: 2rem;
   align-items: start;
 }
 .produkt-img img {
-  width: 140px;
+  width: 240px;
   border-radius: 0.75rem;
 }
 .produkt-popis {
