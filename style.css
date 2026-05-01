@@ -299,11 +299,12 @@ a { text-decoration: none; color: inherit; }
   font-size: 1.3rem;
 }
 .produkt-badge-label {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--brown);
-  opacity: 0.7;
+  opacity: 0.85;
   text-align: center;
-  max-width: 80px;
+  max-width: 120px;
   line-height: 1.3;
 }
 .produkt-content { display: flex; flex-direction: column; gap: 1.25rem; }
