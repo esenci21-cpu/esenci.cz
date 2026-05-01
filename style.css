@@ -467,10 +467,11 @@ a { text-decoration: none; color: inherit; }
 .footer-quote {
   font-family: var(--font-h);
   font-style: italic;
-  font-size: 0.9rem;
-  color: var(--brown);
-  opacity: 0.7;
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--dark);
+  opacity: 1;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
 }
 .footer-heart { font-size: 1rem; color: var(--orange); opacity: 0.6; }
 .footer-copy {
