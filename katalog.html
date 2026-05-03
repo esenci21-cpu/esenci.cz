@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog olejů — Esenci.cz</title>
+  <meta name="description" content="Kompletní přehled přírodních esenciálních olejů BEWIT podle tématu. Najděte olej přesně pro to, co potřebujete.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d27b85f2-d2a8-42a9-81e3-b542b755bde2"></script>
+  <style>
+    .katalog-sekce {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid #f0ede8;
+    }
+    .katalog-sekce:last-of-type {
+      border-bottom: none;
+    }
+    .katalog-nadpis {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--dark);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .katalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+    .katalog-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #faf8f5;
+      border-radius: 10px;
+      padding: 0.65rem 0.9rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.15s;
+      border: 1px solid #f0ede8;
+    }
+    .katalog-item:hover {
+      background: #f5f0eb;
+      transform: translateY(-1px);
+    }
+    .katalog-item.pripravujeme {
+      color: #b0a898;
+      cursor: default;
+      pointer-events: none;
+    }
+    .katalog-item.pripravujeme:hover {
+      background: #faf8f5;
+      transform: none;
+    }
+    .katalog-tag {
+      font-size: 0.65rem;
+      background: #e8e3dc;
+      color: #8a7d6e;
+      border-radius: 4px;
+      padding: 0.1rem 0.35rem;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="./index.html" class="logo">
+      <span class="logo-main">Esence</span>
+      <span class="logo-sub">z přírody</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html">Úvod</a></li>
+        <li><a href="./temata.html">Všechna témata</a></li>
+      </ul>
+      <a href="./temata.html" class="btn-back" style="margin-left:1rem;">← Zpět na témata</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero" style="min-height: auto; padding: 3rem 0 2rem;">
+  <div class="hero-inner" style="grid-template-columns: 1fr; text-align: center;">
+    <div class="hero-text">
+      <h1 class="hero-title">Katalog olejů</h1>
+      <p class="hero-subtitle">najděte přesně to, co potřebujete</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Katalog ── -->
+<section class="potrebujete">
+  <div class="section-inner">
+
+    <!-- 1. Zdraví a imunita -->
+    <div class="katalog-sekce">
+      <h2 class="katalog-nadpis">🛡️ Zdraví a imunita</h2>
+      <div class="katalog-grid">
+        <a href="./imunita.html" class="katalog-item">Imunita</a>
+        <a href="./nachladeni.html" class="katalog-item">Nachlazení</a>
+        <a href="./alergie.html" class="katalog-item">Alergie</a>
+        <a href="#" class="katalog-item pripravujeme">Horečka <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Herpes a afty <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Záněty <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Antibakteriální ochrana <span class="katalog-tag">připravujeme</span></a>
+      </div>
+    </div>
+
+    <!-- 2. Dýchací cesty -->
+    <div class="katalog-sekce">
+      <h2 class="katalog-nadpis">🌬️ Dýchací cesty</h2>
+      <div class="katalog-grid">
+        <a href="./dychani.html" class="katalog-item">Dýchání</a>
+        <a href="./nachladeni.html" class="katalog-item">Rýma a kašel</a>
+        <a href="#" class="katalog-item pripravujeme">Astma <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Sinusitida <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Zahlenění <span class="katalog-tag">připravujeme</span></a>
+      </div>
+    </div>
+
+    <!-- 3. Pohybový aparát -->
+    <div class="katalog-sekce">
+      <h2 class="katalog-nadpis">💪 Pohybový aparát a bolest</h2>
+      <div class="katalog-grid">
+        <a href="./bolest.html" class="katalog-item">Bolest hlavy a zad</a>
+        <a href="./sport.html" class="katalog-item">Sport a regenerace</a>
+        <a href="#" class="katalog-item pripravujeme">Klouby a artritida <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Křeče a spasmy <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Otoky a modřiny <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Fibromyalgie <span class="katalog-tag">připravujeme</span></a>
+      </div>
+    </div>
+
+    <!-- 4. Trávení a detox -->
+    <div class="katalog-sekce">
+      <h2 class="katalog-nadpis">🌿 Trávení a detox</h2>
+      <div class="katalog-grid">
+        <a href="./traveni.html" class="katalog-item">Trávení</a>
+        <a href="./detoxikace.html" class="katalog-item">Detoxikace</a>
+        <a href="./kinetoza.html" class="katalog-item">Cestovní nevolnost</a>
+        <a href="#" class="katalog-item pripravujeme">Nadýmání <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Zácpa <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Játra a žlučník <span class="katalog-tag">připravujeme</span></a>
+      </div>
+    </div>
+
+    <!-- 5. Psychika a emoce -->
+    <div class="katalog-sekce">
+      <h2 class="katalog-nadpis">🧠 Psychika a emoce</h2>
+      <div class="katalog-grid">
+        <a href="./stres.html" class="katalog-item">Stres a přetížení</a>
+        <a href="./spanek.html" class="katalog-item">Spánek</a>
+        <a href="./uzkost.html" class="katalog-item">Úzkost a panika</a>
+        <a href="./nalada.html" class="katalog-item">Nálada a radost</a>
+        <a href="./koncentrace.html" class="katalog-item">Koncentrace</a>
+        <a href="./odvaha.html" class="katalog-item">Sebevědomí a odvaha</a>
+        <a href="./zvladani-zavislosti.html" class="katalog-item">Závislosti</a>
+        <a href="#" class="katalog-item pripravujeme">Deprese <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Trauma a smutek <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Meditace <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Hněv a frustrace <span class="katalog-tag">připravujeme</span></a>
+      </div>
+    </div>
+
+    <!-- 6. Energie a výkon -->
+    <div class="katalog-sekce">
+      <h2 class="katalog-nadpis">⚡ Energie a výkon</h2>
+      <div class="katalog-grid">
+        <a href="./vice-energie.html" class="katalog-item">Více energie</a>
+        <a href="./koncentrace.html" class="katalog-item">Koncentrace</a>
+        <a href="./sport.html" class="katalog-item">Sport</a>
+        <a href="#" class="katalog-item pripravujeme">Syndrom vyhoření <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Ranní rutina <span class="katalog-tag">připravujeme</span></a>
+      </div>
+    </div>
+
+    <!-- 7. Ženské zdraví -->
+    <div class="katalog-sekce">
+      <h2 class="katalog-nadpis">👩 Ženské zdraví</h2>
+      <div class="katalog-grid">
+        <a href="./zensky-cyklus.html" class="katalog-item">Ženský cyklus</a>
+        <a href="./hormony.html" class="katalog-item">Hormony a rovnováha</a>
+        <a href="#" class="katalog-item pripravujeme">Menopauza <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Těhotenství <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Plodnost <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Intimní zdraví <span class="katalog-tag">připravujeme</span></a>
+      </div>
+    </div>
+
+    <!-- 8. Děti a rodina -->
+    <div class="katalog-sekce">
+      <h2 class="katalog-nadpis">👨‍👩‍👧 Děti a rodina</h2>
+      <div class="katalog-grid">
+        <a href="./spanek-deti.html" class="katalog-item">Spánek dětí</a>
+        <a href="./imunita-deti.html" class="katalog-item">Imunita dětí</a>
+        <a href="#" class="katalog-item pripravujeme">Zuby dětí <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Klíšťata a hmyz <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Kolikovité děti <span class="katalog-tag">připravujeme</span></a>
+      </div>
+    </div>
+
+    <!-- 9. Krása a péče -->
+    <div class="katalog-sekce">
+      <h2 class="katalog-nadpis">✨ Krása a péče o tělo</h2>
+      <div class="katalog-grid">
+        <a href="./pece-o-plet.html" class="katalog-item">Kůže a pleť</a>
+        <a href="./vlasy.html" class="katalog-item">Vlasy a nehty</a>
+        <a href="./pece-o-zuby.html" class="katalog-item">Péče o zuby</a>
+        <a href="#" class="katalog-item pripravujeme">Akné <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Jizvy a strie <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Celulitida <span class="katalog-tag">připravujeme</span></a>
+        <a href="#" class="katalog-item pripravujeme">Masáže <span class="katalog-tag">připravujeme</span></a>
+      </div>
+    </div>
+
+    <!-- 10. Jednodruhové oleje -->
+    <div class="katalog-sekce">
+      <h2 class="katalog-nadpis">🌱 Jednodruhové oleje A–Z</h2>
+      <div class="katalog-grid">
+        <a href="https://bewit.love/produkt/bergamot-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Bergamot</a>
+        <a href="https://bewit.love/produkt/cedr-virginsky-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Cedr</a>
+        <a href="https://bewit.love/produkt/citron-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Citron</a>
+        <a href="https://bewit.love/produkt/citronella-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Citronella</a>
+        <a href="https://bewit.love/produkt/citronova-trava-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Citronová tráva</a>
+        <a href="https://bewit.love/produkt/drmek-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Drmek</a>
+        <a href="https://bewit.love/produkt/eukalyptus-globulus-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Eukalyptus</a>
+        <a href="https://bewit.love/produkt/fenykl-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Fenykl</a>
+        <a href="https://bewit.love/produkt/geranium-bourbon-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Geranium</a>
+        <a href="https://bewit.love/produkt/grapefruit-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Grep</a>
+        <a href="https://bewit.love/produkt/heřmanek-rimsky-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Heřmánek římský</a>
+        <a href="https://bewit.love/produkt/jalovec-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Jalovec</a>
+        <a href="https://bewit.love/produkt/kadidlo-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Kadidlo</a>
+        <a href="https://bewit.love/produkt/levandule-francie-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Levandule</a>
+        <a href="https://bewit.love/produkt/majoranka-zahradni-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Majoránka</a>
+        <a href="https://bewit.love/produkt/mata-peperna-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Máta peprná</a>
+        <a href="https://bewit.love/produkt/oregano-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Oregano</a>
+        <a href="https://bewit.love/produkt/pomeranc-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Pomeranč</a>
+        <a href="https://bewit.love/produkt/rozmaryn-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Rozmarýn</a>
+        <a href="https://bewit.love/produkt/salvej-lekarska-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Šalvěj lékařská</a>
+        <a href="https://bewit.love/produkt/tea-tree-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Tea Tree</a>
+        <a href="https://bewit.love/produkt/tymian-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Tymián</a>
+        <a href="https://bewit.love/produkt/vetiver-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Vetiver</a>
+        <a href="https://bewit.love/produkt/ylang-ylang-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Ylang Ylang</a>
+        <a href="https://bewit.love/produkt/zazvor-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Zázvor</a>
+        <a href="https://bewit.love/produkt/zlata-travina-esencialni-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" class="katalog-item">Zlatá travina</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="footer-botanical">🌿 ✦ 🌸 ✦ 🌿</div>
+  <p class="footer-quote">„Tady nejde o výkon ani dokonalost. Jen o návrat k sobě."</p>
+  <p class="footer-heart">♥</p>
+  <p class="footer-copy">© 2026 esenci.cz</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>

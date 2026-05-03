@@ -159,7 +159,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-desc {
   font-size: 1.15rem;
-  color: var(--brown);
+  color: var(--dark);
   line-height: 1.75;
   max-width: 420px;
   font-weight: 300;
@@ -228,9 +228,8 @@ a { text-decoration: none; color: inherit; }
 }
 .kat-desc {
   font-size: 0.9rem;
-  color: var(--brown);
+  color: var(--dark);
   line-height: 1.5;
-  opacity: 0.85;
   flex: 1;
 }
 
@@ -326,7 +325,7 @@ a { text-decoration: none; color: inherit; }
 }
 .produkt-popis {
   font-size: 1.15rem;
-  color: var(--brown);
+  color: var(--dark);
   line-height: 1.7;
   margin-bottom: 1rem;
   font-weight: 300;
@@ -439,7 +438,7 @@ a { text-decoration: none; color: inherit; }
 }
 .poznamka-text {
   font-size: 1.12rem;
-  color: var(--brown);
+  color: var(--dark);
   line-height: 1.75;
   font-weight: 300;
   max-width: 550px;
@@ -467,7 +466,7 @@ a { text-decoration: none; color: inherit; }
 .footer-quote {
   font-family: var(--font-h);
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 0.95rem;
   color: #3B2A1A;
   opacity: 1;
   margin-bottom: 0.75rem;
@@ -487,6 +486,7 @@ a { text-decoration: none; color: inherit; }
   .hero-inner { grid-template-columns: 1fr; gap: 2rem; min-height: auto; }
   .hero-image { order: -1; }
   .hero-image img { height: 300px; }
+  .hero-text { text-align: center; }
   .kategorie-grid { grid-template-columns: repeat(3, 1fr); }
   .naucte-inner { grid-template-columns: 1fr; gap: 2rem; }
   .poznamka-inner { grid-template-columns: 1fr; }
@@ -503,4 +503,7 @@ a { text-decoration: none; color: inherit; }
   .produkt-inner { grid-template-columns: 1fr; }
   .produkt-layout { grid-template-columns: 1fr; }
   .produkt-img img { width: 120px; margin: 0 auto; }
+  .produkt-heading { text-align: center; }
+  .produkt-layout > div:last-child { text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .produkt-checks { text-align: left; }
 }

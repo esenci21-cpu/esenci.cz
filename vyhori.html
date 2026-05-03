@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syndrom vyhoření — Esenci.cz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d27b85f2-d2a8-42a9-81e3-b542b755bde2"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="./index.html" class="logo">
+      <span class="logo-main">Esence</span>
+      <span class="logo-sub">z přírody</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html">Úvod</a></li>
+        <li><a href="./temata.html">Všechna témata</a></li>
+      </ul>
+      <a href="./temata.html" class="btn-back" style="margin-left:1rem;">← Zpět na témata</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<section style="min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 1.5rem;">
+  <div>
+    <div style="font-size: 3rem; margin-bottom: 1.5rem;">🌻</div>
+    <h1 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: #2A2520; margin-bottom: 1rem;">Syndrom vyhoření</h1>
+    <p style="color: #6B5E50; font-size: 1.1rem; margin-bottom: 2rem;">Tato stránka se připravuje.<br>Brzy zde najdete průvodce a tipy na přírodní esence.</p>
+    <a href="./temata.html" class="btn-orange">← Zpět na všechna témata</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-botanical">🌿 ✦ 🌸 ✦ 🌿</div>
+  <p class="footer-quote">„Tady nejde o výkon ani dokonalost. Jen o návrat k sobě."</p>
+  <p class="footer-heart">♥</p>
+  <p class="footer-copy">© 2026 esenci.cz</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>
