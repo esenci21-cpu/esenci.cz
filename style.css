@@ -334,6 +334,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.88rem;
   color: #7a7a6e;
   line-height: 1.5;
+  margin-top: 0.75rem;
   margin-bottom: 1rem;
 }
 .produkt-checks { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; }
@@ -413,7 +414,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.82rem;
   color: #7a7a6e;
   line-height: 1.5;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 /* ── Osobní poznámka ── */
