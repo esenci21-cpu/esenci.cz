@@ -31,6 +31,7 @@ body {
 }
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
+.produkt-jak a { color: var(--orange); text-decoration: underline; }
 
 /* ── Buttons ── */
 .btn-orange {
