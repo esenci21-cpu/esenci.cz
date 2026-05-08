@@ -46,83 +46,138 @@
   </div>
 </section>
 
-<!-- ── Témata — seznam ── -->
+<!-- ── Témata — karty kategorií ── -->
 <section style="padding: 2rem 0 4rem; background: #faf7f4;">
-  <div class="section-inner" style="max-width: 700px;">
+  <div class="section-inner">
 
     <style>
-      .t-skupina { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.09em; color: var(--brown); font-weight: 600; padding: 2rem 0.5rem 0.4rem; border-top: 1px solid #e8e2d8; margin-top: 0.5rem; }
-      .t-skupina:first-child { border-top: none; padding-top: 0; }
-      .t-row { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 0.5rem; border-bottom: 1px solid #ede8e0; text-decoration: none; color: var(--dark); transition: background 0.15s; border-radius: 6px; }
-      .t-row:hover { background: #f0ece6; }
-      .t-icon { font-size: 1.3rem; width: 2rem; text-align: center; flex-shrink: 0; }
-      .t-name { font-weight: 600; font-size: 0.93rem; }
-      .t-desc { font-size: 0.8rem; color: var(--brown); margin-top: 0.1rem; }
-      .t-arrow { margin-left: auto; color: var(--orange); font-size: 1rem; flex-shrink: 0; }
+      .kat-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+      @media (max-width: 600px) { .kat-grid2 { grid-template-columns: 1fr; } }
+      .kat-card2 { background: #fff; border-radius: 14px; padding: 1.25rem 1.4rem; box-shadow: 0 1px 6px rgba(0,0,0,0.07); }
+      .kat-card2-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.9rem; }
+      .kat-card2-icon { font-size: 1.4rem; }
+      .kat-card2-name { font-weight: 700; font-size: 1rem; color: var(--dark); }
+      .kat-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+      .kat-pill { background: #f3f0eb; border-radius: 20px; padding: 0.28rem 0.75rem; font-size: 0.78rem; color: var(--dark); text-decoration: none; transition: background 0.15s; }
+      .kat-pill:hover { background: var(--orange); color: #fff; }
+      .kat-ostatni { grid-column: 1 / -1; }
+      @media (max-width: 600px) { .kat-ostatni { grid-column: 1; } }
     </style>
 
-    <!-- Mysl a emoce -->
-    <div class="t-skupina">Mysl a emoce</div>
-    <a href="./stres.html" class="t-row"><span class="t-icon">🌿</span><div><div class="t-name">Stres a přetížení</div><div class="t-desc">Když je toho na vás moc a potřebujete zklidnit mysl.</div></div><span class="t-arrow">→</span></a>
-    <a href="./spanek.html" class="t-row"><span class="t-icon">🌙</span><div><div class="t-name">Spánek a zklidnění</div><div class="t-desc">Když večer nemůžete vypnout hlavu nebo se budíte unavení.</div></div><span class="t-arrow">→</span></a>
-    <a href="./uzkost.html" class="t-row"><span class="t-icon">🕊️</span><div><div class="t-name">Úzkost a panika</div><div class="t-desc">Když vás přepadá vnitřní neklid nebo strach.</div></div><span class="t-arrow">→</span></a>
-    <a href="./deprese.html" class="t-row"><span class="t-icon">🌧️</span><div><div class="t-name">Deprese a smutek</div><div class="t-desc">Když se cítíte smutní, bez chuti a těžko hledáte světlo.</div></div><span class="t-arrow">→</span></a>
-    <a href="./nalada.html" class="t-row"><span class="t-icon">😊</span><div><div class="t-name">Nálada a radost</div><div class="t-desc">Když potřebujete zvednout náladu a najít lehkost.</div></div><span class="t-arrow">→</span></a>
-    <a href="./vyhori.html" class="t-row"><span class="t-icon">🌱</span><div><div class="t-name">Syndrom vyhoření</div><div class="t-desc">Chronická únava, ztráta motivace a pocit prázdnoty.</div></div><span class="t-arrow">→</span></a>
-    <a href="./prokrastinace.html" class="t-row"><span class="t-icon">⚡</span><div><div class="t-name">Prokrastinace a motivace</div><div class="t-desc">Když odkládáte a těžko se pouštíte do věcí.</div></div><span class="t-arrow">→</span></a>
-    <a href="./zvladani-zavislosti.html" class="t-row"><span class="t-icon">🦋</span><div><div class="t-name">Zvládání závislosti</div><div class="t-desc">Když cítíte, že je čas změnit své návyky.</div></div><span class="t-arrow">→</span></a>
-    <a href="./letgo.html" class="t-row"><span class="t-icon">🔓</span><div><div class="t-name">Pustit to a odpustit</div><div class="t-desc">Staré křivdy a emoční tíha, ze které nejde ven.</div></div><span class="t-arrow">→</span></a>
-    <a href="./meditace.html" class="t-row"><span class="t-icon">🧘</span><div><div class="t-name">Meditace</div><div class="t-desc">Podpora pro hlubší klid, přítomnost a vnitřní ticho.</div></div><span class="t-arrow">→</span></a>
+    <div class="kat-grid2">
 
-    <!-- Energie a výkon -->
-    <div class="t-skupina">Energie a výkon</div>
-    <a href="./vice-energie.html" class="t-row"><span class="t-icon">☀️</span><div><div class="t-name">Více energie</div><div class="t-desc">Když se cítíte unaveni a bez vitality.</div></div><span class="t-arrow">→</span></a>
-    <a href="./koncentrace.html" class="t-row"><span class="t-icon">🧠</span><div><div class="t-name">Koncentrace</div><div class="t-desc">Když se nedokážete soustředit nebo cítíte mentální mlhu.</div></div><span class="t-arrow">→</span></a>
-    <a href="./pamet.html" class="t-row"><span class="t-icon">📚</span><div><div class="t-name">Paměť a učení</div><div class="t-desc">Podpora pro lepší zapamatování a vstřebávání informací.</div></div><span class="t-arrow">→</span></a>
-    <a href="./odvaha.html" class="t-row"><span class="t-icon">✨</span><div><div class="t-name">Sebevědomí a odvaha</div><div class="t-desc">Když potřebujete posílit sebedůvěru a vstoupit do situace s jistotou.</div></div><span class="t-arrow">→</span></a>
-    <a href="./sport.html" class="t-row"><span class="t-icon">💪</span><div><div class="t-name">Sport a regenerace</div><div class="t-desc">Když svaly bolí po tréninku a tělo potřebuje regenerovat.</div></div><span class="t-arrow">→</span></a>
+      <!-- Mysl a emoce -->
+      <div class="kat-card2">
+        <div class="kat-card2-header">
+          <span class="kat-card2-icon">💭</span>
+          <span class="kat-card2-name">Mysl a emoce</span>
+        </div>
+        <div class="kat-pills">
+          <a href="./stres.html" class="kat-pill">🌿 Stres a přetížení</a>
+          <a href="./spanek.html" class="kat-pill">🌙 Spánek a zklidnění</a>
+          <a href="./uzkost.html" class="kat-pill">🕊️ Úzkost a panika</a>
+          <a href="./deprese.html" class="kat-pill">🌧️ Deprese a smutek</a>
+          <a href="./nalada.html" class="kat-pill">😊 Nálada a radost</a>
+          <a href="./vyhori.html" class="kat-pill">🌱 Syndrom vyhoření</a>
+          <a href="./prokrastinace.html" class="kat-pill">⚡ Prokrastinace</a>
+          <a href="./zvladani-zavislosti.html" class="kat-pill">🦋 Zvládání závislosti</a>
+          <a href="./letgo.html" class="kat-pill">🔓 Pustit to a odpustit</a>
+          <a href="./meditace.html" class="kat-pill">🧘 Meditace</a>
+        </div>
+      </div>
 
-    <!-- Tělo a zdraví -->
-    <div class="t-skupina">Tělo a zdraví</div>
-    <a href="./bolest.html" class="t-row"><span class="t-icon">🫶</span><div><div class="t-name">Bolest</div><div class="t-desc">Když vás něco fyzicky omezuje.</div></div><span class="t-arrow">→</span></a>
-    <a href="./imunita.html" class="t-row"><span class="t-icon">🛡️</span><div><div class="t-name">Imunita</div><div class="t-desc">Když chcete posílit obranyschopnost přirozeně.</div></div><span class="t-arrow">→</span></a>
-    <a href="./nachladeni.html" class="t-row"><span class="t-icon">🤧</span><div><div class="t-name">Nachlazení</div><div class="t-desc">Když tělo bojuje s rýmou, kašlem nebo horečkou.</div></div><span class="t-arrow">→</span></a>
-    <a href="./dychani.html" class="t-row"><span class="t-icon">🌬️</span><div><div class="t-name">Dýchání</div><div class="t-desc">Když máte potíže s dýcháním nebo zahleněním.</div></div><span class="t-arrow">→</span></a>
-    <a href="./alergie.html" class="t-row"><span class="t-icon">🌸</span><div><div class="t-name">Alergie</div><div class="t-desc">Když pylová sezóna přináší rýmu a svědění.</div></div><span class="t-arrow">→</span></a>
-    <a href="./traveni.html" class="t-row"><span class="t-icon">🌿</span><div><div class="t-name">Trávení</div><div class="t-desc">Když trpíte nadýmáním nebo zažívacími potížemi.</div></div><span class="t-arrow">→</span></a>
-    <a href="./artritida.html" class="t-row"><span class="t-icon">🦴</span><div><div class="t-name">Artritida a klouby</div><div class="t-desc">Bolest a ztuhlost kloubů, svalů a pojivových tkání.</div></div><span class="t-arrow">→</span></a>
-    <a href="./sinusitida.html" class="t-row"><span class="t-icon">👃</span><div><div class="t-name">Sinusitida</div><div class="t-desc">Ucpaný nos, tlak v obličeji a zánět dutin.</div></div><span class="t-arrow">→</span></a>
-    <a href="./herpes.html" class="t-row"><span class="t-icon">💊</span><div><div class="t-name">Herpes a afty</div><div class="t-desc">Přirozená podpora při oparu a bolestech v ústech.</div></div><span class="t-arrow">→</span></a>
-    <a href="./jizvy.html" class="t-row"><span class="t-icon">🌟</span><div><div class="t-name">Jizvy a strie</div><div class="t-desc">Podpora regenerace pokožky a zmírnění jizev.</div></div><span class="t-arrow">→</span></a>
-    <a href="./jatra.html" class="t-row"><span class="t-icon">🌱</span><div><div class="t-name">Játra a žlučník</div><div class="t-desc">Podpora přirozené detoxikace a trávení tuků.</div></div><span class="t-arrow">→</span></a>
-    <a href="./detoxikace.html" class="t-row"><span class="t-icon">🍃</span><div><div class="t-name">Detoxikace</div><div class="t-desc">Když chcete podpořit tělo v čištění a obnově.</div></div><span class="t-arrow">→</span></a>
+      <!-- Energie a výkon -->
+      <div class="kat-card2">
+        <div class="kat-card2-header">
+          <span class="kat-card2-icon">☀️</span>
+          <span class="kat-card2-name">Energie a výkon</span>
+        </div>
+        <div class="kat-pills">
+          <a href="./vice-energie.html" class="kat-pill">☀️ Více energie</a>
+          <a href="./koncentrace.html" class="kat-pill">🧠 Koncentrace</a>
+          <a href="./pamet.html" class="kat-pill">📚 Paměť a učení</a>
+          <a href="./odvaha.html" class="kat-pill">✨ Sebevědomí a odvaha</a>
+          <a href="./sport.html" class="kat-pill">💪 Sport a regenerace</a>
+        </div>
+      </div>
 
-    <!-- Žena -->
-    <div class="t-skupina">Žena</div>
-    <a href="./zensky-cyklus.html" class="t-row"><span class="t-icon">🌸</span><div><div class="t-name">Ženský cyklus</div><div class="t-desc">Když tělo potřebuje jemnou podporu a rovnováhu.</div></div><span class="t-arrow">→</span></a>
-    <a href="./hormony.html" class="t-row"><span class="t-icon">⚖️</span><div><div class="t-name">Hormony a rovnováha</div><div class="t-desc">Podpora hormonální rovnováhy přirozenou cestou.</div></div><span class="t-arrow">→</span></a>
-    <a href="./menopauza.html" class="t-row"><span class="t-icon">🌺</span><div><div class="t-name">Menopauza</div><div class="t-desc">Podpora při přechodu — návaly, nálady, spánek.</div></div><span class="t-arrow">→</span></a>
-    <a href="./tehotenstvi.html" class="t-row"><span class="t-icon">🤰</span><div><div class="t-name">Těhotenství</div><div class="t-desc">Jemná přírodní podpora v těhotenství a po porodu.</div></div><span class="t-arrow">→</span></a>
-    <a href="./zenska-energie.html" class="t-row"><span class="t-icon">🦋</span><div><div class="t-name">Ženská energie</div><div class="t-desc">Pro smyslnost, krásu a propojení s vnitřní ženou.</div></div><span class="t-arrow">→</span></a>
-    <a href="./vztahy.html" class="t-row"><span class="t-icon">❤️</span><div><div class="t-name">Vztahy a láska</div><div class="t-desc">Pro otevřené srdce, sebelásku a hlubší blízkost.</div></div><span class="t-arrow">→</span></a>
+      <!-- Tělo a zdraví -->
+      <div class="kat-card2">
+        <div class="kat-card2-header">
+          <span class="kat-card2-icon">🌿</span>
+          <span class="kat-card2-name">Tělo a zdraví</span>
+        </div>
+        <div class="kat-pills">
+          <a href="./bolest.html" class="kat-pill">🫶 Bolest</a>
+          <a href="./imunita.html" class="kat-pill">🛡️ Imunita</a>
+          <a href="./nachladeni.html" class="kat-pill">🤧 Nachlazení</a>
+          <a href="./dychani.html" class="kat-pill">🌬️ Dýchání</a>
+          <a href="./alergie.html" class="kat-pill">🌸 Alergie</a>
+          <a href="./traveni.html" class="kat-pill">🌿 Trávení</a>
+          <a href="./artritida.html" class="kat-pill">🦴 Artritida a klouby</a>
+          <a href="./sinusitida.html" class="kat-pill">👃 Sinusitida</a>
+          <a href="./herpes.html" class="kat-pill">💊 Herpes a afty</a>
+          <a href="./jizvy.html" class="kat-pill">🌟 Jizvy a strie</a>
+          <a href="./jatra.html" class="kat-pill">🌱 Játra a žlučník</a>
+          <a href="./detoxikace.html" class="kat-pill">🍃 Detoxikace</a>
+        </div>
+      </div>
 
-    <!-- Péče -->
-    <div class="t-skupina">Péče o sebe</div>
-    <a href="./vlasy.html" class="t-row"><span class="t-icon">💇</span><div><div class="t-name">Vlasy</div><div class="t-desc">Přirozená péče o vlasy, kořínky a jejich růst.</div></div><span class="t-arrow">→</span></a>
-    <a href="./pece-o-plet.html" class="t-row"><span class="t-icon">✨</span><div><div class="t-name">Kůže a pleť</div><div class="t-desc">Přirozená péče o pleť, hydratace a regenerace.</div></div><span class="t-arrow">→</span></a>
-    <a href="./pece-o-zuby.html" class="t-row"><span class="t-icon">🦷</span><div><div class="t-name">Péče o zuby</div><div class="t-desc">Přirozený způsob péče o ústa a zdravý úsměv.</div></div><span class="t-arrow">→</span></a>
-    <a href="./joga.html" class="t-row"><span class="t-icon">🧘</span><div><div class="t-name">Jóga a čakry</div><div class="t-desc">Podpora pro práci s energetickými centry těla.</div></div><span class="t-arrow">→</span></a>
+      <!-- Žena -->
+      <div class="kat-card2">
+        <div class="kat-card2-header">
+          <span class="kat-card2-icon">🌸</span>
+          <span class="kat-card2-name">Žena</span>
+        </div>
+        <div class="kat-pills">
+          <a href="./zensky-cyklus.html" class="kat-pill">🌸 Ženský cyklus</a>
+          <a href="./hormony.html" class="kat-pill">⚖️ Hormony a rovnováha</a>
+          <a href="./menopauza.html" class="kat-pill">🌺 Menopauza</a>
+          <a href="./tehotenstvi.html" class="kat-pill">🤰 Těhotenství</a>
+          <a href="./zenska-energie.html" class="kat-pill">🦋 Ženská energie</a>
+          <a href="./vztahy.html" class="kat-pill">❤️ Vztahy a láska</a>
+        </div>
+      </div>
 
-    <!-- Pro děti -->
-    <div class="t-skupina">Pro děti</div>
-    <a href="./imunita-deti.html" class="t-row"><span class="t-icon">⭐</span><div><div class="t-name">Imunita dětí</div><div class="t-desc">Jemná přírodní podpora pro zdraví a obranyschopnost dětí.</div></div><span class="t-arrow">→</span></a>
-    <a href="./spanek-deti.html" class="t-row"><span class="t-icon">🌙</span><div><div class="t-name">Spánek dětí</div><div class="t-desc">Když je usínání dětí náročné a noce jsou neklidné.</div></div><span class="t-arrow">→</span></a>
+      <!-- Péče o sebe -->
+      <div class="kat-card2">
+        <div class="kat-card2-header">
+          <span class="kat-card2-icon">✨</span>
+          <span class="kat-card2-name">Péče o sebe</span>
+        </div>
+        <div class="kat-pills">
+          <a href="./vlasy.html" class="kat-pill">💇 Vlasy</a>
+          <a href="./pece-o-plet.html" class="kat-pill">✨ Kůže a pleť</a>
+          <a href="./pece-o-zuby.html" class="kat-pill">🦷 Péče o zuby</a>
+          <a href="./joga.html" class="kat-pill">🧘 Jóga a čakry</a>
+        </div>
+      </div>
 
-    <!-- Ostatní -->
-    <div class="t-skupina">Ostatní</div>
-    <a href="./kinetoza.html" class="t-row"><span class="t-icon">🌍</span><div><div class="t-name">Cestovní nevolnost</div><div class="t-desc">Nevolnost v autě, letadle nebo na lodi.</div></div><span class="t-arrow">→</span></a>
-    <a href="./komari.html" class="t-row"><span class="t-icon">🦟</span><div><div class="t-name">Komáři a hmyz</div><div class="t-desc">Přirozená ochrana před hmyzem bez chemie.</div></div><span class="t-arrow">→</span></a>
+      <!-- Pro děti -->
+      <div class="kat-card2">
+        <div class="kat-card2-header">
+          <span class="kat-card2-icon">⭐</span>
+          <span class="kat-card2-name">Pro děti</span>
+        </div>
+        <div class="kat-pills">
+          <a href="./imunita-deti.html" class="kat-pill">⭐ Imunita dětí</a>
+          <a href="./spanek-deti.html" class="kat-pill">🌙 Spánek dětí</a>
+        </div>
+      </div>
 
+      <!-- Ostatní — přes celou šířku -->
+      <div class="kat-card2 kat-ostatni">
+        <div class="kat-card2-header">
+          <span class="kat-card2-icon">🌍</span>
+          <span class="kat-card2-name">Ostatní</span>
+        </div>
+        <div class="kat-pills">
+          <a href="./kinetoza.html" class="kat-pill">🌍 Cestovní nevolnost</a>
+          <a href="./komari.html" class="kat-pill">🦟 Komáři a hmyz</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
