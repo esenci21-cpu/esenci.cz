@@ -36,143 +36,153 @@
   </div>
 </nav>
 
-<!-- ── Hero lišta ── -->
-<section style="background: linear-gradient(135deg, #7aa054, #9dc46e); padding: 2.5rem 1rem; text-align: center; position: relative; overflow: hidden;">
-<h1 style="color:#fff; font-family:'Playfair Display',serif; font-size:2.4rem; font-weight:700; margin:0; letter-spacing:0.02em;">Témata</h1>
-  <p style="color:rgba(255,255,255,0.82); font-size:0.95rem; margin:0.5rem 0 0; letter-spacing:0.04em;">vyberte si podle toho, co právě prožíváte</p>
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1 class="hero-title">Témata</h1>
+      <p class="hero-subtitle">která by vás mohla zajímat</p>
+      <p class="hero-desc">Vyberte si téma, které vás právě trápí nebo zajímá, a najděte přirozenou cestu zpět k sobě.</p>
+    </div>
+    <div class="hero-image">
+      <img src="./images/lahvicka.png" alt="Esenciální oleje" style="object-position: center center;">
+    </div>
+  </div>
 </section>
 
-<!-- ── Témata — karty kategorií ── -->
-<section style="padding: 2rem 0 4rem; background: #faf7f4;">
-  <div class="section-inner">
+<!-- ── Kategorie jako sekce ── -->
+<style>
+  .kat-sekce { padding: 2rem 0; }
+  .kat-sekce-inner { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+  .kat-sekce-nadpis { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+  .kat-sekce-icon { font-size: 1.5rem; }
+  .kat-sekce-name { font-weight: 700; font-size: 1.15rem; color: var(--dark); }
+  .kat-sekce-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .kat-sekce-pill { border-radius: 20px; padding: 0.35rem 0.9rem; font-size: 0.83rem; color: var(--dark); text-decoration: none; background: rgba(255,255,255,0.7); transition: background 0.15s, color 0.15s; }
+  .kat-sekce-pill:hover { background: var(--orange); color: #fff; }
+</style>
 
-    <style>
-      .kat-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-      @media (max-width: 600px) { .kat-grid2 { grid-template-columns: 1fr; } }
-      .kat-card2 { background: #fff; border-radius: 14px; padding: 1.25rem 1.4rem; box-shadow: 0 1px 6px rgba(0,0,0,0.07); }
-      .kat-card2-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.9rem; }
-      .kat-card2-icon { font-size: 1.4rem; }
-      .kat-card2-name { font-weight: 700; font-size: 1rem; color: var(--dark); }
-      .kat-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-      .kat-pill { background: #f3f0eb; border-radius: 20px; padding: 0.28rem 0.75rem; font-size: 0.78rem; color: var(--dark); text-decoration: none; transition: background 0.15s; }
-      .kat-pill:hover { background: var(--orange); color: #fff; }
-      .kat-ostatni { grid-column: 1 / -1; }
-      @media (max-width: 500px) { .kat-ostatni { grid-column: 1; } }
-    </style>
+<!-- Mysl a emoce -->
+<section class="kat-sekce" style="background:#EEF1F8;">
+  <div class="kat-sekce-inner">
+    <div class="kat-sekce-nadpis">
+      <span class="kat-sekce-icon">💭</span>
+      <span class="kat-sekce-name">Mysl a emoce</span>
+    </div>
+    <div class="kat-sekce-pills">
+      <a href="./stres.html" class="kat-sekce-pill">🌿 Stres a přetížení</a>
+      <a href="./spanek.html" class="kat-sekce-pill">🌙 Spánek a zklidnění</a>
+      <a href="./uzkost.html" class="kat-sekce-pill">🕊️ Úzkost a panika</a>
+      <a href="./deprese.html" class="kat-sekce-pill">🌧️ Deprese a smutek</a>
+      <a href="./nalada.html" class="kat-sekce-pill">😊 Nálada a radost</a>
+      <a href="./vyhori.html" class="kat-sekce-pill">🌱 Syndrom vyhoření</a>
+      <a href="./prokrastinace.html" class="kat-sekce-pill">⚡ Prokrastinace</a>
+      <a href="./zvladani-zavislosti.html" class="kat-sekce-pill">🦋 Zvládání závislosti</a>
+      <a href="./letgo.html" class="kat-sekce-pill">🔓 Pustit to a odpustit</a>
+      <a href="./meditace.html" class="kat-sekce-pill">🧘 Meditace</a>
+    </div>
+  </div>
+</section>
 
-    <div class="kat-grid2">
+<!-- Energie a výkon -->
+<section class="kat-sekce" style="background:#FFFBF0;">
+  <div class="kat-sekce-inner">
+    <div class="kat-sekce-nadpis">
+      <span class="kat-sekce-icon">☀️</span>
+      <span class="kat-sekce-name">Energie a výkon</span>
+    </div>
+    <div class="kat-sekce-pills">
+      <a href="./vice-energie.html" class="kat-sekce-pill">☀️ Více energie</a>
+      <a href="./koncentrace.html" class="kat-sekce-pill">🧠 Koncentrace</a>
+      <a href="./pamet.html" class="kat-sekce-pill">📚 Paměť a učení</a>
+      <a href="./odvaha.html" class="kat-sekce-pill">✨ Sebevědomí a odvaha</a>
+      <a href="./sport.html" class="kat-sekce-pill">💪 Sport a regenerace</a>
+    </div>
+  </div>
+</section>
 
-      <!-- Mysl a emoce -->
-      <div class="kat-card2" style="background:#EEF1F8;">
-        <div class="kat-card2-header">
-          <span class="kat-card2-icon">💭</span>
-          <span class="kat-card2-name">Mysl a emoce</span>
-        </div>
-        <div class="kat-pills">
-          <a href="./stres.html" class="kat-pill">🌿 Stres a přetížení</a>
-          <a href="./spanek.html" class="kat-pill">🌙 Spánek a zklidnění</a>
-          <a href="./uzkost.html" class="kat-pill">🕊️ Úzkost a panika</a>
-          <a href="./deprese.html" class="kat-pill">🌧️ Deprese a smutek</a>
-          <a href="./nalada.html" class="kat-pill">😊 Nálada a radost</a>
-          <a href="./vyhori.html" class="kat-pill">🌱 Syndrom vyhoření</a>
-          <a href="./prokrastinace.html" class="kat-pill">⚡ Prokrastinace</a>
-          <a href="./zvladani-zavislosti.html" class="kat-pill">🦋 Zvládání závislosti</a>
-          <a href="./letgo.html" class="kat-pill">🔓 Pustit to a odpustit</a>
-          <a href="./meditace.html" class="kat-pill">🧘 Meditace</a>
-        </div>
-      </div>
+<!-- Tělo a zdraví -->
+<section class="kat-sekce" style="background:#F0FAF5;">
+  <div class="kat-sekce-inner">
+    <div class="kat-sekce-nadpis">
+      <span class="kat-sekce-icon">🌿</span>
+      <span class="kat-sekce-name">Tělo a zdraví</span>
+    </div>
+    <div class="kat-sekce-pills">
+      <a href="./bolest.html" class="kat-sekce-pill">🫶 Bolest</a>
+      <a href="./imunita.html" class="kat-sekce-pill">🛡️ Imunita</a>
+      <a href="./nachladeni.html" class="kat-sekce-pill">🤧 Nachlazení</a>
+      <a href="./dychani.html" class="kat-sekce-pill">🌬️ Dýchání</a>
+      <a href="./alergie.html" class="kat-sekce-pill">🌸 Alergie</a>
+      <a href="./traveni.html" class="kat-sekce-pill">🌿 Trávení</a>
+      <a href="./artritida.html" class="kat-sekce-pill">🦴 Artritida a klouby</a>
+      <a href="./sinusitida.html" class="kat-sekce-pill">👃 Sinusitida</a>
+      <a href="./herpes.html" class="kat-sekce-pill">💊 Herpes a afty</a>
+      <a href="./jizvy.html" class="kat-sekce-pill">🌟 Jizvy a strie</a>
+      <a href="./jatra.html" class="kat-sekce-pill">🌱 Játra a žlučník</a>
+      <a href="./detoxikace.html" class="kat-sekce-pill">🍃 Detoxikace</a>
+    </div>
+  </div>
+</section>
 
-      <!-- Energie a výkon -->
-      <div class="kat-card2" style="background:#FFFBF0;">
-        <div class="kat-card2-header">
-          <span class="kat-card2-icon">☀️</span>
-          <span class="kat-card2-name">Energie a výkon</span>
-        </div>
-        <div class="kat-pills">
-          <a href="./vice-energie.html" class="kat-pill">☀️ Více energie</a>
-          <a href="./koncentrace.html" class="kat-pill">🧠 Koncentrace</a>
-          <a href="./pamet.html" class="kat-pill">📚 Paměť a učení</a>
-          <a href="./odvaha.html" class="kat-pill">✨ Sebevědomí a odvaha</a>
-          <a href="./sport.html" class="kat-pill">💪 Sport a regenerace</a>
-        </div>
-      </div>
+<!-- Žena -->
+<section class="kat-sekce" style="background:#FBF2F5;">
+  <div class="kat-sekce-inner">
+    <div class="kat-sekce-nadpis">
+      <span class="kat-sekce-icon">🌸</span>
+      <span class="kat-sekce-name">Žena</span>
+    </div>
+    <div class="kat-sekce-pills">
+      <a href="./zensky-cyklus.html" class="kat-sekce-pill">🌸 Ženský cyklus</a>
+      <a href="./hormony.html" class="kat-sekce-pill">⚖️ Hormony a rovnováha</a>
+      <a href="./menopauza.html" class="kat-sekce-pill">🌺 Menopauza</a>
+      <a href="./tehotenstvi.html" class="kat-sekce-pill">🤰 Těhotenství</a>
+      <a href="./zenska-energie.html" class="kat-sekce-pill">🦋 Ženská energie</a>
+      <a href="./vztahy.html" class="kat-sekce-pill">❤️ Vztahy a láska</a>
+    </div>
+  </div>
+</section>
 
-      <!-- Tělo a zdraví -->
-      <div class="kat-card2" style="background:#F0FAF5;">
-        <div class="kat-card2-header">
-          <span class="kat-card2-icon">🌿</span>
-          <span class="kat-card2-name">Tělo a zdraví</span>
-        </div>
-        <div class="kat-pills">
-          <a href="./bolest.html" class="kat-pill">🫶 Bolest</a>
-          <a href="./imunita.html" class="kat-pill">🛡️ Imunita</a>
-          <a href="./nachladeni.html" class="kat-pill">🤧 Nachlazení</a>
-          <a href="./dychani.html" class="kat-pill">🌬️ Dýchání</a>
-          <a href="./alergie.html" class="kat-pill">🌸 Alergie</a>
-          <a href="./traveni.html" class="kat-pill">🌿 Trávení</a>
-          <a href="./artritida.html" class="kat-pill">🦴 Artritida a klouby</a>
-          <a href="./sinusitida.html" class="kat-pill">👃 Sinusitida</a>
-          <a href="./herpes.html" class="kat-pill">💊 Herpes a afty</a>
-          <a href="./jizvy.html" class="kat-pill">🌟 Jizvy a strie</a>
-          <a href="./jatra.html" class="kat-pill">🌱 Játra a žlučník</a>
-          <a href="./detoxikace.html" class="kat-pill">🍃 Detoxikace</a>
-        </div>
-      </div>
+<!-- Péče o sebe -->
+<section class="kat-sekce" style="background:#F5F0FB;">
+  <div class="kat-sekce-inner">
+    <div class="kat-sekce-nadpis">
+      <span class="kat-sekce-icon">✨</span>
+      <span class="kat-sekce-name">Péče o sebe</span>
+    </div>
+    <div class="kat-sekce-pills">
+      <a href="./vlasy.html" class="kat-sekce-pill">💇 Vlasy</a>
+      <a href="./pece-o-plet.html" class="kat-sekce-pill">✨ Kůže a pleť</a>
+      <a href="./pece-o-zuby.html" class="kat-sekce-pill">🦷 Péče o zuby</a>
+      <a href="./joga.html" class="kat-sekce-pill">🧘 Jóga a čakry</a>
+    </div>
+  </div>
+</section>
 
-      <!-- Žena -->
-      <div class="kat-card2" style="background:#FBF2F5;">
-        <div class="kat-card2-header">
-          <span class="kat-card2-icon">🌸</span>
-          <span class="kat-card2-name">Žena</span>
-        </div>
-        <div class="kat-pills">
-          <a href="./zensky-cyklus.html" class="kat-pill">🌸 Ženský cyklus</a>
-          <a href="./hormony.html" class="kat-pill">⚖️ Hormony a rovnováha</a>
-          <a href="./menopauza.html" class="kat-pill">🌺 Menopauza</a>
-          <a href="./tehotenstvi.html" class="kat-pill">🤰 Těhotenství</a>
-          <a href="./zenska-energie.html" class="kat-pill">🦋 Ženská energie</a>
-          <a href="./vztahy.html" class="kat-pill">❤️ Vztahy a láska</a>
-        </div>
-      </div>
+<!-- Pro děti -->
+<section class="kat-sekce" style="background:#FDF8EE;">
+  <div class="kat-sekce-inner">
+    <div class="kat-sekce-nadpis">
+      <span class="kat-sekce-icon">⭐</span>
+      <span class="kat-sekce-name">Pro děti</span>
+    </div>
+    <div class="kat-sekce-pills">
+      <a href="./imunita-deti.html" class="kat-sekce-pill">⭐ Imunita dětí</a>
+      <a href="./spanek-deti.html" class="kat-sekce-pill">🌙 Spánek dětí</a>
+    </div>
+  </div>
+</section>
 
-      <!-- Péče o sebe -->
-      <div class="kat-card2" style="background:#F5F0FB;">
-        <div class="kat-card2-header">
-          <span class="kat-card2-icon">✨</span>
-          <span class="kat-card2-name">Péče o sebe</span>
-        </div>
-        <div class="kat-pills">
-          <a href="./vlasy.html" class="kat-pill">💇 Vlasy</a>
-          <a href="./pece-o-plet.html" class="kat-pill">✨ Kůže a pleť</a>
-          <a href="./pece-o-zuby.html" class="kat-pill">🦷 Péče o zuby</a>
-          <a href="./joga.html" class="kat-pill">🧘 Jóga a čakry</a>
-        </div>
-      </div>
-
-      <!-- Pro děti -->
-      <div class="kat-card2" style="background:#FDF8EE;">
-        <div class="kat-card2-header">
-          <span class="kat-card2-icon">⭐</span>
-          <span class="kat-card2-name">Pro děti</span>
-        </div>
-        <div class="kat-pills">
-          <a href="./imunita-deti.html" class="kat-pill">⭐ Imunita dětí</a>
-          <a href="./spanek-deti.html" class="kat-pill">🌙 Spánek dětí</a>
-        </div>
-      </div>
-
-      <!-- Ostatní — přes celou šířku -->
-      <div class="kat-card2 kat-ostatni" style="background:#F3F6EE;">
-        <div class="kat-card2-header">
-          <span class="kat-card2-icon">🌍</span>
-          <span class="kat-card2-name">Ostatní</span>
-        </div>
-        <div class="kat-pills">
-          <a href="./kinetoza.html" class="kat-pill">🌍 Cestovní nevolnost</a>
-          <a href="./komari.html" class="kat-pill">🦟 Komáři a hmyz</a>
-        </div>
-      </div>
-
+<!-- Ostatní -->
+<section class="kat-sekce" style="background:#F3F6EE;">
+  <div class="kat-sekce-inner">
+    <div class="kat-sekce-nadpis">
+      <span class="kat-sekce-icon">🌍</span>
+      <span class="kat-sekce-name">Ostatní</span>
+    </div>
+    <div class="kat-sekce-pills">
+      <a href="./kinetoza.html" class="kat-sekce-pill">🌍 Cestovní nevolnost</a>
+      <a href="./komari.html" class="kat-sekce-pill">🦟 Komáři a hmyz</a>
     </div>
   </div>
 </section>
