@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Průvodkyně — Esenci.cz</title>
+  <meta name="description" content="Jmenuji se Rita a esenciální oleje jsou součástí mého každodenního života. Zjistěte, proč věřím produktům BEWIT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d27b85f2-d2a8-42a9-81e3-b542b755bde2"></script>
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="./index.html" class="logo">
+      <span class="logo-main">Esence</span>
+      <span class="logo-sub">z přírody</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html">Úvod</a></li>
+        <li><a href="./temata.html">Témata</a></li>
+        <li><a href="./jak-pouzivat.html">Jak používat</a></li>
+      </ul>
+      <a href="https://mybewit.com/r/3fqlzp0xrllj7" target="_blank" rel="noopener" title="Registrace zdarma — slevy až 50 % na vybrané produkty" style="margin-left:1rem; background:var(--orange); color:#fff; padding:0.3rem 0.75rem; border-radius:20px; font-size:0.78rem; text-decoration:none; white-space:nowrap; font-weight:500;">Výhody BEWIT →</a>
+      <a href="./index.html" class="btn-back" style="margin-left:1rem;">← Zpět na úvod</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Průvodkyně ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1 class="hero-title">Průvodkyně světem esencí</h1>
+      <p class="hero-subtitle">Jmenuji se Rita</p>
+      <p class="hero-desc">
+        Esenciální oleje jsou součástí mého každodenního života už několik let.
+        Používám je doma, v práci i na cestách — a čím víc jsem je poznávala,
+        tím víc mi dávaly smysl.
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="./images/foto-pruvodce.png" alt="Rita — průvodkyně světem esencí" style="object-position: center center;">
+    </div>
+  </div>
+</section>
+
+<!-- ── Příběh ── -->
+<section class="poznamka">
+  <div class="poznamka-inner">
+    <div>
+      <div class="poznamka-icon">🌿</div>
+      <p class="poznamka-text">
+        Produkty od BEWIT doporučuji proto, že jim skutečně věřím.
+        A ta důvěra nevznikla jen z katalogu — osobně jsem navštívila
+        jejich zázemí v Ostravě. Prošla jsem sklady i výrobou a viděla
+        na vlastní oči, jak péče o kvalitu vypadá v praxi.
+        <br><br>
+        <strong>100 % přírodní, 0 % chemie</strong> — to není jen slogan.
+        To je přístup, který jsem si ověřila.
+        <br><br>
+        Tento průvodce vznikl proto, abyste nemuseli hledat tak dlouho jako já.
+        Jednoduše, přehledně, bez zbytečných složitostí.
+      </p>
+    </div>
+    <div class="poznamka-img">
+      <img src="./images/foto-pruvodce.png" alt="Rita — průvodkyně světem esencí" style="object-position: center top;">
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="footer-botanical">🌿 ✦ 🌸 ✦ 🌿</div>
+  <p class="footer-quote">„Tady nejde o výkon ani dokonalost. Jen o návrat k sobě."</p>
+  <p class="footer-heart">♥</p>
+  <p class="footer-copy">© 2026 esenci.cz</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>
