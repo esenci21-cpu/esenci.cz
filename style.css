@@ -236,7 +236,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ── Naučte se ── */
 .naucte {
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   background: var(--cream);
 }
 .naucte-inner {
@@ -245,7 +245,7 @@ a { text-decoration: none; color: inherit; }
   padding: 0 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
 }
 .naucte-title {
