@@ -404,7 +404,7 @@ a { text-decoration: none; color: inherit; }
 .vyber-name {
   font-family: var(--font-h);
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: var(--dark);
 }
 .vyber-desc {
