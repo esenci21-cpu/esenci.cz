@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Esenci.cz</title>
+  <meta name="description" content="Články o esenciálních olejích — tipy, zkušenosti a rady pro každodenní použití přírodních esencí.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d27b85f2-d2a8-42a9-81e3-b542b755bde2"></script>
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="./index.html" class="logo">
+      <span class="logo-main">Esence</span>
+      <span class="logo-sub">z přírody</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html">Úvod</a></li>
+        <li><a href="./temata.html">Témata</a></li>
+        <li><a href="./jak-pouzivat.html">Jak používat</a></li>
+        <li><a href="./pruvodce.html">Průvodkyně</a></li>
+        <li><a href="./blog.html" class="active">Blog</a></li>
+      </ul>
+      <a href="https://mybewit.com/r/3fqlzp0xrllj7" target="_blank" rel="noopener" title="Registrace zdarma — slevy až 50 % na vybrané produkty" style="margin-left:1rem; background:var(--orange); color:#fff; padding:0.3rem 0.75rem; border-radius:20px; font-size:0.78rem; text-decoration:none; white-space:nowrap; font-weight:500;">Výhody BEWIT →</a>
+      <a href="./index.html" class="btn-back" style="margin-left:1rem;">← Zpět na úvod</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1 class="hero-title">Blog</h1>
+      <p class="hero-subtitle">tipy, zkušenosti a průvodce světem esencí</p>
+      <p class="hero-desc">
+        Zde sdílím vše, co jsem se o esenciálních olejích naučila —
+        od představení jednotlivých olejů až po praktické tipy pro každodenní život.
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="./images/blog.jpg" alt="Blog o esenciálních olejích" style="object-position: center center;">
+    </div>
+  </div>
+</section>
+
+<!-- ── Články ── -->
+<section style="padding: 3rem 0; background: #fff;">
+  <div class="section-inner" style="max-width: 720px;">
+
+    <!-- Článek: BEWIT -->
+    <a href="./bewit.html" style="text-decoration: none; color: inherit;">
+      <div style="display: flex; gap: 1.25rem; align-items: flex-start; padding: 1.5rem 0; border-bottom: 1px solid #e0d9d0;" onmouseover="this.style.background='#faf8f5'" onmouseout="this.style.background='none'">
+        <div style="font-size: 2rem; min-width: 3rem; text-align: center;">🌿</div>
+        <div>
+          <p style="font-size: 0.78rem; color: var(--orange); font-weight: 500; margin: 0 0 0.25rem;">O značce · květen 2026</p>
+          <h2 style="font-size: 1.1rem; color: var(--dark); margin: 0 0 0.4rem; font-family: 'Playfair Display', serif;">Proč doporučuji BEWIT</h2>
+          <p style="font-size: 0.92rem; color: var(--text-light); line-height: 1.6; margin: 0 0 0.5rem;">Česká firma z Ostravy, 100% přírodní oleje a kvalita, které věřím už 3 roky.</p>
+          <p style="font-size: 0.82rem; color: var(--orange); font-weight: 500; margin: 0;">Číst článek →</p>
+        </div>
+      </div>
+    </a>
+
+    <!-- Připravujeme -->
+    <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 2rem; text-align: center;">
+      Další články připravuji — sledujte nás!
+    </p>
+
+  </div>
+</section>
+
+<!-- ── BEWIT ── -->
+<section style="background:#f0f5ec; padding:2.5rem 0 1.5rem;">
+  <div class="section-inner" style="text-align:center;">
+    <p style="font-size:1.05rem; color:var(--dark); max-width:540px; margin:0 auto; line-height:1.6;">
+      🌿 Všechny esence, které na tomto webu doporučuji, jsou od BEWIT.
+      Jako registrovaný zákazník můžete nakupovat se slevou <strong>až 50 %</strong> na vybrané produkty.
+    </p>
+    <a href="https://mybewit.com/r/3fqlzp0xrllj7" target="_blank" rel="noopener"
+       style="display:inline-block; margin-top:0.75rem; color:var(--orange); font-size:0.9rem; text-decoration:underline; font-weight:500;">
+      Registrace u BEWIT zdarma →
+    </a>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="footer-botanical">🌿 ✦ 🌸 ✦ 🌿</div>
+  <p class="footer-quote">„Tady nejde o výkon ani dokonalost. Jen o návrat k sobě."</p>
+  <p class="footer-heart">♥</p>
+  <p class="footer-copy">© 2026 esenci.cz</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>
