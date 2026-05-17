@@ -1,0 +1,2002 @@
+[
+  {
+    "name": "Andělika lékařská",
+    "typ": "olej",
+    "popis": "Ochrana, uvolnění, stabilita, očista, duchovní síla"
+  },
+  {
+    "name": "Anýz",
+    "typ": "olej",
+    "popis": "Trávení, uvolnění, ženský cyklus, zklidnění, energie"
+  },
+  {
+    "name": "Akácie",
+    "typ": "olej",
+    "popis": "Akácie je spojována s vnitřní"
+  },
+  {
+    "name": "Aksamitník rozkladitý",
+    "typ": "olej",
+    "popis": "Očista, paraziti, pokožka, ochrana, zklidnění"
+  },
+  {
+    "name": "Alpinie",
+    "typ": "olej",
+    "popis": "Alpinie podporuje proudění"
+  },
+  {
+    "name": "Amyris",
+    "typ": "olej",
+    "popis": "Klid, hloubka, meditace, uzemnění, uvolnění"
+  },
+  {
+    "name": "Badyán pravý",
+    "typ": "olej",
+    "popis": "Trávení, imunita, ženská síla, uvolnění, vnitřní teplo"
+  },
+  {
+    "name": "Bay St. Thomas",
+    "typ": "olej",
+    "popis": "Mužská síla, oheň, tonizace, jasnost, povzbuzení"
+  },
+  {
+    "name": "Bazalka kafrová",
+    "typ": "olej",
+    "popis": "Prokrvení, očista, svaly, nachlazení, stimulace"
+  },
+  {
+    "name": "Bazalka pravá",
+    "typ": "olej",
+    "popis": "Jasnost, koncentrace, svěžest, nervy, úleva"
+  },
+  {
+    "name": "Benzoin",
+    "typ": "olej",
+    "popis": "Klid, výživa, stabilita, zahojení, útěcha"
+  },
+  {
+    "name": "Bergamot",
+    "typ": "olej",
+    "popis": "Uvolnění, lehkost, radost, tok energie, emoční obnova"
+  },
+  {
+    "name": "Borovice banksová",
+    "typ": "olej",
+    "popis": "Očista, dýchání, vitalita, čerstvost, imunita"
+  },
+  {
+    "name": "Borovice lesní",
+    "typ": "olej",
+    "popis": "Sebevědomí, očista, vitalita, dech, pozitivita"
+  },
+  {
+    "name": "Cedr atlaský",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, mužská síla, detoxikace, ochrana"
+  },
+  {
+    "name": "Cedr himálajský",
+    "typ": "olej",
+    "popis": "Síla, stabilita, uzemnění, očista, odolnost"
+  },
+  {
+    "name": "Celer – semena",
+    "typ": "olej",
+    "popis": "Očista, klouby, detoxikace, trávení, rovnováha"
+  },
+  {
+    "name": "Citron",
+    "typ": "olej",
+    "popis": "Osvěžení, očista, jasnost, důvěra, povzbuzení"
+  },
+  {
+    "name": "Citronela",
+    "typ": "olej",
+    "popis": "Ochrana, očista, uvolnění, repelent, svěžest"
+  },
+  {
+    "name": "Citronová tráva",
+    "typ": "olej",
+    "popis": "Očista, energie, rovnováha, regenerace, osvěžení"
+  },
+  {
+    "name": "Copaiba",
+    "typ": "olej",
+    "popis": "Klid, úleva, regenerace, protizánět, vyrovnání"
+  },
+  {
+    "name": "Cubeb – pepř kubebový",
+    "typ": "olej",
+    "popis": "Očista, dýchání, mužská síla, vylučování, povzbuzení"
+  },
+  {
+    "name": "Cypriol",
+    "typ": "olej",
+    "popis": "Očista, uzemnění, detoxikace, klid, rovnováha"
+  },
+  {
+    "name": "Cypřiš",
+    "typ": "olej",
+    "popis": "Přechod, stabilita, obnova, očista, tok"
+  },
+  {
+    "name": "Česnek",
+    "typ": "olej",
+    "popis": "Imunita, očista, antiparazit, vitalita, odvaha"
+  },
+  {
+    "name": "Drmek",
+    "typ": "olej",
+    "popis": "Hormonální rovnováha, ženský cyklus, klid, přijetí, víra"
+  },
+  {
+    "name": "Elemi",
+    "typ": "olej",
+    "popis": "Jasnost, dech, meditace, klid, regenerace"
+  },
+  {
+    "name": "Eukalyptus",
+    "typ": "olej",
+    "popis": "Volnost, dech, očista, vitalita, otevřenost"
+  },
+  {
+    "name": "Eukalyptus blue",
+    "typ": "olej",
+    "popis": "Dech, imunita, jasnost, ochrana, svěžest"
+  },
+  {
+    "name": "Eukalyptus camaldulensis",
+    "typ": "olej",
+    "popis": "Očista, vitalita, dýchání, ochrana, svěžest"
+  },
+  {
+    "name": "Eukalyptus staigeriana",
+    "typ": "olej",
+    "popis": "Lehkost, radost, dech, očista, jemnost"
+  },
+  {
+    "name": "Eukalyptus radiata",
+    "typ": "olej",
+    "popis": "Jemnost, dýchání, imunita, uvolnění, bezpečí"
+  },
+  {
+    "name": "Fenykl",
+    "typ": "olej",
+    "popis": "Sebevyjádření, trávení, proudění, rovnováha, ženská"
+  },
+  {
+    "name": "Fenykl sladký",
+    "typ": "olej",
+    "popis": "Trávení, očista, ženskost, jasnost, odvaha"
+  },
+  {
+    "name": "Galbanum",
+    "typ": "olej",
+    "popis": "Hloubka, uvolnění, propojení, harmonie,"
+  },
+  {
+    "name": "Galgán",
+    "typ": "olej",
+    "popis": "Trávení, vitalita, prohřátí, aktivace, obranyschopnost"
+  },
+  {
+    "name": "Geranium bourbon",
+    "typ": "olej",
+    "popis": "Ženskost, srdce, rovnováha, harmonie, jemnost"
+  },
+  {
+    "name": "Ginger lily - zázvorová lilie",
+    "typ": "olej",
+    "popis": "Jemnost, klid, ženskost, harmonie, dech"
+  },
+  {
+    "name": "Grapefruit",
+    "typ": "olej",
+    "popis": "Lehkost, detoxikace, osvěžení, radost, metabolismus"
+  },
+  {
+    "name": "Gurjum balsam",
+    "typ": "olej",
+    "popis": "Dýchání, uzemnění, klid, regenerace, ochrana"
+  },
+  {
+    "name": "Heřmánek pravý",
+    "typ": "olej",
+    "popis": "Klid, přijetí, regenerace, jemnost, uvolnění"
+  },
+  {
+    "name": "Hinoki",
+    "typ": "olej",
+    "popis": "Klid, posvátnost, očista, stabilita, ticho"
+  },
+  {
+    "name": "Hřebíček",
+    "typ": "olej",
+    "popis": "Síla, ochrana, prohřátí, imunita, stabilita"
+  },
+  {
+    "name": "Chmel",
+    "typ": "olej",
+    "popis": "Uvolnění, ženskost, spánek, hormonální rovnováha, klid"
+  },
+  {
+    "name": "Ibiškovec pižmový –",
+    "typ": "olej",
+    "popis": "Smyslnost, uvolnění, klid, harmonie, spojení"
+  },
+  {
+    "name": "Jalovec",
+    "typ": "olej",
+    "popis": "Očista, volnost, odvaha, prostor, nový začátek"
+  },
+  {
+    "name": "Jasmín",
+    "typ": "olej",
+    "popis": "Radost, intuice, tvořivost, ženskost, harmonie"
+  },
+  {
+    "name": "Jedle balzámová",
+    "typ": "olej",
+    "popis": "Klid, dech, čistota, duchovní síla, úleva"
+  },
+  {
+    "name": "Jedle sibiřská",
+    "typ": "olej",
+    "popis": "Čistota, dech, jasnost, vitalita, lehkost"
+  },
+  {
+    "name": "Kadidlo carterii",
+    "typ": "olej",
+    "popis": "Klid, duch, víra, posvátnost, dýchání"
+  },
+  {
+    "name": "Kadidlo sacra",
+    "typ": "olej",
+    "popis": "Duch, světlo, čistota, přítomnost, posvátnost"
+  },
+  {
+    "name": "Kadidlo frereana",
+    "typ": "olej",
+    "popis": "Odvaha, povznesení, světlo, ochrana, jasnost"
+  },
+  {
+    "name": "Kadidlo serrata",
+    "typ": "olej",
+    "popis": "Klid, spojení, regenerace, spiritualita, posvátnost"
+  },
+  {
+    "name": "Kafrovník (ravintsara)",
+    "typ": "olej",
+    "popis": "Očista, síla, imunita, volnost, rovnováha"
+  },
+  {
+    "name": "Kardamom",
+    "typ": "olej",
+    "popis": "Chuť do života, rovnováha, zažehnutí, spokojenost,"
+  },
+  {
+    "name": "Klementinka",
+    "typ": "olej",
+    "popis": "Radost, lehkost, uvolnění, hravost, optimismus"
+  },
+  {
+    "name": "Kmín koptský",
+    "typ": "olej",
+    "popis": "Trávení, očista, síla, prohřátí, odvaha"
+  },
+  {
+    "name": "Kmín kořenný",
+    "typ": "olej",
+    "popis": "Klid, trávení, uvolnění, vřelost, důvěra"
+  },
+  {
+    "name": "Kmín římský",
+    "typ": "olej",
+    "popis": "Odhodlání, vitalita, zažehnutí, vytrvalost, jistota"
+  },
+  {
+    "name": "Kopaiva",
+    "typ": "olej",
+    "popis": "Klid, regenerace, úleva, protizánět, bezpečí"
+  },
+  {
+    "name": "Kopál vonný (Palo Santo)",
+    "typ": "olej",
+    "popis": "Očista, duch, vnitřní ticho, ochrana, rovnováha"
+  },
+  {
+    "name": "Kopr",
+    "typ": "olej",
+    "popis": "Klid, trávení, jemnost, uvolnění, důvěra"
+  },
+  {
+    "name": "Koriandr",
+    "typ": "olej",
+    "popis": "Klid, tvořivost, stabilita, radost, zažívání"
+  },
+  {
+    "name": "Kozlík lékařský",
+    "typ": "olej",
+    "popis": "Klid, útlum, uvolnění, regenerace, vyrovnání"
+  },
+  {
+    "name": "Kurkuma – kořen",
+    "typ": "olej",
+    "popis": "Očista, síla, protizánět, světlo, vitalita"
+  },
+  {
+    "name": "Kurkuma zedoary",
+    "typ": "olej",
+    "popis": "Očista, odvaha, hojení, síla, zažívání"
+  },
+  {
+    "name": "Labdanum",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, hloubka, ženská síla, uzdravení"
+  },
+  {
+    "name": "Lavandin",
+    "typ": "olej",
+    "popis": "Klid, očista, pohyb, síla, stabilita"
+  },
+  {
+    "name": "Levandule lékařská",
+    "typ": "olej",
+    "popis": "Klid, sebevyjádření, regenerace, rovnováha, bezpečí"
+  },
+  {
+    "name": "Levandule spike",
+    "typ": "olej",
+    "popis": "Dech, síla, odvaha, očista, uvolnění"
+  },
+  {
+    "name": "Libavka",
+    "typ": "olej",
+    "popis": "Úleva, pohyb, prohřátí, uvolnění, regenerace"
+  },
+  {
+    "name": "Libora měnivá",
+    "typ": "olej",
+    "popis": "Změna, odvaha, očista, vnitřní přechod, stabilizace"
+  },
+  {
+    "name": "Limetka",
+    "typ": "olej",
+    "popis": "Radost, svěžest, odvaha, očista, lehkost"
+  },
+  {
+    "name": "Litsea cubeba",
+    "typ": "olej",
+    "popis": "Jasnost, radost, lehkost, svěžest, přítomnost."
+  },
+  {
+    "name": "Majoránka zahradní",
+    "typ": "olej",
+    "popis": "Uvolnění, soucit, srdečnost, klid, vyrovnání"
+  },
+  {
+    "name": "Mandarinka",
+    "typ": "olej",
+    "popis": "Radost, hravost, uvolnění, vnitřní dítě, lehkost"
+  },
+  {
+    "name": "Mandle hořká",
+    "typ": "olej",
+    "popis": "Klid, jemnost, důvěra, uvolnění, sladké uzdravení"
+  },
+  {
+    "name": "Manuka",
+    "typ": "olej",
+    "popis": "Ochrana, síla, očista, imunita, rovnováha"
+  },
+  {
+    "name": "Massoia",
+    "typ": "olej",
+    "popis": "Dotek, vřelost, ženskost, sladkost, péče"
+  },
+  {
+    "name": "Meduňka lékařská",
+    "typ": "olej",
+    "popis": "Mír, srdce, uvolnění, stabilita, ztišení"
+  },
+  {
+    "name": "Máta peprná",
+    "typ": "olej",
+    "popis": "Osvěžení, bdělost, proudění, koncentrace, uvolnění"
+  },
+  {
+    "name": "Myrha",
+    "typ": "olej",
+    "popis": "Hloubka, uzemnění, ztišení, hojení, duchovní spojení"
+  },
+  {
+    "name": "Nard (jatamansi)",
+    "typ": "olej",
+    "popis": "Hlubina, usebrání, klid, přijetí, duchovní integrace"
+  },
+  {
+    "name": "Neroli",
+    "typ": "olej",
+    "popis": "Něha, přijetí, radost, rovnováha, otevřenost"
+  },
+  {
+    "name": "Pačuli",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, smyslnost, regenerace, přijetí"
+  },
+  {
+    "name": "Pelargonie růžová",
+    "typ": "olej",
+    "popis": "Rovnováha, jemnost, srdečnost, ženskost, stabilita"
+  },
+  {
+    "name": "Pomeranč sladký",
+    "typ": "olej",
+    "popis": "Radost, uvolnění, optimismus, důvěra, dětská lehkost"
+  },
+  {
+    "name": "Puškvorec",
+    "typ": "olej",
+    "popis": "Koncentrace, mysl, trávení, uzemnění, mentální síla"
+  },
+  {
+    "name": "Růže damašská",
+    "typ": "olej",
+    "popis": "Láska, přijetí, hojivost, něha, ženská esence"
+  },
+  {
+    "name": "Santalové dřevo",
+    "typ": "olej",
+    "popis": "Ticho, meditace, soustředění, klid, duchovní spojení"
+  },
+  {
+    "name": "Skořice pravá (kůra)",
+    "typ": "olej",
+    "popis": "Vášeň, teplo, aktivace, energie, odvaha"
+  },
+  {
+    "name": "Šalvěj lékařská",
+    "typ": "olej",
+    "popis": "Jasnost, očista, síla, ženská rovnováha, transformace"
+  },
+  {
+    "name": "Tea tree",
+    "typ": "olej",
+    "popis": "Očista, ochrana, imunita, síla, bdělost"
+  },
+  {
+    "name": "Tulsi (bazalka posvátná)",
+    "typ": "olej",
+    "popis": "Očista, víra, ochrana, povznesení, vitalita"
+  },
+  {
+    "name": "Tymián obecný",
+    "typ": "olej",
+    "popis": "Síla, odvaha, očista, imunita, prodyšnost"
+  },
+  {
+    "name": "Vanilka",
+    "typ": "olej",
+    "popis": "Klid, útěcha, něha, sladkost, důvěra"
+  },
+  {
+    "name": "Vetiver",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, ochrana, klid, hloubka"
+  },
+  {
+    "name": "Vratič modrý",
+    "typ": "olej",
+    "popis": "Zánět, klid, alergie, pokožka, jemnost"
+  },
+  {
+    "name": "Ylang-ylang",
+    "typ": "olej",
+    "popis": "Radost, uvolnění, smyslnost, srdce, rovnováha"
+  },
+  {
+    "name": "Zázvor",
+    "typ": "olej",
+    "popis": "Odvaha, zahřátí, aktivace, trávení, odhodlání"
+  },
+  {
+    "name": "33",
+    "fullname": "33",
+    "typ": "smes",
+    "popis": "Univerzální směs s mimořádně širokým spektrem použití"
+  },
+  {
+    "name": "3S",
+    "fullname": "3 seconds",
+    "typ": "smes",
+    "popis": "Rychlá povzbuzující směs pro"
+  },
+  {
+    "name": "A-PAR",
+    "fullname": "Anti parasite",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při očistě organismu od"
+  },
+  {
+    "name": "AFRODITE",
+    "fullname": "Afrodite",
+    "typ": "smes",
+    "popis": "Směs věnovaná ženské kráse, přitažlivosti a smyslnosti"
+  },
+  {
+    "name": "AG",
+    "fullname": "Anti-aging",
+    "typ": "smes",
+    "popis": "Prémiová směs pro regeneraci, výživu a omlazení pokožky"
+  },
+  {
+    "name": "ALG",
+    "fullname": "Allergie",
+    "typ": "smes",
+    "popis": "Směs vytvořená pro úlevu při alergických"
+  },
+  {
+    "name": "AMOR",
+    "fullname": "Amor",
+    "typ": "smes",
+    "popis": "Jemná, hluboká směs vytvořená pro otevření"
+  },
+  {
+    "name": "ANCAN",
+    "fullname": "Anti candida",
+    "typ": "smes",
+    "popis": "Silná funkční směs zaměřená na podporu při přemnožení"
+  },
+  {
+    "name": "ANE",
+    "fullname": "Anemia",
+    "typ": "smes",
+    "popis": "Směs určená pro podporu při"
+  },
+  {
+    "name": "ANGEL",
+    "fullname": "Angel",
+    "typ": "smes",
+    "popis": "Jemná parfémová směs inspirovaná andělskou energií"
+  },
+  {
+    "name": "ANTIS",
+    "fullname": "Antistress",
+    "typ": "smes",
+    "popis": "Oblíbená směs zaměřená na stres, napětí a emoční přetížení"
+  },
+  {
+    "name": "AST",
+    "fullname": "Asthma",
+    "typ": "smes",
+    "popis": "Směs vytvořená pro podporu při astmatických"
+  },
+  {
+    "name": "AURA",
+    "fullname": "Aura",
+    "typ": "smes",
+    "popis": "Jemný harmonizační parfém určený pro každodenní očistu a"
+  },
+  {
+    "name": "BABY SLEEP",
+    "fullname": "Baby sleep",
+    "typ": "smes",
+    "popis": "Jemná a bezpečná směs vytvořená speciálně pro podporu"
+  },
+  {
+    "name": "BALANCE",
+    "fullname": "Balance",
+    "typ": "smes",
+    "popis": "Harmonizační směs vytvořená pro stabilizaci"
+  },
+  {
+    "name": "BALZE",
+    "fullname": "By alzheimer",
+    "typ": "smes",
+    "popis": "Podpůrná směs vytvořená pro osoby s Alzheimerovou"
+  },
+  {
+    "name": "BEST FRIEND",
+    "fullname": "Best friend",
+    "typ": "smes",
+    "popis": "Univerzální jemná první pomoc pro tělo i duši"
+  },
+  {
+    "name": "BLUE DIAMOND",
+    "fullname": "Blue diamond",
+    "typ": "smes",
+    "popis": "Luxusní parfémová kompozice s duchovní hloubkou"
+  },
+  {
+    "name": "BO",
+    "fullname": "Bone",
+    "typ": "smes",
+    "popis": "Specializovaná směs zaměřená na regeneraci"
+  },
+  {
+    "name": "BODYGUARD",
+    "fullname": "Bodyguard",
+    "typ": "smes",
+    "popis": "Intenzivní ochranná směs fungující jako přírodní štít proti"
+  },
+  {
+    "name": "BREAST PLUS",
+    "fullname": "Breast plus",
+    "typ": "smes",
+    "popis": "Jemná"
+  },
+  {
+    "name": "BREATH",
+    "fullname": "Breath",
+    "typ": "smes",
+    "popis": "Jeden z největších bestsellerů – silná a komplexní směs pro"
+  },
+  {
+    "name": "BREF",
+    "fullname": "Breast-feeding",
+    "typ": "smes",
+    "popis": "Jemná směs pro podporu přirozené tvorby mateřského mléka"
+  },
+  {
+    "name": "BRO",
+    "fullname": "Bronchitis",
+    "typ": "smes",
+    "popis": "Směs vhodná při akutních i chronických zánětech dýchacích"
+  },
+  {
+    "name": "BRUISES",
+    "fullname": "Bruises",
+    "typ": "smes",
+    "popis": "Směs určená k podpoře při"
+  },
+  {
+    "name": "BULCE",
+    "fullname": "By ulcers",
+    "typ": "smes",
+    "popis": "Směs zaměřená na žaludeční vředy a podrážděný žaludek"
+  },
+  {
+    "name": "BUNI",
+    "fullname": "Bunion",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při vybočeném palci (hallux"
+  },
+  {
+    "name": "BYD",
+    "fullname": "By diarrhea",
+    "typ": "smes",
+    "popis": "Směs na podporu při akutním i chronickém průjmu"
+  },
+  {
+    "name": "BYDIA",
+    "fullname": "By diabetes",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu organismu při cukrovce"
+  },
+  {
+    "name": "BYF",
+    "fullname": "By flu",
+    "typ": "smes",
+    "popis": "Směs určená k podpoře organismu při chřipce"
+  },
+  {
+    "name": "BYFEV",
+    "fullname": "By fever",
+    "typ": "smes",
+    "popis": "Směs na podporu při zvýšené teplotě a horečce"
+  },
+  {
+    "name": "CALMING",
+    "fullname": "Calmig",
+    "typ": "smes",
+    "popis": "Utišující směs, která harmonizuje nervový"
+  },
+  {
+    "name": "CLARITY",
+    "fullname": "Clarity",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro jasnost"
+  },
+  {
+    "name": "CLEAN HOME",
+    "fullname": "Clean home",
+    "typ": "smes",
+    "popis": "Čisticí směs určená pro"
+  },
+  {
+    "name": "COLDET",
+    "fullname": "Colon detoxication",
+    "typ": "smes",
+    "popis": "Bestseller v oblasti hloubkové detoxikace a regenerace střev"
+  },
+  {
+    "name": "COLWIT",
+    "fullname": "Cold",
+    "typ": "smes",
+    "popis": "Univerzální směs na podporu těla při nachlazení"
+  },
+  {
+    "name": "COMMUNICATION",
+    "fullname": "Communication",
+    "typ": "smes",
+    "popis": "Směs na podporu jasné, upřímné a otevřené komunikace"
+  },
+  {
+    "name": "COMPASSION",
+    "fullname": "Compassion",
+    "typ": "smes",
+    "popis": "Jemná směs podporující"
+  },
+  {
+    "name": "CONFESSION",
+    "fullname": "Confession",
+    "typ": "smes",
+    "popis": "Hluboká směs pro"
+  },
+  {
+    "name": "CONFIDENCE",
+    "fullname": "Confidence",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro podporu"
+  },
+  {
+    "name": "CORIANDER DEUX",
+    "fullname": "Coriander deux",
+    "typ": "smes",
+    "popis": "Směs s dvojím koriandrem -"
+  },
+  {
+    "name": "COURAGE",
+    "fullname": "Courage",
+    "typ": "smes",
+    "popis": "Směs pro podporu"
+  },
+  {
+    "name": "CREATIVITY",
+    "fullname": "Creativity",
+    "typ": "smes",
+    "popis": "Povzbuzující a inspirativní směs pro rozproudění"
+  },
+  {
+    "name": "DARK CIRCLES HELP",
+    "fullname": "Dark circles help",
+    "typ": "smes",
+    "popis": "Směs určená pro ošetření tmavých kruhů pod očima"
+  },
+  {
+    "name": "DEEP SLEEP",
+    "fullname": "Deep sleep",
+    "typ": "smes",
+    "popis": "Komplexní směs pro podporu"
+  },
+  {
+    "name": "DENT",
+    "fullname": "Dental",
+    "typ": "smes",
+    "popis": "Jeden z bestsellerů v péči o ústní dutinu"
+  },
+  {
+    "name": "DESI",
+    "fullname": "Desinfection",
+    "typ": "smes",
+    "popis": "Univerzální dezinfekční směs pro široké použití"
+  },
+  {
+    "name": "DESPACITO",
+    "fullname": "Despacito",
+    "typ": "smes",
+    "popis": "Parfémová směs - oslava života v jeho"
+  },
+  {
+    "name": "DETOL",
+    "fullname": "Detoxication liver",
+    "typ": "smes",
+    "popis": "Směs zaměřená na detoxikaci"
+  },
+  {
+    "name": "DRY C",
+    "fullname": "Dry cough",
+    "typ": "smes",
+    "popis": "Směs zaměřená na suchý, dráždivý"
+  },
+  {
+    "name": "DUPREG",
+    "fullname": "During pregnancy",
+    "typ": "smes",
+    "popis": "Jemná a bezpečná směs vytvořená pro podporu žen v období"
+  },
+  {
+    "name": "DX",
+    "fullname": "Detoxification",
+    "typ": "smes",
+    "popis": "Komplexní směs zaměřená na podporu celkové detoxikace"
+  },
+  {
+    "name": "E-SMO",
+    "fullname": "Elektro smog",
+    "typ": "smes",
+    "popis": "Ochranná směs navržená pro minimalizaci dopadů"
+  },
+  {
+    "name": "EARTH",
+    "fullname": "Earth",
+    "typ": "smes",
+    "popis": "Směs inspirovaná prvkem Země podle tradiční čínské medicíny"
+  },
+  {
+    "name": "ELLI",
+    "fullname": "Elli",
+    "typ": "smes",
+    "popis": "Smyslný, jemně květinový parfém s dominantním"
+  },
+  {
+    "name": "EMPATHY",
+    "fullname": "Empathy",
+    "typ": "smes",
+    "popis": "Harmonizační směs pro prohloubení"
+  },
+  {
+    "name": "EPI",
+    "fullname": "Epilepsy",
+    "typ": "smes",
+    "popis": "Směs zaměřená na jemnou podporu při epilepsii a"
+  },
+  {
+    "name": "EROS",
+    "fullname": "Eros",
+    "typ": "smes",
+    "popis": "Směs probouzející smyslnost, vášeň a intimní propojení"
+  },
+  {
+    "name": "ETHER",
+    "fullname": "Ether",
+    "typ": "smes",
+    "popis": "Éterická parfémová směs laděná na prvek"
+  },
+  {
+    "name": "FAITH",
+    "fullname": "Faith",
+    "typ": "smes",
+    "popis": "Jemná směs víry, naděje a hluboké vnitřní důvěry"
+  },
+  {
+    "name": "FASCIA",
+    "fullname": "Fascia",
+    "typ": "smes",
+    "popis": "Specializovaná směs pro harmonizaci a uvolnění fascií -"
+  },
+  {
+    "name": "FIRE",
+    "fullname": "Fire",
+    "typ": "smes",
+    "popis": "Prvek ohně podle tradiční čínské medicíny - energie"
+  },
+  {
+    "name": "FLOW",
+    "fullname": "Flow",
+    "typ": "smes",
+    "popis": "Jemný parfém pro podporu vnitřního"
+  },
+  {
+    "name": "FLOW B",
+    "fullname": "Flow blood",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu přirozeného toku"
+  },
+  {
+    "name": "FOCUS",
+    "fullname": "Focus",
+    "typ": "smes",
+    "popis": "Podpůrná směs pro"
+  },
+  {
+    "name": "FOREVER",
+    "fullname": "Forever",
+    "typ": "smes",
+    "popis": "Parfémová směs věnovaná tématu"
+  },
+  {
+    "name": "FORGIVENESS",
+    "fullname": "Forgiveness",
+    "typ": "smes",
+    "popis": "Jemná a hluboce léčivá směs určená pro proces odpuštění –"
+  },
+  {
+    "name": "FRANKINCENSE",
+    "fullname": "QUATTUOR",
+    "typ": "smes",
+    "popis": "Frankincense quattuor Unikátní směs čtyř druhů kadidla s"
+  },
+  {
+    "name": "FREEDOM",
+    "fullname": "Freedom",
+    "typ": "smes",
+    "popis": "Směs pro pocit"
+  },
+  {
+    "name": "FRESH",
+    "fullname": "Fresh",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro svěžest těla i mysli"
+  },
+  {
+    "name": "GASTO",
+    "fullname": "Gallstones",
+    "typ": "smes",
+    "popis": "Směs cílená na podporu žlučníku při výskytu žlučových kamenů"
+  },
+  {
+    "name": "GENERATOR",
+    "fullname": "Generator",
+    "typ": "smes",
+    "popis": "Směs inspirovaná typem Generátor v systému Human Design"
+  },
+  {
+    "name": "GENTLE SMILE",
+    "fullname": "Gentle smile",
+    "typ": "smes",
+    "popis": "Jemná směs pro klid, něhu a vnitřní úsměv"
+  },
+  {
+    "name": "GET UP",
+    "fullname": "Get up",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro chvíle, kdy se člověk cítí na"
+  },
+  {
+    "name": "GODDESS",
+    "fullname": "Goddess",
+    "typ": "smes",
+    "popis": "Směs věnovaná premenstruační fázi ženy - magickému období"
+  },
+  {
+    "name": "GOLD",
+    "fullname": "Gold",
+    "typ": "smes",
+    "popis": "Luxusní sérum pro každodenní péči o"
+  },
+  {
+    "name": "GOLD A",
+    "fullname": "Acne",
+    "typ": "smes",
+    "popis": "Směs určená pro problematickou pleť se sklonem k akné"
+  },
+  {
+    "name": "GOLD A-SHA MAN",
+    "fullname": "After shave man",
+    "typ": "smes",
+    "popis": "Zklidňující směs po holení vytvořená speciálně pro potřeby"
+  },
+  {
+    "name": "GOLD A-SHA WOMAN",
+    "fullname": "After shave woman",
+    "typ": "smes",
+    "popis": "Jemná směs po holení vytvořená pro citlivé ženské"
+  },
+  {
+    "name": "GOLD AA SERUM",
+    "fullname": "Anti aging",
+    "typ": "smes",
+    "popis": "Vysoce účinné sérum proti stárnutí"
+  },
+  {
+    "name": "GOLD AN-CELL",
+    "fullname": "Anti cellulite",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při celulitidě"
+  },
+  {
+    "name": "GOLD BABY",
+    "fullname": "Baby",
+    "typ": "smes",
+    "popis": "Jemná"
+  },
+  {
+    "name": "GOLD BALANCE OILY",
+    "fullname": "Balance oily (skin)",
+    "typ": "smes",
+    "popis": "Směs určená pro vyvážení"
+  },
+  {
+    "name": "GOLD BEAUTY",
+    "fullname": "Beauty",
+    "typ": "smes",
+    "popis": "Univerzální směs krásy pro každodenní péči o pleť"
+  },
+  {
+    "name": "GOLD BODY",
+    "fullname": "Body",
+    "typ": "smes",
+    "popis": "Vyživující směs pro celkovou péči o pokožku těla"
+  },
+  {
+    "name": "GOLD C",
+    "fullname": "Cancer",
+    "typ": "smes",
+    "popis": "Cílená směs vytvořená jako podpora při závažných kožních"
+  },
+  {
+    "name": "GOLD COL",
+    "fullname": "Collagen",
+    "typ": "smes",
+    "popis": "Směs zaměřená na přirozenou podporu tvorby vlastního"
+  },
+  {
+    "name": "GOLD D",
+    "fullname": "Derma",
+    "typ": "smes",
+    "popis": "Jemná směs vytvořená speciálně pro pleť s rosaceou (acne"
+  },
+  {
+    "name": "GOLD DEO",
+    "fullname": "Deo",
+    "typ": "smes",
+    "popis": "Přírodní deodorantová směs navržená k neutralizaci"
+  },
+  {
+    "name": "GOLD FIRST",
+    "fullname": "First",
+    "typ": "smes",
+    "popis": "Směs první pomoci pro všechny drobné úrazy -"
+  },
+  {
+    "name": "GOLD HE",
+    "fullname": "Herpes",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při"
+  },
+  {
+    "name": "GOLD LAVENDER",
+    "fullname": "Lavender",
+    "typ": "smes",
+    "popis": "Luxusní levandulová směs pro každodenní péči o pleť i"
+  },
+  {
+    "name": "GOLD LIPS",
+    "fullname": "Lips",
+    "typ": "smes",
+    "popis": "Výživná směs pro intenzivní péči o rty"
+  },
+  {
+    "name": "GOLD MAN",
+    "fullname": "Man",
+    "typ": "smes",
+    "popis": "Ošetřující směs vytvořená speciálně pro potřeby mužské"
+  },
+  {
+    "name": "GOLD MOISTURISING",
+    "fullname": "Moisturising",
+    "typ": "smes",
+    "popis": "Hydratační směs pro suchou, napjatou a dehydratovanou pleť"
+  },
+  {
+    "name": "GOLD NOWA",
+    "fullname": "No warts",
+    "typ": "smes",
+    "popis": "Cílená směs na bradavice"
+  },
+  {
+    "name": "GOLD PROVANCE",
+    "fullname": "Provance",
+    "typ": "smes",
+    "popis": "Jemná"
+  },
+  {
+    "name": "GOLD PS",
+    "fullname": "Psoriasis",
+    "typ": "smes",
+    "popis": "Speciální směs určená pro podporu při lupénce a"
+  },
+  {
+    "name": "GOLD RED",
+    "fullname": "Red",
+    "typ": "smes",
+    "popis": "Regenerační a vyživující sérum s dračí"
+  },
+  {
+    "name": "GOLD SCA",
+    "fullname": "Scars",
+    "typ": "smes",
+    "popis": "Hojivá směs určená pro péči o jizvy"
+  },
+  {
+    "name": "GOLD SENSITIVE",
+    "fullname": "Sensitive",
+    "typ": "smes",
+    "popis": "Směs určená pro velmi"
+  },
+  {
+    "name": "GOLD SHI",
+    "fullname": "Shingles",
+    "typ": "smes",
+    "popis": "Směs určená pro podporu při pásovém oparu"
+  },
+  {
+    "name": "GOLD SUN B",
+    "fullname": "Sun burns",
+    "typ": "smes",
+    "popis": "Směs určená k úlevě při spálení od slunce a pro podrážděnou"
+  },
+  {
+    "name": "GOLD SUPERIOR",
+    "fullname": "Superior",
+    "typ": "smes",
+    "popis": "Luxusní směs pro krásu, vitalitu a hlubokou výživu pokožky"
+  },
+  {
+    "name": "GOLD WR SERUM",
+    "fullname": "Wrinkles",
+    "typ": "smes",
+    "popis": "Sérum zaměřené na"
+  },
+  {
+    "name": "GROUNDING",
+    "fullname": "Grounding",
+    "typ": "smes",
+    "popis": "Uzemňující směs pro"
+  },
+  {
+    "name": "GUR",
+    "fullname": "Genitourinary",
+    "typ": "smes",
+    "popis": "Směs zaměřená na urogenitální trakt - močový měchýř"
+  },
+  {
+    "name": "H PLANT",
+    "fullname": "Help plant",
+    "typ": "smes",
+    "popis": "Směs pro přírodní péči o rostliny, květiny i stromy"
+  },
+  {
+    "name": "H PLUS",
+    "fullname": "Hydrogen plus",
+    "typ": "smes",
+    "popis": "Směs podporující zvýšenou tvorbu molekulárního vodíku v"
+  },
+  {
+    "name": "HAIR",
+    "fullname": "Hair",
+    "typ": "smes",
+    "popis": "Směs pro zdraví vlasů - podporuje jejich"
+  },
+  {
+    "name": "HEBAUT",
+    "fullname": "Help by autism",
+    "typ": "smes",
+    "popis": "Jemná"
+  },
+  {
+    "name": "HELP GB",
+    "fullname": "Help gall bladder",
+    "typ": "smes",
+    "popis": "Směs pro podporu žlučníku a zdravého trávení tuků"
+  },
+  {
+    "name": "HELP H",
+    "fullname": "Help heart",
+    "typ": "smes",
+    "popis": "Jedna z nejsilnějších směsí pro podporu"
+  },
+  {
+    "name": "HELP K",
+    "fullname": "Help kidney",
+    "typ": "smes",
+    "popis": "Směs zaměřená na posílení"
+  },
+  {
+    "name": "HELP P",
+    "fullname": "Pancreas",
+    "typ": "smes",
+    "popis": "Jedna z nejsilnějších směsí pro podporu"
+  },
+  {
+    "name": "HELP SP",
+    "fullname": "Spleen",
+    "typ": "smes",
+    "popis": "Podpůrná směs pro slinivku"
+  },
+  {
+    "name": "HEMO",
+    "fullname": "Hemorrhoids",
+    "typ": "smes",
+    "popis": "Směs určená na podporu při hemoroidech"
+  },
+  {
+    "name": "HEMUS",
+    "fullname": "Help by multiple sclerosis",
+    "typ": "smes",
+    "popis": "Podpůrná směs pro organismus při roztroušené skleróze"
+  },
+  {
+    "name": "HEPAR",
+    "fullname": "Help by parkinson",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu organismu při Parkinsonově nemoci"
+  },
+  {
+    "name": "HIGH VIBRATION",
+    "fullname": "High vibration",
+    "typ": "smes",
+    "popis": "Vysokovibrační směs pro naladění na lehkost"
+  },
+  {
+    "name": "HOLY ANOINTING",
+    "fullname": "Holy anointing",
+    "typ": "smes",
+    "popis": "Posvátná směs inspirovaná biblickým olejem svatého pomazání"
+  },
+  {
+    "name": "HORMBAL",
+    "fullname": "Hormonal balance",
+    "typ": "smes",
+    "popis": "Směs pro harmonizaci hormonálního systému"
+  },
+  {
+    "name": "HUMILITY",
+    "fullname": "Humility",
+    "typ": "smes",
+    "popis": "Jemná, hluboce působící směs pokory, soucitu a odevzdání"
+  },
+  {
+    "name": "HYP",
+    "fullname": "Hypertension",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při vysokém krevním tlaku"
+  },
+  {
+    "name": "HYPOT",
+    "fullname": "Hypothyroidism",
+    "typ": "smes",
+    "popis": "Podpora při snížené funkci štítné žlázy (hypotyreóze)"
+  },
+  {
+    "name": "CHAKRA 1",
+    "fullname": "Chacra 1",
+    "typ": "smes",
+    "popis": "Směs pro harmonizaci první čakry (kořenové)"
+  },
+  {
+    "name": "CHAKRA 2",
+    "fullname": "Chacra 2",
+    "typ": "smes",
+    "popis": "Směs pro harmonizaci druhé - sakrální čakry"
+  },
+  {
+    "name": "CHAKRA 3",
+    "fullname": "Chacra 3",
+    "typ": "smes",
+    "popis": "Harmonizační směs pro třetí čakru - solar plexus"
+  },
+  {
+    "name": "CHAKRA 4",
+    "fullname": "Chacra 4",
+    "typ": "smes",
+    "popis": "Směs laděná na čtvrtou - srdeční čakru"
+  },
+  {
+    "name": "CHAKRA 5",
+    "fullname": "Chacra 5",
+    "typ": "smes",
+    "popis": "Směs laděná na pátou - krční čakru"
+  },
+  {
+    "name": "CHAKRA 6",
+    "fullname": "Chacra 6",
+    "typ": "smes",
+    "popis": "Směs pro harmonizaci šesté čakry (třetí oko)"
+  },
+  {
+    "name": "CHAKRA 7",
+    "fullname": "Chacra 7",
+    "typ": "smes",
+    "popis": "Vysoce spirituální směs pro harmonizaci sedmé - korunní"
+  },
+  {
+    "name": "CHOLBAL",
+    "fullname": "Cholesterol balancing",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu vyrovnané hladiny cholesterolu a"
+  },
+  {
+    "name": "I AM",
+    "fullname": "I am",
+    "typ": "smes",
+    "popis": "Meditativní směs podporující spojení se"
+  },
+  {
+    "name": "I DON‘T SMOKE",
+    "fullname": "I don‘t smoke",
+    "typ": "smes",
+    "popis": "Směs pro podporu při odvykání kouření a uvolňování"
+  },
+  {
+    "name": "I‘M HAPPY",
+    "fullname": "I‘m happy",
+    "typ": "smes",
+    "popis": "Harmonizační směs pro obnovu vnitřní radosti a lehkosti"
+  },
+  {
+    "name": "IMM",
+    "fullname": "Immunity",
+    "typ": "smes",
+    "popis": "Směs na podporu přirozené"
+  },
+  {
+    "name": "INF",
+    "fullname": "Inflammation",
+    "typ": "smes",
+    "popis": "Cílená směs na podporu při akutních i chronických zánětech"
+  },
+  {
+    "name": "INNER CHILD",
+    "fullname": "Inner child",
+    "typ": "smes",
+    "popis": "Jemná"
+  },
+  {
+    "name": "INNER WOMAN",
+    "fullname": "Inner woman",
+    "typ": "smes",
+    "popis": "Směs zaměřená na hluboké propojení s vnitřní ženou - tou"
+  },
+  {
+    "name": "INSECT STOP",
+    "fullname": "Insect stop",
+    "typ": "smes",
+    "popis": "Přírodní repelentní směs určená k ochraně před hmyzem -"
+  },
+  {
+    "name": "INSPIRATION",
+    "fullname": "Inspiration",
+    "typ": "smes",
+    "popis": "Povznášející směs pro probuzení"
+  },
+  {
+    "name": "INTEGRITY",
+    "fullname": "Integrity",
+    "typ": "smes",
+    "popis": "Směs pro posílení vnitřní"
+  },
+  {
+    "name": "INTUITION",
+    "fullname": "Intuition",
+    "typ": "smes",
+    "popis": "Jemná směs podporující vnitřní"
+  },
+  {
+    "name": "JOY",
+    "fullname": "Joy",
+    "typ": "smes",
+    "popis": "Povznášející směs pro radost, klid a vnitřní pohodu"
+  },
+  {
+    "name": "KING",
+    "fullname": "King",
+    "typ": "smes",
+    "popis": "Směs ztělesňující mužskou sílu, moudrost a klidné vedení"
+  },
+  {
+    "name": "LAUNDRY CITRUS",
+    "fullname": "Laundry citrus",
+    "typ": "smes",
+    "popis": "Osvěžující citrusová směs určená pro praní prádla a domácí"
+  },
+  {
+    "name": "LAVENDER DEUX",
+    "fullname": "Lavender",
+    "typ": "smes",
+    "popis": "Harmonická směs jednoho druhu levandule získaného dvěma"
+  },
+  {
+    "name": "LEADER",
+    "fullname": "Leader",
+    "typ": "smes",
+    "popis": "Směs pro všechny, kdo nesou zodpovědnost - lídry"
+  },
+  {
+    "name": "LEARNING",
+    "fullname": "Learning",
+    "typ": "smes",
+    "popis": "Směs pro podporu učení, soustředění a duševní výkonnosti"
+  },
+  {
+    "name": "LEGUT",
+    "fullname": "Leaky gut",
+    "typ": "smes",
+    "popis": "Cílená směs pro podporu při syndromu zvýšené propustnosti"
+  },
+  {
+    "name": "LET GO",
+    "fullname": "Let go",
+    "typ": "smes",
+    "popis": "Směs pro uvolnění"
+  },
+  {
+    "name": "LICE",
+    "fullname": "Lice",
+    "typ": "smes",
+    "popis": "Směs pro přirozenou pomoc při výskytu vší a pro o pokožku"
+  },
+  {
+    "name": "LIFE",
+    "fullname": "Life",
+    "typ": "smes",
+    "popis": "Celostní směs ztělesňující samotnou podstatu života -"
+  },
+  {
+    "name": "LOVE",
+    "fullname": "Love",
+    "typ": "smes",
+    "popis": "Hluboká, výživná směs lásky pro srdce i duši"
+  },
+  {
+    "name": "LYM",
+    "fullname": "Lymph",
+    "typ": "smes",
+    "popis": "Očistná směs podporující tok lymfy, detoxikaci a odvodnění"
+  },
+  {
+    "name": "MAGIC",
+    "fullname": "Magic",
+    "typ": "smes",
+    "popis": "Jemný, tajuplný parfém s nádechem magie"
+  },
+  {
+    "name": "MAN NO. 1",
+    "fullname": "Man no. 1",
+    "typ": "smes",
+    "popis": "Elegantní parfém pro muže, vyzařující"
+  },
+  {
+    "name": "MAN PR",
+    "fullname": "Man prostate",
+    "typ": "smes",
+    "popis": "Elegantní přírodní parfém pro muže, vyzařující"
+  },
+  {
+    "name": "MANIFESTOR",
+    "fullname": "Manifestor - Human design",
+    "typ": "smes",
+    "popis": "Směs inspirovaná typem Manifestor v Human Design"
+  },
+  {
+    "name": "MERRY CHRISTMAS",
+    "fullname": "Merry christmas",
+    "typ": "smes",
+    "popis": "Slavnostní směs pro vytvoření pravé vánoční atmosféry"
+  },
+  {
+    "name": "MASSAGE KIDS",
+    "fullname": "Massage kids",
+    "typ": "smes",
+    "popis": "Jemná a bezpečná směs určená pro masáže dětí"
+  },
+  {
+    "name": "MEDITATION",
+    "fullname": "Meditation",
+    "typ": "smes",
+    "popis": "Směs vytvořená pro hluboké ztišení, meditaci a kontemplaci"
+  },
+  {
+    "name": "MEMORY",
+    "fullname": "Memory",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu"
+  },
+  {
+    "name": "METAL",
+    "fullname": "Metal",
+    "typ": "smes",
+    "popis": "Prvek kov podle tradiční čínské medicíny"
+  },
+  {
+    "name": "MIG",
+    "fullname": "Migraine",
+    "typ": "smes",
+    "popis": "Směs zaměřená na úlevu při"
+  },
+  {
+    "name": "MIRACLE",
+    "fullname": "Miracle",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při překyselení organismu a"
+  },
+  {
+    "name": "MONEY",
+    "fullname": "Money",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu"
+  },
+  {
+    "name": "MOON",
+    "fullname": "Moon",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu menstruačního"
+  },
+  {
+    "name": "MOTIVATION",
+    "fullname": "Motivation",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro nastartování"
+  },
+  {
+    "name": "MOVE GT",
+    "fullname": "Move gout",
+    "typ": "smes",
+    "popis": "Podpora při dně (pakostnici)"
+  },
+  {
+    "name": "MOVE IT",
+    "fullname": "Move it",
+    "typ": "smes",
+    "popis": "Směs pro klouby a celý pohybový aparát"
+  },
+  {
+    "name": "MUCRA",
+    "fullname": "Muscle cramps and aches",
+    "typ": "smes",
+    "popis": "Úleva při svalových křečích, napětí a namožení"
+  },
+  {
+    "name": "MYSTERY",
+    "fullname": "Mystery",
+    "typ": "smes",
+    "popis": "Záhadný, přitažlivý parfém, který probouzí ženské"
+  },
+  {
+    "name": "NASE",
+    "fullname": "Nausea",
+    "typ": "smes",
+    "popis": "Jemná směs pro úlevu při"
+  },
+  {
+    "name": "NIRVANA",
+    "fullname": "Nirvana",
+    "typ": "smes",
+    "popis": "Aromaterapeutická kompozice podporující hluboký vnitřní"
+  },
+  {
+    "name": "NO",
+    "fullname": "No",
+    "typ": "smes",
+    "popis": "Směs pro jasné vymezení"
+  },
+  {
+    "name": "NOBAPA",
+    "fullname": "No back pain",
+    "typ": "smes",
+    "popis": "Směs zaměřená na úlevu od bolestí"
+  },
+  {
+    "name": "NOCON",
+    "fullname": "No constipacion",
+    "typ": "smes",
+    "popis": "Podpora při"
+  },
+  {
+    "name": "NOHEPA",
+    "fullname": "No head pain",
+    "typ": "smes",
+    "popis": "Úleva při bolestech hlavy, tenzních stavech a migrénách"
+  },
+  {
+    "name": "NOMAD FROM",
+    "fullname": "THE STARS",
+    "typ": "smes",
+    "popis": "Nomad from the stars"
+  },
+  {
+    "name": "NOPA",
+    "fullname": "No pain",
+    "typ": "smes",
+    "popis": "Jedna z nejoblíbenějších a nejuniverzálnějších směsí pro"
+  },
+  {
+    "name": "NOPA NR",
+    "fullname": "Nopa nervous",
+    "typ": "smes",
+    "popis": "Směs určená pro bolesti nervového původu –"
+  },
+  {
+    "name": "NOSE",
+    "fullname": "Nose",
+    "typ": "smes",
+    "popis": "Směs na uvolnění nosních dutin při"
+  },
+  {
+    "name": "NOW",
+    "fullname": "Now",
+    "typ": "smes",
+    "popis": "Meditativní směs pro přítomnost a bezčasovost"
+  },
+  {
+    "name": "O2 MAX",
+    "fullname": "Oxygen max",
+    "typ": "smes",
+    "popis": "Směs pro lepší okysličení krve, mozku a tělesných tkání"
+  },
+  {
+    "name": "OK DIG",
+    "fullname": "OK digestion",
+    "typ": "smes",
+    "popis": "Komplexní směs na podporu trávení - vhodná při"
+  },
+  {
+    "name": "ONLY ONE",
+    "fullname": "Only one",
+    "typ": "smes",
+    "popis": "Parfém ztělesňující jedinečnost, oddanost a hluboké spojení"
+  },
+  {
+    "name": "OPEN HEART",
+    "fullname": "Open heart",
+    "typ": "smes",
+    "popis": "Parfémová směs pro otevření"
+  },
+  {
+    "name": "ORACLE",
+    "fullname": "Oracle",
+    "typ": "smes",
+    "popis": "ORACLE je parfémová směs věnovaná menstruační fázi - období"
+  },
+  {
+    "name": "OSPO",
+    "fullname": "Osteoporosis",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu kostní"
+  },
+  {
+    "name": "PARTNERSHIP",
+    "fullname": "Partnership",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu partnerských a milostných vztahů"
+  },
+  {
+    "name": "PEACE",
+    "fullname": "Peace",
+    "typ": "smes",
+    "popis": "Směs vnitřního míru a uvolnění"
+  },
+  {
+    "name": "PIGMENT SPOTS",
+    "fullname": "Pigment spots",
+    "typ": "smes",
+    "popis": "Směs pro zklidnění a sjednocení tónu"
+  },
+  {
+    "name": "PO-W-ER",
+    "fullname": "Power",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro výkon, vitalitu a bdělost"
+  },
+  {
+    "name": "POLOS",
+    "fullname": "Polycystic ovary syntrome",
+    "typ": "smes",
+    "popis": "Směs cílená na podporu při syndromu polycystických vaječníků"
+  },
+  {
+    "name": "PRANA",
+    "fullname": "Prana",
+    "typ": "smes",
+    "popis": "Vitalizační směs inspirovaná životní energií pránou"
+  },
+  {
+    "name": "PRAYER",
+    "fullname": "Prayer",
+    "typ": "smes",
+    "popis": "Jemná spirituální směs pro ztišení, klid a modlitbu"
+  },
+  {
+    "name": "PRENA",
+    "fullname": "Pregnancy nausea",
+    "typ": "smes",
+    "popis": "Úleva při těhotenské nevolnosti a zvracení"
+  },
+  {
+    "name": "PRO NO",
+    "fullname": "Nitric oxide",
+    "typ": "smes",
+    "popis": "Podporuje tvorbu oxidu dusnatého v"
+  },
+  {
+    "name": "PROJECTOR",
+    "fullname": "Projector - Human design",
+    "typ": "smes",
+    "popis": "Směs inspirovaná Human Design typem Projektor"
+  },
+  {
+    "name": "PROTECT",
+    "fullname": "Protect",
+    "typ": "smes",
+    "popis": "Jedna z nejoblíbenějších a nejsilnějších směsí pro"
+  },
+  {
+    "name": "PROTECT B",
+    "fullname": "Protect bacteria, borellia",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při bakteriálních a virových"
+  },
+  {
+    "name": "PURE",
+    "fullname": "Pure",
+    "typ": "smes",
+    "popis": "Očistná, univerzální směs pro prostor i tělo"
+  },
+  {
+    "name": "PX",
+    "fullname": "Smallpox",
+    "typ": "smes",
+    "popis": "Podpora v období výskytu neštovic u dětí i dospělých"
+  },
+  {
+    "name": "QUEEN",
+    "fullname": "Queen",
+    "typ": "smes",
+    "popis": "QUEEN je parfémová směs věnovaná ovulační fázi období"
+  },
+  {
+    "name": "REFLECTOR",
+    "fullname": "Reflector",
+    "typ": "smes",
+    "popis": "Směs inspirovaná Human Design typem Reflektor"
+  },
+  {
+    "name": "RELAX",
+    "fullname": "Relax",
+    "typ": "smes",
+    "popis": "Uvolňující směs pro zklidnění těla i mysli"
+  },
+  {
+    "name": "RELES",
+    "fullname": "Restless legs syndrome",
+    "typ": "smes",
+    "popis": "Úleva při syndromu neklidných nohou"
+  },
+  {
+    "name": "RESOLUTION",
+    "fullname": "Resolution",
+    "typ": "smes",
+    "popis": "Směs pro podporu rozhodnosti, jasnosti a odvahy ke změně"
+  },
+  {
+    "name": "RHE",
+    "fullname": "Rheumatism",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu pohybového aparátu při"
+  },
+  {
+    "name": "ROSA VIBE",
+    "fullname": "Rosa vibe",
+    "typ": "smes",
+    "popis": "Jemný a ženský parfém s růžovou"
+  },
+  {
+    "name": "S STOP",
+    "fullname": "Snoring stop",
+    "typ": "smes",
+    "popis": "Podpora při chrápání"
+  },
+  {
+    "name": "SAUNA",
+    "fullname": "Sauna",
+    "typ": "smes",
+    "popis": "Aromaterapeutická směs navržená speciálně pro použití v"
+  },
+  {
+    "name": "SELF LOVE",
+    "fullname": "Self love",
+    "typ": "smes",
+    "popis": "Oblíbený parfém pro podporu"
+  },
+  {
+    "name": "SHOES",
+    "fullname": "Shoes",
+    "typ": "smes",
+    "popis": "Praktická směs pro dezinfekci obuvi"
+  },
+  {
+    "name": "SO HAPPY TOGETHER",
+    "fullname": "So happy together",
+    "typ": "smes",
+    "popis": "Radostná směs podporující harmonické"
+  },
+  {
+    "name": "SOULGUARD",
+    "fullname": "Soulguard",
+    "typ": "smes",
+    "popis": "Ochranný parfém na emoční i energetické úrovni"
+  },
+  {
+    "name": "STEM PLUS",
+    "fullname": "Stem cell",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu přirozené tvorby kmenových buněk v"
+  },
+  {
+    "name": "STOP ADD",
+    "fullname": "Stop addiction",
+    "typ": "smes",
+    "popis": "Směs pro podporu při překonávání závislostí – na"
+  },
+  {
+    "name": "SUBY C-1",
+    "fullname": "Support by cancer",
+    "typ": "smes",
+    "popis": "Směs určená pro ranní harmonizaci organismu při"
+  },
+  {
+    "name": "SUBY C-2",
+    "fullname": "Support by cancer",
+    "typ": "smes",
+    "popis": "Směs vhodná pro denní"
+  },
+  {
+    "name": "SUBY C-3",
+    "fullname": "Support by cancer",
+    "typ": "smes",
+    "popis": "Směs určená pro večerní"
+  },
+  {
+    "name": "SUNSHINE",
+    "fullname": "Sunschine",
+    "typ": "smes",
+    "popis": "Rozjasňující parfémová směs plná optimismu, tepla a radosti"
+  },
+  {
+    "name": "SUP-ER-MAN",
+    "fullname": "Support erectiom man",
+    "typ": "smes",
+    "popis": "Směs pro podporu erekce a mužského sebevědomí"
+  },
+  {
+    "name": "SW",
+    "fullname": "Swelling",
+    "typ": "smes",
+    "popis": "Podpora při otocích a zadržování vody v těle"
+  },
+  {
+    "name": "TANTRA",
+    "fullname": "Tantra",
+    "typ": "smes",
+    "popis": "Smyslný a hluboce laděný parfém pro spojení"
+  },
+  {
+    "name": "TATTOO",
+    "fullname": "Tattoo",
+    "typ": "smes",
+    "popis": "Regenerační směs určená pro péči o čerstvá i starší tetování"
+  },
+  {
+    "name": "THANK YOU",
+    "fullname": "Thank you",
+    "typ": "smes",
+    "popis": "Směs vděčnosti a celistvosti"
+  },
+  {
+    "name": "TIN",
+    "fullname": "Tinnitus",
+    "typ": "smes",
+    "popis": "Směs zaměřená na úlevu při tinnitu -"
+  },
+  {
+    "name": "TONAFU",
+    "fullname": "Toenail fungus",
+    "typ": "smes",
+    "popis": "Cílená směs pro podporu při plísni na nehtech rukou i nohou"
+  },
+  {
+    "name": "TRANSFORMATION",
+    "fullname": "Transformation",
+    "typ": "smes",
+    "popis": "Hluboká směs pro podporu vnitřní proměny a osobního růstu"
+  },
+  {
+    "name": "TRAUMA FREE",
+    "fullname": "Trauma free",
+    "typ": "smes",
+    "popis": "Podpůrná směs pro zpracování emočních"
+  },
+  {
+    "name": "TRAVELLING",
+    "fullname": "Traveling",
+    "typ": "smes",
+    "popis": "Směs pro pohodlné a klidné cestování"
+  },
+  {
+    "name": "VAHE",
+    "fullname": "Varicose help",
+    "typ": "smes",
+    "popis": "Podpora při křečových"
+  },
+  {
+    "name": "VIBE",
+    "fullname": "Vibe",
+    "typ": "smes",
+    "popis": "Energetizující parfém pro zvednutí vibrace a naladění se na"
+  },
+  {
+    "name": "VIRGIN",
+    "fullname": "Virgin",
+    "typ": "smes",
+    "popis": "VIRGIN je parfémová směs věnovaná dynamické fázi"
+  },
+  {
+    "name": "VITA",
+    "fullname": "Vital cell",
+    "typ": "smes",
+    "popis": "Směs zaměřená na regeneraci a výživu buněk"
+  },
+  {
+    "name": "VITALITY",
+    "fullname": "Vitality",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro obnovu životní"
+  },
+  {
+    "name": "WARRIOR",
+    "fullname": "Warrior",
+    "typ": "smes",
+    "popis": "Směs bojovníka pro aktivaci odvahy, síly a odhodlání"
+  },
+  {
+    "name": "WATER",
+    "fullname": "Water",
+    "typ": "smes",
+    "popis": "Prvek voda podle TCM"
+  },
+  {
+    "name": "WET C",
+    "fullname": "Wet cough",
+    "typ": "smes",
+    "popis": "Směs pro uvolnění vlhkého kašle a podporu vykašlávání hlenů"
+  },
+  {
+    "name": "WILD WOMAN",
+    "fullname": "Wild woman",
+    "typ": "smes",
+    "popis": "Parfémová směs ztělesňující"
+  },
+  {
+    "name": "WINNER",
+    "fullname": "Winner",
+    "typ": "smes",
+    "popis": "Silná směs pro motivaci, odvahu a překonání prokrastinace"
+  },
+  {
+    "name": "WLOSS",
+    "fullname": "Weight loss",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu štíhlé"
+  },
+  {
+    "name": "WOFERT",
+    "fullname": "Woman fertility",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu ženské"
+  },
+  {
+    "name": "WOMAN M",
+    "fullname": "Menopauza",
+    "typ": "smes",
+    "popis": "Harmonizační směs zaměřená na podporu ženy v období"
+  },
+  {
+    "name": "WOMAN No. 1",
+    "fullname": "Woman no. 1",
+    "typ": "smes",
+    "popis": "Jemný parfém podporující"
+  },
+  {
+    "name": "WOOD",
+    "fullname": "Wood",
+    "typ": "smes",
+    "popis": "Prvek dřevo podle TCM symbolizuje růst"
+  },
+  {
+    "name": "YES",
+    "fullname": "Yes",
+    "typ": "smes",
+    "popis": "Směs přijetí, souznění a důvěry v život"
+  }
+]

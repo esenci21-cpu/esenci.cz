@@ -1,15 +1,142 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oleje A–Z — Esenci.cz</title>
-  <meta name="description" content="Přehled esenciálních olejů BEWIT — články, tipy a rady pro každý olej zvlášť.">
+  <title>Průvodce oleji A–Z — Esenci.cz</title>
+  <meta name="description" content="Přehled všech jednodruhových olejů a směsí BEWIT. Vyhledejte podle názvu nebo účinku.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="d27b85f2-d2a8-42a9-81e3-b542b755bde2"></script>
+  <style>
+    .catalog-section {
+      padding: 2.5rem 0 3rem;
+      background: #fff;
+    }
+    .catalog-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    .search-wrap {
+      margin-bottom: 1rem;
+    }
+    .search-input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--dark);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus {
+      border-color: var(--orange);
+    }
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .filter-btn {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--dark);
+      border-radius: 20px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.85rem;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .filter-btn.active {
+      background: var(--orange);
+      color: #fff;
+      border-color: var(--orange);
+    }
+    .filter-btn:hover:not(.active) {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+    .count-line {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+    }
+    .oil-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .oil-item {
+      display: flex;
+      gap: 1rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 0.15s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .oil-item:hover {
+      background: #faf8f5;
+    }
+    .oil-icon {
+      font-size: 1.6rem;
+      min-width: 2.2rem;
+      text-align: center;
+      padding-top: 0.1rem;
+    }
+    .oil-body {
+      flex: 1;
+      min-width: 0;
+    }
+    .oil-name-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.2rem;
+    }
+    .oil-name {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--dark);
+    }
+    .oil-fullname {
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    .oil-badge {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--orange);
+      background: #fff4ec;
+      border: 1px solid #f5d9c0;
+      border-radius: 20px;
+      padding: 0.1rem 0.5rem;
+      white-space: nowrap;
+    }
+    .oil-popis {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.55;
+      margin: 0;
+    }
+    .no-results {
+      text-align: center;
+      padding: 2.5rem 0;
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -24,7 +151,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="./index.html">Úvod</a></li>
         <li><a href="./temata.html">Témata</a></li>
-        <li><a href="./jak-pouzivat.html" class="active">Jak používat</a></li>
+        <li><a href="./jak-pouzivat.html">Jak používat</a></li>
         <li><a href="./pruvodce.html">Průvodkyně</a></li>
         <li><a href="./blog.html">Blog</a></li>
       </ul>
@@ -41,38 +168,48 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
-      <h1 class="hero-title">Oleje A–Z</h1>
-      <p class="hero-subtitle">průvodce konkrétními oleji</p>
+      <h1 class="hero-title">Průvodce oleji A–Z</h1>
+      <p class="hero-subtitle">350 olejů a směsí BEWIT</p>
       <p class="hero-desc">
-        Přehled esenciálních olejů, o kterých jsem psala.
-        Každý olej má svůj článek s popisem, účinky a návodem k použití.
+        Přehled všech jednodruhových olejů a směsí.
+        Vyhledejte podle názvu nebo účinku.
       </p>
     </div>
     <div class="hero-image">
-      <img src="./images/jak_pouzivat.png" alt="Katalog esenciálních olejů" style="object-position: center 0%;">
+      <img src="./images/lahvicky.jpg" alt="Katalog esenciálních olejů" style="object-position: center center;">
     </div>
   </div>
 </section>
 
-<!-- ── Seznam olejů ── -->
-<section style="padding: 3rem 0; background: #fff;">
-  <div class="section-inner" style="max-width: 720px;">
+<!-- ── Katalog ── -->
+<section class="catalog-section">
+  <div class="catalog-inner">
 
-    <a href="./ok-dig.html" style="text-decoration: none; color: inherit;">
-      <div style="display: flex; gap: 1.25rem; align-items: flex-start; padding: 1.5rem 0; border-bottom: 1px solid #e0d9d0;" onmouseover="this.style.background='#faf8f5'" onmouseout="this.style.background='none'">
-        <div style="font-size: 2rem; min-width: 3rem; text-align: center;">🌿</div>
-        <div>
-          <p style="font-size: 0.78rem; color: var(--orange); font-weight: 500; margin: 0 0 0.25rem;">Směs · Trávení</p>
-          <h2 style="font-size: 1.1rem; color: var(--dark); margin: 0 0 0.4rem; font-family: 'Playfair Display', serif;">OK DIG</h2>
-          <p style="font-size: 0.92rem; color: var(--text-light); line-height: 1.6; margin: 0 0 0.5rem;">Pro lehčí trávení a pohodu žaludku. Anýz, fenykl, tymián, jalovec, kardamom a zázvor.</p>
-          <p style="font-size: 0.82rem; color: var(--orange); font-weight: 500; margin: 0;">Číst více →</p>
-        </div>
-      </div>
-    </a>
+    <div class="search-wrap" style="position:relative; margin-bottom:1.25rem;">
+      <span style="position:absolute; left:1rem; top:50%; transform:translateY(-50%); font-size:1.1rem; pointer-events:none;">🔍</span>
+      <input
+        type="search"
+        class="search-input"
+        id="searchInput"
+        placeholder="Hledat olej nebo účinek…"
+        autocomplete="off"
+        style="padding-left:2.75rem; font-size:1.05rem; border:2px solid var(--orange); border-radius:0.75rem;"
+      >
+    </div>
 
-    <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 2rem; text-align: center;">
-      Další oleje přibývají — sledujte nás!
-    </p>
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="vse">Vše (350)</button>
+      <button class="filter-btn" data-filter="olej">Jednodruhové (100)</button>
+      <button class="filter-btn" data-filter="smes">Směsi (250)</button>
+    </div>
+
+    <p class="count-line" id="countLine">Zobrazeno 350 z 350</p>
+
+    <ul class="oil-list" id="oilList"></ul>
+
+    <div class="no-results" id="noResults" style="display:none;">
+      Nenalezeno — zkuste jiný výraz.
+    </div>
 
   </div>
 </section>
@@ -93,19 +230,2463 @@
 
 <!-- ── Disclaimer ── -->
 <p style="text-align:center; font-size:0.8rem; color:#8a7a6a; padding:0.75rem 1rem 0; background:var(--cream);">Esenciální oleje nejsou náhradou lékařské péče.</p>
+
 <!-- ── Footer ── -->
 <footer class="footer">
   <div class="footer-botanical">🌿 ✦ 🌸 ✦ 🌿</div>
   <p class="footer-quote">„Tady nejde o výkon ani dokonalost. Jen o návrat k sobě."</p>
   <p style="font-size: 0.78rem; color: #7a6a5a; margin: 0.5rem 0 0;">Esenciální oleje nejsou náhradou lékařské péče.</p>
   <p class="footer-heart">♥</p>
-  <p class="footer-copy">© 2026 esenci.cz</p>
+    <p class="footer-copy" style="font-size:0.75rem; opacity:0.7;">Esenci.cz provozuje Rita Drabinová · <a href="mailto:eft.joga@gmail.com" style="color:inherit;">eft.joga@gmail.com</a></p>
+<p class="footer-copy">© 2026 esenci.cz</p>
 </footer>
 
 <script>
   const toggle = document.getElementById('navToggle');
   const links  = document.getElementById('navLinks');
   toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+
+<script>
+const OLEJE = [
+  {
+    "name": "Andělika lékařská",
+    "typ": "olej",
+    "popis": "Ochrana, uvolnění, stabilita, očista, duchovní síla",
+    "page": "./olej-andelika-esencialni-olej.html"
+  },
+  {
+    "name": "Anýz",
+    "typ": "olej",
+    "popis": "Trávení, uvolnění, ženský cyklus, zklidnění, energie",
+    "page": "./olej-anyz-esencialni-olej.html"
+  },
+  {
+    "name": "Akácie",
+    "typ": "olej",
+    "popis": "Akácie je spojována s vnitřní",
+    "page": "./olej-acacia-esencialni-olej.html"
+  },
+  {
+    "name": "Aksamitník rozkladitý",
+    "typ": "olej",
+    "popis": "Očista, paraziti, pokožka, ochrana, zklidnění",
+    "page": "./olej-aksamitnik-rozkladity-esencialni-olej.html"
+  },
+  {
+    "name": "Alpinie",
+    "typ": "olej",
+    "popis": "Alpinie podporuje proudění",
+    "page": "./olej-alpinia-esencialni-olej.html"
+  },
+  {
+    "name": "Amyris",
+    "typ": "olej",
+    "popis": "Klid, hloubka, meditace, uzemnění, uvolnění",
+    "page": "./olej-amyris-esencialni-olej.html"
+  },
+  {
+    "name": "Badyán pravý",
+    "typ": "olej",
+    "popis": "Trávení, imunita, ženská síla, uvolnění, vnitřní teplo",
+    "page": "./olej-badyan-pravy-esencialni-olej.html"
+  },
+  {
+    "name": "Bay St. Thomas",
+    "typ": "olej",
+    "popis": "Mužská síla, oheň, tonizace, jasnost, povzbuzení",
+    "page": "./olej-bay-st.-thomas-esencialni-olej.html"
+  },
+  {
+    "name": "Bazalka kafrová",
+    "typ": "olej",
+    "popis": "Prokrvení, očista, svaly, nachlazení, stimulace",
+    "page": "./olej-bazalka-kafrova-esencialni-olej.html"
+  },
+  {
+    "name": "Bazalka pravá",
+    "typ": "olej",
+    "popis": "Jasnost, koncentrace, svěžest, nervy, úleva",
+    "page": "./olej-bazalka-esencialni-olej.html"
+  },
+  {
+    "name": "Benzoin",
+    "typ": "olej",
+    "popis": "Klid, výživa, stabilita, zahojení, útěcha",
+    "page": "./olej-benzoin-absolue-esencialni-olej.html"
+  },
+  {
+    "name": "Bergamot",
+    "typ": "olej",
+    "popis": "Uvolnění, lehkost, radost, tok energie, emoční obnova",
+    "page": "./olej-bergamot.html"
+  },
+  {
+    "name": "Borovice banksová",
+    "typ": "olej",
+    "popis": "Očista, dýchání, vitalita, čerstvost, imunita",
+    "page": "./olej-borovice-banksova-bio.html"
+  },
+  {
+    "name": "Borovice lesní",
+    "typ": "olej",
+    "popis": "Sebevědomí, očista, vitalita, dech, pozitivita",
+    "page": "./olej-borovice-lesni-esencialni-olej.html"
+  },
+  {
+    "name": "Cedr atlaský",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, mužská síla, detoxikace, ochrana",
+    "page": "./olej-cedr-atlasky-esencialni-olej.html"
+  },
+  {
+    "name": "Cedr himálajský",
+    "typ": "olej",
+    "popis": "Síla, stabilita, uzemnění, očista, odolnost",
+    "page": "./olej-cedr-himalajsky-esencialni-olej.html"
+  },
+  {
+    "name": "Celer – semena",
+    "typ": "olej",
+    "popis": "Očista, klouby, detoxikace, trávení, rovnováha",
+    "page": "./olej-celer-semena-esencialni-olej.html"
+  },
+  {
+    "name": "Citron",
+    "typ": "olej",
+    "popis": "Osvěžení, očista, jasnost, důvěra, povzbuzení",
+    "page": "./olej-bewit-citron-bio-raw-esencialni-olej.html"
+  },
+  {
+    "name": "Citronela",
+    "typ": "olej",
+    "popis": "Ochrana, očista, uvolnění, repelent, svěžest",
+    "page": "./olej-citronela-esencialni-olej.html"
+  },
+  {
+    "name": "Citronová tráva",
+    "typ": "olej",
+    "popis": "Očista, energie, rovnováha, regenerace, osvěžení",
+    "page": "./olej-citronova-trava-esencialni-olej.html"
+  },
+  {
+    "name": "Copaiba",
+    "typ": "olej",
+    "popis": "Klid, úleva, regenerace, protizánět, vyrovnání",
+    "page": "./olej-kopaiva-esencialni-olej.html"
+  },
+  {
+    "name": "Cubeb – pepř kubebový",
+    "typ": "olej",
+    "popis": "Očista, dýchání, mužská síla, vylučování, povzbuzení",
+    "page": "./olej-cubeb-esencialni-olej.html"
+  },
+  {
+    "name": "Cypriol",
+    "typ": "olej",
+    "popis": "Očista, uzemnění, detoxikace, klid, rovnováha",
+    "page": "./olej-cypriol-esencialni-olej.html"
+  },
+  {
+    "name": "Cypřiš",
+    "typ": "olej",
+    "popis": "Přechod, stabilita, obnova, očista, tok",
+    "page": "./olej-cypris1-esencialni-olej.html"
+  },
+  {
+    "name": "Česnek",
+    "typ": "olej",
+    "popis": "Imunita, očista, antiparazit, vitalita, odvaha",
+    "page": "./olej-garlic-esencialni-olej.html"
+  },
+  {
+    "name": "Drmek",
+    "typ": "olej",
+    "popis": "Hormonální rovnováha, ženský cyklus, klid, přijetí, víra",
+    "page": "./olej-drmek-esencialni-olej.html"
+  },
+  {
+    "name": "Elemi",
+    "typ": "olej",
+    "popis": "Jasnost, dech, meditace, klid, regenerace",
+    "page": "./olej-elemi-esencialni-olej.html"
+  },
+  {
+    "name": "Eukalyptus",
+    "typ": "olej",
+    "popis": "Volnost, dech, očista, vitalita, otevřenost",
+    "page": "./olej-eukalyptus-esencialni-olej.html"
+  },
+  {
+    "name": "Eukalyptus blue",
+    "typ": "olej",
+    "popis": "Dech, imunita, jasnost, ochrana, svěžest",
+    "page": "./olej-eukalyptus-blue-esencialni-olej.html"
+  },
+  {
+    "name": "Eukalyptus camaldulensis",
+    "typ": "olej",
+    "popis": "Očista, vitalita, dýchání, ochrana, svěžest",
+    "page": "./olej-eukalyptus-camaldulensis-esencialni-olej.html"
+  },
+  {
+    "name": "Eukalyptus staigeriana",
+    "typ": "olej",
+    "popis": "Lehkost, radost, dech, očista, jemnost",
+    "page": "./olej-eukalyptus-staigeriana-esencialni-olej.html"
+  },
+  {
+    "name": "Eukalyptus radiata",
+    "typ": "olej",
+    "popis": "Jemnost, dýchání, imunita, uvolnění, bezpečí",
+    "page": "./olej-eukalyptus-radiata-esencialni-olej.html"
+  },
+  {
+    "name": "Fenykl",
+    "typ": "olej",
+    "popis": "Sebevyjádření, trávení, proudění, rovnováha, ženská",
+    "page": "./olej-fenykl-esencialni-olej.html"
+  },
+  {
+    "name": "Fenykl sladký",
+    "typ": "olej",
+    "popis": "Trávení, očista, ženskost, jasnost, odvaha",
+    "page": "./olej-bewit-fenykl-obecny-esencialni-olej.html"
+  },
+  {
+    "name": "Galbanum",
+    "typ": "olej",
+    "popis": "Hloubka, uvolnění, propojení, harmonie,",
+    "page": "./olej-galbanum-esencialni-olej.html"
+  },
+  {
+    "name": "Galgán",
+    "typ": "olej",
+    "popis": "Trávení, vitalita, prohřátí, aktivace, obranyschopnost",
+    "page": "./olej-galangal-esencialni-olej.html"
+  },
+  {
+    "name": "Geranium bourbon",
+    "typ": "olej",
+    "popis": "Ženskost, srdce, rovnováha, harmonie, jemnost",
+    "page": "./olej-geranium-bourbon-esencialni-olej.html"
+  },
+  {
+    "name": "Ginger lily - zázvorová lilie",
+    "typ": "olej",
+    "popis": "Jemnost, klid, ženskost, harmonie, dech",
+    "page": "./olej-ginger-lily-esencialni-olej.html"
+  },
+  {
+    "name": "Grapefruit",
+    "typ": "olej",
+    "popis": "Lehkost, detoxikace, osvěžení, radost, metabolismus",
+    "page": "./olej-bewit-grapefruit-sun-esencialni-olej.html"
+  },
+  {
+    "name": "Gurjum balsam",
+    "typ": "olej",
+    "popis": "Dýchání, uzemnění, klid, regenerace, ochrana",
+    "page": "./olej-gurjun-balsam-esencialni-olej.html"
+  },
+  {
+    "name": "Heřmánek pravý",
+    "typ": "olej",
+    "popis": "Klid, přijetí, regenerace, jemnost, uvolnění",
+    "page": "./olej-hermanek-pravy-esencialni-olej.html"
+  },
+  {
+    "name": "Hinoki",
+    "typ": "olej",
+    "popis": "Klid, posvátnost, očista, stabilita, ticho",
+    "page": "./olej-bewit-hinoki-esencialni-olej.html"
+  },
+  {
+    "name": "Hřebíček",
+    "typ": "olej",
+    "popis": "Síla, ochrana, prohřátí, imunita, stabilita",
+    "page": "./olej-clove-esencialni-olej.html"
+  },
+  {
+    "name": "Chmel",
+    "typ": "olej",
+    "popis": "Uvolnění, ženskost, spánek, hormonální rovnováha, klid",
+    "page": "./olej-chmel-esencialni-olej.html"
+  },
+  {
+    "name": "Ibiškovec pižmový –",
+    "typ": "olej",
+    "popis": "Smyslnost, uvolnění, klid, harmonie, spojení",
+    "page": "./olej-ibiskovec-pizmovy-esencialni-olej.html"
+  },
+  {
+    "name": "Jalovec",
+    "typ": "olej",
+    "popis": "Očista, volnost, odvaha, prostor, nový začátek",
+    "page": "./olej-jalovec-leaf-esencialni-olej.html"
+  },
+  {
+    "name": "Jasmín",
+    "typ": "olej",
+    "popis": "Radost, intuice, tvořivost, ženskost, harmonie",
+    "page": "./olej-jasmine-absolue-esencialni-olej.html"
+  },
+  {
+    "name": "Jedle balzámová",
+    "typ": "olej",
+    "popis": "Klid, dech, čistota, duchovní síla, úleva",
+    "page": "./olej-jedle-balzamova-esencialni-olej.html"
+  },
+  {
+    "name": "Jedle sibiřská",
+    "typ": "olej",
+    "popis": "Čistota, dech, jasnost, vitalita, lehkost",
+    "page": "./olej-jedle-sibirska-jehlici-esencialni-olej.html"
+  },
+  {
+    "name": "Kadidlo carterii",
+    "typ": "olej",
+    "popis": "Klid, duch, víra, posvátnost, dýchání",
+    "page": "./olej-frankincense-carterii-esencialni-olej.html"
+  },
+  {
+    "name": "Kadidlo sacra",
+    "typ": "olej",
+    "popis": "Duch, světlo, čistota, přítomnost, posvátnost",
+    "page": "./olej-boswellia-sacra-esencialni-olej.html"
+  },
+  {
+    "name": "Kadidlo frereana",
+    "typ": "olej",
+    "popis": "Odvaha, povznesení, světlo, ochrana, jasnost",
+    "page": "./olej-frankincense-frereana-esencialni-olej.html"
+  },
+  {
+    "name": "Kadidlo serrata",
+    "typ": "olej",
+    "popis": "Klid, spojení, regenerace, spiritualita, posvátnost",
+    "page": "./olej-kadidlo-esencialni-olej.html"
+  },
+  {
+    "name": "Kafrovník (ravintsara)",
+    "typ": "olej",
+    "popis": "Očista, síla, imunita, volnost, rovnováha",
+    "page": "./olej-kafr-esencialni-olej.html"
+  },
+  {
+    "name": "Kardamom",
+    "typ": "olej",
+    "popis": "Chuť do života, rovnováha, zažehnutí, spokojenost,",
+    "page": "./olej-kardamom-cerny-esencialni-olej.html"
+  },
+  {
+    "name": "Klementinka",
+    "typ": "olej",
+    "popis": "Radost, lehkost, uvolnění, hravost, optimismus",
+    "page": "./olej-clementina-esencialni-olej.html"
+  },
+  {
+    "name": "Kmín koptský",
+    "typ": "olej",
+    "popis": "Trávení, očista, síla, prohřátí, odvaha",
+    "page": "./olej-ajowan-esencialni-olej.html"
+  },
+  {
+    "name": "Kmín kořenný",
+    "typ": "olej",
+    "popis": "Klid, trávení, uvolnění, vřelost, důvěra",
+    "page": "./olej-caraway-esencialni-olej.html"
+  },
+  {
+    "name": "Kmín římský",
+    "typ": "olej",
+    "popis": "Odhodlání, vitalita, zažehnutí, vytrvalost, jistota",
+    "page": "./olej-kmin-esencialni-olej.html"
+  },
+  {
+    "name": "Kopaiva",
+    "typ": "olej",
+    "popis": "Klid, regenerace, úleva, protizánět, bezpečí",
+    "page": "./olej-kopaiva-esencialni-olej.html"
+  },
+  {
+    "name": "Kopál vonný (Palo Santo)",
+    "typ": "olej",
+    "popis": "Očista, duch, vnitřní ticho, ochrana, rovnováha",
+    "page": "./olej-palo-santo-esencialni-olej.html"
+  },
+  {
+    "name": "Kopr",
+    "typ": "olej",
+    "popis": "Klid, trávení, jemnost, uvolnění, důvěra",
+    "page": "./olej-dill-seed-esencialni-olej.html"
+  },
+  {
+    "name": "Koriandr",
+    "typ": "olej",
+    "popis": "Klid, tvořivost, stabilita, radost, zažívání",
+    "page": "./olej-bewit-koriandr-sety-esencialni-olej.html"
+  },
+  {
+    "name": "Kozlík lékařský",
+    "typ": "olej",
+    "popis": "Klid, útlum, uvolnění, regenerace, vyrovnání",
+    "page": "./olej-kozlik-esencialni-olej.html"
+  },
+  {
+    "name": "Kurkuma – kořen",
+    "typ": "olej",
+    "popis": "Očista, síla, protizánět, světlo, vitalita",
+    "page": "./olej-turmeric-leaves-esencialni-olej.html"
+  },
+  {
+    "name": "Kurkuma zedoary",
+    "typ": "olej",
+    "popis": "Očista, odvaha, hojení, síla, zažívání",
+    "page": "./olej-zedoary-esencialni-olej.html"
+  },
+  {
+    "name": "Labdanum",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, hloubka, ženská síla, uzdravení",
+    "page": "./olej-labdanum-esencialni-olej.html"
+  },
+  {
+    "name": "Lavandin",
+    "typ": "olej",
+    "popis": "Klid, očista, pohyb, síla, stabilita",
+    "page": "./olej-lavandin-esencialni-olej.html"
+  },
+  {
+    "name": "Levandule lékařská",
+    "typ": "olej",
+    "popis": "Klid, sebevyjádření, regenerace, rovnováha, bezpečí",
+    "page": "./olej-levandule-esencialni-olej.html"
+  },
+  {
+    "name": "Levandule spike",
+    "typ": "olej",
+    "popis": "Dech, síla, odvaha, očista, uvolnění",
+    "page": "./olej-spike-lavender-esencialni-olej.html"
+  },
+  {
+    "name": "Libavka",
+    "typ": "olej",
+    "popis": "Úleva, pohyb, prohřátí, uvolnění, regenerace",
+    "page": "./olej-libavka-esencialni-olej.html"
+  },
+  {
+    "name": "Libora měnivá",
+    "typ": "olej",
+    "popis": "Změna, odvaha, očista, vnitřní přechod, stabilizace",
+    "page": "./olej-libora-meniva-esencialni-olej.html"
+  },
+  {
+    "name": "Limetka",
+    "typ": "olej",
+    "popis": "Radost, svěžest, odvaha, očista, lehkost",
+    "page": "./olej-limetka-esencialni-olej.html"
+  },
+  {
+    "name": "Litsea cubeba",
+    "typ": "olej",
+    "popis": "Jasnost, radost, lehkost, svěžest, přítomnost.",
+    "page": "./olej-litsea-cubeba-esencialni-olej.html"
+  },
+  {
+    "name": "Majoránka zahradní",
+    "typ": "olej",
+    "popis": "Uvolnění, soucit, srdečnost, klid, vyrovnání",
+    "page": "./olej-majoranka-esencialni-olej.html"
+  },
+  {
+    "name": "Mandarinka",
+    "typ": "olej",
+    "popis": "Radost, hravost, uvolnění, vnitřní dítě, lehkost",
+    "page": "./olej-zluta-mandarinka-esencialni-olej.html"
+  },
+  {
+    "name": "Mandle hořká",
+    "typ": "olej",
+    "popis": "Klid, jemnost, důvěra, uvolnění, sladké uzdravení",
+    "page": "./olej-prunus-amygdalus-esencialni-olej.html"
+  },
+  {
+    "name": "Manuka",
+    "typ": "olej",
+    "popis": "Ochrana, síla, očista, imunita, rovnováha",
+    "page": "./olej-manuka-esencialni-olej.html"
+  },
+  {
+    "name": "Massoia",
+    "typ": "olej",
+    "popis": "Dotek, vřelost, ženskost, sladkost, péče",
+    "page": "./olej-massoia-bark-esencialni-olej.html"
+  },
+  {
+    "name": "Meduňka lékařská",
+    "typ": "olej",
+    "popis": "Mír, srdce, uvolnění, stabilita, ztišení",
+    "page": "./olej-melissa-esencialni-olej.html"
+  },
+  {
+    "name": "Máta peprná",
+    "typ": "olej",
+    "popis": "Osvěžení, bdělost, proudění, koncentrace, uvolnění",
+    "page": "./olej-mata-peprna-esencialni-olej.html"
+  },
+  {
+    "name": "Myrha",
+    "typ": "olej",
+    "popis": "Hloubka, uzemnění, ztišení, hojení, duchovní spojení",
+    "page": "./olej-myrha-esencialni-olej.html"
+  },
+  {
+    "name": "Nard (jatamansi)",
+    "typ": "olej",
+    "popis": "Hlubina, usebrání, klid, přijetí, duchovní integrace",
+    "page": "./olej-spikenard-esencialni-olej.html"
+  },
+  {
+    "name": "Neroli",
+    "typ": "olej",
+    "popis": "Něha, přijetí, radost, rovnováha, otevřenost",
+    "page": "./olej-neroli-esencialni-olej.html"
+  },
+  {
+    "name": "Pačuli",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, smyslnost, regenerace, přijetí",
+    "page": "./olej-paculi-esencialni-olej.html"
+  },
+  {
+    "name": "Pelargonie růžová",
+    "typ": "olej",
+    "popis": "Rovnováha, jemnost, srdečnost, ženskost, stabilita",
+    "page": "./olej-geranie-esencialni-olej.html"
+  },
+  {
+    "name": "Pomeranč sladký",
+    "typ": "olej",
+    "popis": "Radost, uvolnění, optimismus, důvěra, dětská lehkost",
+    "page": "./olej-pomeranc-esencialni-olej.html"
+  },
+  {
+    "name": "Puškvorec",
+    "typ": "olej",
+    "popis": "Koncentrace, mysl, trávení, uzemnění, mentální síla",
+    "page": "./olej-calamus-esencialni-olej.html"
+  },
+  {
+    "name": "Růže damašská",
+    "typ": "olej",
+    "popis": "Láska, přijetí, hojivost, něha, ženská esence",
+    "page": "./olej-rosa-damascena-esencialni-olej.html"
+  },
+  {
+    "name": "Santalové dřevo",
+    "typ": "olej",
+    "popis": "Ticho, meditace, soustředění, klid, duchovní spojení",
+    "page": "./olej-sandalwood-esencialni-olej.html"
+  },
+  {
+    "name": "Skořice pravá (kůra)",
+    "typ": "olej",
+    "popis": "Vášeň, teplo, aktivace, energie, odvaha",
+    "page": "./olej-skorice-kura-esencialni-olej.html"
+  },
+  {
+    "name": "Šalvěj lékařská",
+    "typ": "olej",
+    "popis": "Jasnost, očista, síla, ženská rovnováha, transformace",
+    "page": "./olej-salvej-esencialni-olej.html"
+  },
+  {
+    "name": "Tea tree",
+    "typ": "olej",
+    "popis": "Očista, ochrana, imunita, síla, bdělost",
+    "page": "./olej-tea-tree-esencialni-olej.html"
+  },
+  {
+    "name": "Tulsi (bazalka posvátná)",
+    "typ": "olej",
+    "popis": "Očista, víra, ochrana, povznesení, vitalita",
+    "page": "./olej-bazalka-posvatna-esencialni-olej.html"
+  },
+  {
+    "name": "Tymián obecný",
+    "typ": "olej",
+    "popis": "Síla, odvaha, očista, imunita, prodyšnost",
+    "page": "./olej-tymian-esencialni-olej.html"
+  },
+  {
+    "name": "Vanilka",
+    "typ": "olej",
+    "popis": "Klid, útěcha, něha, sladkost, důvěra",
+    "page": "./olej-vanilla-esencialni-olej.html"
+  },
+  {
+    "name": "Vetiver",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, ochrana, klid, hloubka",
+    "page": "./olej-vetiver-esencialni-olej.html"
+  },
+  {
+    "name": "Vratič modrý",
+    "typ": "olej",
+    "popis": "Zánět, klid, alergie, pokožka, jemnost",
+    "page": "./olej-blue-tansy-esencialni-olej.html"
+  },
+  {
+    "name": "Ylang-ylang",
+    "typ": "olej",
+    "popis": "Radost, uvolnění, smyslnost, srdce, rovnováha",
+    "page": "./olej-ylang-ylang-esencialni-olej.html"
+  },
+  {
+    "name": "Zázvor",
+    "typ": "olej",
+    "popis": "Odvaha, zahřátí, aktivace, trávení, odhodlání",
+    "page": "./olej-zazvor-esencialni-olej.html"
+  },
+  {
+    "name": "33",
+    "fullname": "33",
+    "typ": "smes",
+    "popis": "Univerzální směs s mimořádně širokým spektrem použití",
+    "page": "./smes-33-esencialni-olej.html"
+  },
+  {
+    "name": "3S",
+    "fullname": "3 seconds",
+    "typ": "smes",
+    "popis": "Rychlá povzbuzující směs pro",
+    "page": "./smes-3s-esencialni-olej.html"
+  },
+  {
+    "name": "A-PAR",
+    "fullname": "Anti parasite",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při očistě organismu od",
+    "page": "./smes-apar-esencialni-olej.html"
+  },
+  {
+    "name": "AFRODITE",
+    "fullname": "Afrodite",
+    "typ": "smes",
+    "popis": "Směs věnovaná ženské kráse, přitažlivosti a smyslnosti",
+    "page": "./smes-bewit-afrodite-esencialni-olej.html"
+  },
+  {
+    "name": "AG",
+    "fullname": "Anti-aging",
+    "typ": "smes",
+    "popis": "Prémiová směs pro regeneraci, výživu a omlazení pokožky",
+    "page": "./smes-ag-esencialni-olej.html"
+  },
+  {
+    "name": "ALG",
+    "fullname": "Allergie",
+    "typ": "smes",
+    "popis": "Směs vytvořená pro úlevu při alergických",
+    "page": "./smes-alg-esencialni-olej.html"
+  },
+  {
+    "name": "AMOR",
+    "fullname": "Amor",
+    "typ": "smes",
+    "popis": "Jemná, hluboká směs vytvořená pro otevření",
+    "page": "./smes-bewit-amor-esencialni-olej.html"
+  },
+  {
+    "name": "ANCAN",
+    "fullname": "Anti candida",
+    "typ": "smes",
+    "popis": "Silná funkční směs zaměřená na podporu při přemnožení",
+    "page": "./smes-ancan-esencialni-olej.html"
+  },
+  {
+    "name": "ANE",
+    "fullname": "Anemia",
+    "typ": "smes",
+    "popis": "Směs určená pro podporu při",
+    "page": "./smes-ane-esencialni-olej.html"
+  },
+  {
+    "name": "ANGEL",
+    "fullname": "Angel",
+    "typ": "smes",
+    "popis": "Jemná parfémová směs inspirovaná andělskou energií",
+    "page": "./smes-angel-esencialni-olej.html"
+  },
+  {
+    "name": "ANTIS",
+    "fullname": "Antistress",
+    "typ": "smes",
+    "popis": "Oblíbená směs zaměřená na stres, napětí a emoční přetížení",
+    "page": "./smes-antis-esencialni-olej.html"
+  },
+  {
+    "name": "AST",
+    "fullname": "Asthma",
+    "typ": "smes",
+    "popis": "Směs vytvořená pro podporu při astmatických",
+    "page": "./smes-bewit-ast-esencialni-olej.html"
+  },
+  {
+    "name": "AURA",
+    "fullname": "Aura",
+    "typ": "smes",
+    "popis": "Jemný harmonizační parfém určený pro každodenní očistu a",
+    "page": "./smes-aura.html"
+  },
+  {
+    "name": "BABY SLEEP",
+    "fullname": "Baby sleep",
+    "typ": "smes",
+    "popis": "Jemná a bezpečná směs vytvořená speciálně pro podporu",
+    "page": "./smes-bewit-baby-sleep-esencialni-olej.html"
+  },
+  {
+    "name": "BALANCE",
+    "fullname": "Balance",
+    "typ": "smes",
+    "popis": "Harmonizační směs vytvořená pro stabilizaci",
+    "page": "./smes-balance-esencialni-olej.html"
+  },
+  {
+    "name": "BALZE",
+    "fullname": "By alzheimer",
+    "typ": "smes",
+    "popis": "Podpůrná směs vytvořená pro osoby s Alzheimerovou",
+    "page": "./smes-balze-esencialni-olej.html"
+  },
+  {
+    "name": "BEST FRIEND",
+    "fullname": "Best friend",
+    "typ": "smes",
+    "popis": "Univerzální jemná první pomoc pro tělo i duši",
+    "page": "./smes-bewit-best-friend-esencialni-olej.html"
+  },
+  {
+    "name": "BLUE DIAMOND",
+    "fullname": "Blue diamond",
+    "typ": "smes",
+    "popis": "Luxusní parfémová kompozice s duchovní hloubkou",
+    "page": "./smes-blue-diamond-esencialni-olej.html"
+  },
+  {
+    "name": "BO",
+    "fullname": "Bone",
+    "typ": "smes",
+    "popis": "Specializovaná směs zaměřená na regeneraci",
+    "page": "./smes-bewit-bo-esencialni-olej.html"
+  },
+  {
+    "name": "BODYGUARD",
+    "fullname": "Bodyguard",
+    "typ": "smes",
+    "popis": "Intenzivní ochranná směs fungující jako přírodní štít proti",
+    "page": "./smes-bodyguard-esencialni-olej.html"
+  },
+  {
+    "name": "BREAST PLUS",
+    "fullname": "Breast plus",
+    "typ": "smes",
+    "popis": "Jemná",
+    "page": "./smes-breast-plus-esencialni-olej.html"
+  },
+  {
+    "name": "BREATH",
+    "fullname": "Breath",
+    "typ": "smes",
+    "popis": "Jeden z největších bestsellerů – silná a komplexní směs pro",
+    "page": "./smes-breath-esencialni-olej.html"
+  },
+  {
+    "name": "BREF",
+    "fullname": "Breast-feeding",
+    "typ": "smes",
+    "popis": "Jemná směs pro podporu přirozené tvorby mateřského mléka",
+    "page": "./smes-bref-esencialni-olej.html"
+  },
+  {
+    "name": "BRO",
+    "fullname": "Bronchitis",
+    "typ": "smes",
+    "popis": "Směs vhodná při akutních i chronických zánětech dýchacích",
+    "page": "./smes-bro.html"
+  },
+  {
+    "name": "BRUISES",
+    "fullname": "Bruises",
+    "typ": "smes",
+    "popis": "Směs určená k podpoře při",
+    "page": "./smes-bewit-bruises-esencialni-olej.html"
+  },
+  {
+    "name": "BULCE",
+    "fullname": "By ulcers",
+    "typ": "smes",
+    "popis": "Směs zaměřená na žaludeční vředy a podrážděný žaludek",
+    "page": "./smes-bewit-bulce-esencialni-olej.html"
+  },
+  {
+    "name": "BUNI",
+    "fullname": "Bunion",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při vybočeném palci (hallux",
+    "page": "./smes-buni-esencialni-olej.html"
+  },
+  {
+    "name": "BYD",
+    "fullname": "By diarrhea",
+    "typ": "smes",
+    "popis": "Směs na podporu při akutním i chronickém průjmu",
+    "page": "./smes-byd-esencialni-olej.html"
+  },
+  {
+    "name": "BYDIA",
+    "fullname": "By diabetes",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu organismu při cukrovce",
+    "page": "./smes-bewit-bydia-esencialni-olej.html"
+  },
+  {
+    "name": "BYF",
+    "fullname": "By flu",
+    "typ": "smes",
+    "popis": "Směs určená k podpoře organismu při chřipce",
+    "page": "./smes-bewit-byf-esencialni-olej.html"
+  },
+  {
+    "name": "BYFEV",
+    "fullname": "By fever",
+    "typ": "smes",
+    "popis": "Směs na podporu při zvýšené teplotě a horečce",
+    "page": "./smes-bewit-byfev-esencialni-olej.html"
+  },
+  {
+    "name": "CALMING",
+    "fullname": "Calmig",
+    "typ": "smes",
+    "popis": "Utišující směs, která harmonizuje nervový",
+    "page": "./smes-calming-esencialni-olej.html"
+  },
+  {
+    "name": "CLARITY",
+    "fullname": "Clarity",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro jasnost",
+    "page": "./smes-clarity-esencialni-olej.html"
+  },
+  {
+    "name": "CLEAN HOME",
+    "fullname": "Clean home",
+    "typ": "smes",
+    "popis": "Čisticí směs určená pro",
+    "page": "./smes-bewit-clean-home-esencialni-olej.html"
+  },
+  {
+    "name": "COLDET",
+    "fullname": "Colon detoxication",
+    "typ": "smes",
+    "popis": "Bestseller v oblasti hloubkové detoxikace a regenerace střev",
+    "page": "./smes-coldet-esencialni-olej.html"
+  },
+  {
+    "name": "COLWIT",
+    "fullname": "Cold",
+    "typ": "smes",
+    "popis": "Univerzální směs na podporu těla při nachlazení",
+    "page": "./smes-colwit-esencialni-olej.html"
+  },
+  {
+    "name": "COMMUNICATION",
+    "fullname": "Communication",
+    "typ": "smes",
+    "popis": "Směs na podporu jasné, upřímné a otevřené komunikace",
+    "page": "./smes-comunication-esencialni-olej.html"
+  },
+  {
+    "name": "COMPASSION",
+    "fullname": "Compassion",
+    "typ": "smes",
+    "popis": "Jemná směs podporující",
+    "page": "./smes-compassion-esencialni-olej.html"
+  },
+  {
+    "name": "CONFESSION",
+    "fullname": "Confession",
+    "typ": "smes",
+    "popis": "Hluboká směs pro",
+    "page": "./smes-confession-esencialni-olej.html"
+  },
+  {
+    "name": "CONFIDENCE",
+    "fullname": "Confidence",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro podporu",
+    "page": "./smes-confidence-esencialni-olej.html"
+  },
+  {
+    "name": "CORIANDER DEUX",
+    "fullname": "Coriander deux",
+    "typ": "smes",
+    "popis": "Směs s dvojím koriandrem -",
+    "page": "./smes-coriander-deux-esencialni-olej.html"
+  },
+  {
+    "name": "COURAGE",
+    "fullname": "Courage",
+    "typ": "smes",
+    "popis": "Směs pro podporu",
+    "page": "./smes-courage-esencialni-olej.html"
+  },
+  {
+    "name": "CREATIVITY",
+    "fullname": "Creativity",
+    "typ": "smes",
+    "popis": "Povzbuzující a inspirativní směs pro rozproudění",
+    "page": "./smes-creativity-esencialni-olej.html"
+  },
+  {
+    "name": "DARK CIRCLES HELP",
+    "fullname": "Dark circles help",
+    "typ": "smes",
+    "popis": "Směs určená pro ošetření tmavých kruhů pod očima",
+    "page": "./smes-dark-circles-help-esencialni-olej.html"
+  },
+  {
+    "name": "DEEP SLEEP",
+    "fullname": "Deep sleep",
+    "typ": "smes",
+    "popis": "Komplexní směs pro podporu",
+    "page": "./smes-deep-sleep-esencialni-olej.html"
+  },
+  {
+    "name": "DENT",
+    "fullname": "Dental",
+    "typ": "smes",
+    "popis": "Jeden z bestsellerů v péči o ústní dutinu",
+    "page": "./smes-bewit-dent-esencialni-olej.html"
+  },
+  {
+    "name": "DESI",
+    "fullname": "Desinfection",
+    "typ": "smes",
+    "popis": "Univerzální dezinfekční směs pro široké použití",
+    "page": "./smes-desi-esencialni-olej.html"
+  },
+  {
+    "name": "DESPACITO",
+    "fullname": "Despacito",
+    "typ": "smes",
+    "popis": "Parfémová směs - oslava života v jeho",
+    "page": "./smes-bewit-despcito-esencialni-olej.html"
+  },
+  {
+    "name": "DETOL",
+    "fullname": "Detoxication liver",
+    "typ": "smes",
+    "popis": "Směs zaměřená na detoxikaci",
+    "page": "./smes-detol-esencialni-olej.html"
+  },
+  {
+    "name": "DRY C",
+    "fullname": "Dry cough",
+    "typ": "smes",
+    "popis": "Směs zaměřená na suchý, dráždivý",
+    "page": "./smes-dry-c-esencialni-olej.html"
+  },
+  {
+    "name": "DUPREG",
+    "fullname": "During pregnancy",
+    "typ": "smes",
+    "popis": "Jemná a bezpečná směs vytvořená pro podporu žen v období",
+    "page": "./smes-dupreg-esencialni-olej.html"
+  },
+  {
+    "name": "DX",
+    "fullname": "Detoxification",
+    "typ": "smes",
+    "popis": "Komplexní směs zaměřená na podporu celkové detoxikace",
+    "page": "./smes-bewit-dx-esencialni-olej.html"
+  },
+  {
+    "name": "E-SMO",
+    "fullname": "Elektro smog",
+    "typ": "smes",
+    "popis": "Ochranná směs navržená pro minimalizaci dopadů",
+    "page": "./smes-bewit-e-smo-esencialni-olej.html"
+  },
+  {
+    "name": "EARTH",
+    "fullname": "Earth",
+    "typ": "smes",
+    "popis": "Směs inspirovaná prvkem Země podle tradiční čínské medicíny",
+    "page": "./smes-earth-esencialni-olej.html"
+  },
+  {
+    "name": "ELLI",
+    "fullname": "Elli",
+    "typ": "smes",
+    "popis": "Smyslný, jemně květinový parfém s dominantním",
+    "page": "./smes-elli-esencialni-olej.html"
+  },
+  {
+    "name": "EMPATHY",
+    "fullname": "Empathy",
+    "typ": "smes",
+    "popis": "Harmonizační směs pro prohloubení",
+    "page": "./smes-empathy-esencialni-olej.html"
+  },
+  {
+    "name": "EPI",
+    "fullname": "Epilepsy",
+    "typ": "smes",
+    "popis": "Směs zaměřená na jemnou podporu při epilepsii a",
+    "page": "./smes-bewit-epi-esencialni-olej.html"
+  },
+  {
+    "name": "EROS",
+    "fullname": "Eros",
+    "typ": "smes",
+    "popis": "Směs probouzející smyslnost, vášeň a intimní propojení",
+    "page": "./smes-eros-esencialni-olej.html"
+  },
+  {
+    "name": "ETHER",
+    "fullname": "Ether",
+    "typ": "smes",
+    "popis": "Éterická parfémová směs laděná na prvek",
+    "page": "./smes-ether-esencialni-olej.html"
+  },
+  {
+    "name": "FAITH",
+    "fullname": "Faith",
+    "typ": "smes",
+    "popis": "Jemná směs víry, naděje a hluboké vnitřní důvěry",
+    "page": "./smes-faith-esencialni-olej.html"
+  },
+  {
+    "name": "FASCIA",
+    "fullname": "Fascia",
+    "typ": "smes",
+    "popis": "Specializovaná směs pro harmonizaci a uvolnění fascií -",
+    "page": "./smes-bewit-fascia-esencialni-olej.html"
+  },
+  {
+    "name": "FIRE",
+    "fullname": "Fire",
+    "typ": "smes",
+    "popis": "Prvek ohně podle tradiční čínské medicíny - energie",
+    "page": "./smes-fire-esencialni-olej.html"
+  },
+  {
+    "name": "FLOW",
+    "fullname": "Flow",
+    "typ": "smes",
+    "popis": "Jemný parfém pro podporu vnitřního",
+    "page": "./smes-bewit-flow-esencialni-olej.html"
+  },
+  {
+    "name": "FLOW B",
+    "fullname": "Flow blood",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu přirozeného toku",
+    "page": "./smes-bewit-flow-b-esencialni-olej.html"
+  },
+  {
+    "name": "FOCUS",
+    "fullname": "Focus",
+    "typ": "smes",
+    "popis": "Podpůrná směs pro",
+    "page": "./smes-bewit-focus-esencialni-olej.html"
+  },
+  {
+    "name": "FOREVER",
+    "fullname": "Forever",
+    "typ": "smes",
+    "popis": "Parfémová směs věnovaná tématu",
+    "page": "./smes-forever-esencialni-olej.html"
+  },
+  {
+    "name": "FORGIVENESS",
+    "fullname": "Forgiveness",
+    "typ": "smes",
+    "popis": "Jemná a hluboce léčivá směs určená pro proces odpuštění –",
+    "page": "./smes-forgiveness-esencialni-olej.html"
+  },
+  {
+    "name": "FRANKINCENSE",
+    "fullname": "QUATTUOR",
+    "typ": "smes",
+    "popis": "Frankincense quattuor Unikátní směs čtyř druhů kadidla s",
+    "page": "./smes-bewit-frankincense-quattuor-esencialni-olej.html"
+  },
+  {
+    "name": "FREEDOM",
+    "fullname": "Freedom",
+    "typ": "smes",
+    "popis": "Směs pro pocit",
+    "page": "./smes-freedom-esencialni-olej.html"
+  },
+  {
+    "name": "FRESH",
+    "fullname": "Fresh",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro svěžest těla i mysli",
+    "page": "./smes-fresh-esencialni-olej.html"
+  },
+  {
+    "name": "GASTO",
+    "fullname": "Gallstones",
+    "typ": "smes",
+    "popis": "Směs cílená na podporu žlučníku při výskytu žlučových kamenů",
+    "page": "./smes-bewit-gasto-esencialni-olej.html"
+  },
+  {
+    "name": "GENERATOR",
+    "fullname": "Generator",
+    "typ": "smes",
+    "popis": "Směs inspirovaná typem Generátor v systému Human Design",
+    "page": "./smes-bewit-generator-esencialni-olej.html"
+  },
+  {
+    "name": "GENTLE SMILE",
+    "fullname": "Gentle smile",
+    "typ": "smes",
+    "popis": "Jemná směs pro klid, něhu a vnitřní úsměv",
+    "page": "./smes-bewit-gentle-smile-esencialni-olej.html"
+  },
+  {
+    "name": "GET UP",
+    "fullname": "Get up",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro chvíle, kdy se člověk cítí na",
+    "page": "./smes-get-up-esencialni-olej.html"
+  },
+  {
+    "name": "GODDESS",
+    "fullname": "Goddess",
+    "typ": "smes",
+    "popis": "Směs věnovaná premenstruační fázi ženy - magickému období",
+    "page": "./smes-goddess-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD",
+    "fullname": "Gold",
+    "typ": "smes",
+    "popis": "Luxusní sérum pro každodenní péči o",
+    "page": "./smes-gold-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD A",
+    "fullname": "Acne",
+    "typ": "smes",
+    "popis": "Směs určená pro problematickou pleť se sklonem k akné",
+    "page": "./smes-bewit-gold-a-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD A-SHA MAN",
+    "fullname": "After shave man",
+    "typ": "smes",
+    "popis": "Zklidňující směs po holení vytvořená speciálně pro potřeby",
+    "page": "./smes-bewit-gold-a-sha-man-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD A-SHA WOMAN",
+    "fullname": "After shave woman",
+    "typ": "smes",
+    "popis": "Jemná směs po holení vytvořená pro citlivé ženské",
+    "page": "./smes-bewit-gold-a-sha-woman-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD AA SERUM",
+    "fullname": "Anti aging",
+    "typ": "smes",
+    "popis": "Vysoce účinné sérum proti stárnutí",
+    "page": "./smes-bewit-gold-aa-serum-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD AN-CELL",
+    "fullname": "Anti cellulite",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při celulitidě",
+    "page": "./smes-bewit-gold-an-cell-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD BABY",
+    "fullname": "Baby",
+    "typ": "smes",
+    "popis": "Jemná",
+    "page": "./smes-bewit-gold-baby-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD BALANCE OILY",
+    "fullname": "Balance oily (skin)",
+    "typ": "smes",
+    "popis": "Směs určená pro vyvážení",
+    "page": "./smes-gold-balance-oily-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD BEAUTY",
+    "fullname": "Beauty",
+    "typ": "smes",
+    "popis": "Univerzální směs krásy pro každodenní péči o pleť",
+    "page": "./smes-bewit-gold-beauty-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD BODY",
+    "fullname": "Body",
+    "typ": "smes",
+    "popis": "Vyživující směs pro celkovou péči o pokožku těla",
+    "page": "./smes-bewit-gold-body-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD C",
+    "fullname": "Cancer",
+    "typ": "smes",
+    "popis": "Cílená směs vytvořená jako podpora při závažných kožních",
+    "page": "./smes-bewit-gold-c-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD COL",
+    "fullname": "Collagen",
+    "typ": "smes",
+    "popis": "Směs zaměřená na přirozenou podporu tvorby vlastního",
+    "page": "./smes-bewit-gold-col-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD D",
+    "fullname": "Derma",
+    "typ": "smes",
+    "popis": "Jemná směs vytvořená speciálně pro pleť s rosaceou (acne",
+    "page": "./smes-bewit-gold-d-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD DEO",
+    "fullname": "Deo",
+    "typ": "smes",
+    "popis": "Přírodní deodorantová směs navržená k neutralizaci",
+    "page": "./smes-bewit-gold-deo-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD FIRST",
+    "fullname": "First",
+    "typ": "smes",
+    "popis": "Směs první pomoci pro všechny drobné úrazy -",
+    "page": "./smes-bewit-gold-first-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD HE",
+    "fullname": "Herpes",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při",
+    "page": "./smes-bewit-gold-he-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD LAVENDER",
+    "fullname": "Lavender",
+    "typ": "smes",
+    "popis": "Luxusní levandulová směs pro každodenní péči o pleť i",
+    "page": "./smes-gold-lavender-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD LIPS",
+    "fullname": "Lips",
+    "typ": "smes",
+    "popis": "Výživná směs pro intenzivní péči o rty",
+    "page": "./smes-bewit-gold-lips-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD MAN",
+    "fullname": "Man",
+    "typ": "smes",
+    "popis": "Ošetřující směs vytvořená speciálně pro potřeby mužské",
+    "page": "./smes-bewit-gold-man-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD MOISTURISING",
+    "fullname": "Moisturising",
+    "typ": "smes",
+    "popis": "Hydratační směs pro suchou, napjatou a dehydratovanou pleť",
+    "page": "./smes-gold-moisturising-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD NOWA",
+    "fullname": "No warts",
+    "typ": "smes",
+    "popis": "Cílená směs na bradavice",
+    "page": "./smes-bewit-gold-nowa-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD PROVANCE",
+    "fullname": "Provance",
+    "typ": "smes",
+    "popis": "Jemná",
+    "page": "./smes-gold-provance-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD PS",
+    "fullname": "Psoriasis",
+    "typ": "smes",
+    "popis": "Speciální směs určená pro podporu při lupénce a",
+    "page": "./smes-bewit-gold-ps-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD RED",
+    "fullname": "Red",
+    "typ": "smes",
+    "popis": "Regenerační a vyživující sérum s dračí",
+    "page": "./smes-gold-red-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD SCA",
+    "fullname": "Scars",
+    "typ": "smes",
+    "popis": "Hojivá směs určená pro péči o jizvy",
+    "page": "./smes-gold-sca-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD SENSITIVE",
+    "fullname": "Sensitive",
+    "typ": "smes",
+    "popis": "Směs určená pro velmi",
+    "page": "./smes-bewit-gold-sensitive-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD SHI",
+    "fullname": "Shingles",
+    "typ": "smes",
+    "popis": "Směs určená pro podporu při pásovém oparu",
+    "page": "./smes-bewit-gold-shi-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD SUN B",
+    "fullname": "Sun burns",
+    "typ": "smes",
+    "popis": "Směs určená k úlevě při spálení od slunce a pro podrážděnou",
+    "page": "./smes-bewit-gold-sun-b-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD SUPERIOR",
+    "fullname": "Superior",
+    "typ": "smes",
+    "popis": "Luxusní směs pro krásu, vitalitu a hlubokou výživu pokožky",
+    "page": "./smes-bewit-gold-superrior-esencialni-olej.html"
+  },
+  {
+    "name": "GOLD WR SERUM",
+    "fullname": "Wrinkles",
+    "typ": "smes",
+    "popis": "Sérum zaměřené na",
+    "page": "./smes-bewit-gold-wr-serum-esencialni-olej.html"
+  },
+  {
+    "name": "GROUNDING",
+    "fullname": "Grounding",
+    "typ": "smes",
+    "popis": "Uzemňující směs pro",
+    "page": "./smes-grounding-esencialni-olej.html"
+  },
+  {
+    "name": "GUR",
+    "fullname": "Genitourinary",
+    "typ": "smes",
+    "popis": "Směs zaměřená na urogenitální trakt - močový měchýř",
+    "page": "./smes-gur-esencialni-olej.html"
+  },
+  {
+    "name": "H PLANT",
+    "fullname": "Help plant",
+    "typ": "smes",
+    "popis": "Směs pro přírodní péči o rostliny, květiny i stromy",
+    "page": "./smes-h-plant-esencialni-olej.html"
+  },
+  {
+    "name": "H PLUS",
+    "fullname": "Hydrogen plus",
+    "typ": "smes",
+    "popis": "Směs podporující zvýšenou tvorbu molekulárního vodíku v",
+    "page": "./smes-h-plus-esencialni-olej.html"
+  },
+  {
+    "name": "HAIR",
+    "fullname": "Hair",
+    "typ": "smes",
+    "popis": "Směs pro zdraví vlasů - podporuje jejich",
+    "page": "./smes-hair-esencialni-olej.html"
+  },
+  {
+    "name": "HEBAUT",
+    "fullname": "Help by autism",
+    "typ": "smes",
+    "popis": "Jemná",
+    "page": "./smes-hebaut-esencialni-olej.html"
+  },
+  {
+    "name": "HELP GB",
+    "fullname": "Help gall bladder",
+    "typ": "smes",
+    "popis": "Směs pro podporu žlučníku a zdravého trávení tuků",
+    "page": "./smes-help-gb-esencialni-olej.html"
+  },
+  {
+    "name": "HELP H",
+    "fullname": "Help heart",
+    "typ": "smes",
+    "popis": "Jedna z nejsilnějších směsí pro podporu",
+    "page": "./smes-help-h-esencialni-olej.html"
+  },
+  {
+    "name": "HELP K",
+    "fullname": "Help kidney",
+    "typ": "smes",
+    "popis": "Směs zaměřená na posílení",
+    "page": "./smes-bewit-help-k-esencialni-olej.html"
+  },
+  {
+    "name": "HELP P",
+    "fullname": "Pancreas",
+    "typ": "smes",
+    "popis": "Jedna z nejsilnějších směsí pro podporu",
+    "page": "./smes-help-p-esencialni-olej.html"
+  },
+  {
+    "name": "HELP SP",
+    "fullname": "Spleen",
+    "typ": "smes",
+    "popis": "Podpůrná směs pro slinivku",
+    "page": "./smes-help-sp-esencialni-olej.html"
+  },
+  {
+    "name": "HEMO",
+    "fullname": "Hemorrhoids",
+    "typ": "smes",
+    "popis": "Směs určená na podporu při hemoroidech",
+    "page": "./smes-bewit-hemo-esencialni-olej.html"
+  },
+  {
+    "name": "HEMUS",
+    "fullname": "Help by multiple sclerosis",
+    "typ": "smes",
+    "popis": "Podpůrná směs pro organismus při roztroušené skleróze",
+    "page": "./smes-bewit-hemus-esencialni-olej.html"
+  },
+  {
+    "name": "HEPAR",
+    "fullname": "Help by parkinson",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu organismu při Parkinsonově nemoci",
+    "page": "./smes-bewit-hepar-esencialni-olej.html"
+  },
+  {
+    "name": "HIGH VIBRATION",
+    "fullname": "High vibration",
+    "typ": "smes",
+    "popis": "Vysokovibrační směs pro naladění na lehkost",
+    "page": "./smes-high-vibration-esencialni-olej.html"
+  },
+  {
+    "name": "HOLY ANOINTING",
+    "fullname": "Holy anointing",
+    "typ": "smes",
+    "popis": "Posvátná směs inspirovaná biblickým olejem svatého pomazání",
+    "page": "./smes-holy-anointing-esencialni-olej.html"
+  },
+  {
+    "name": "HORMBAL",
+    "fullname": "Hormonal balance",
+    "typ": "smes",
+    "popis": "Směs pro harmonizaci hormonálního systému",
+    "page": "./smes-hormbal-esencialni-olej.html"
+  },
+  {
+    "name": "HUMILITY",
+    "fullname": "Humility",
+    "typ": "smes",
+    "popis": "Jemná, hluboce působící směs pokory, soucitu a odevzdání",
+    "page": "./smes-humility-esencialni-olej.html"
+  },
+  {
+    "name": "HYP",
+    "fullname": "Hypertension",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při vysokém krevním tlaku",
+    "page": "./smes-bewit-hyp-esencialni-olej.html"
+  },
+  {
+    "name": "HYPOT",
+    "fullname": "Hypothyroidism",
+    "typ": "smes",
+    "popis": "Podpora při snížené funkci štítné žlázy (hypotyreóze)",
+    "page": "./smes-bewit-hypot-esencialni-olej.html"
+  },
+  {
+    "name": "CHAKRA 1",
+    "fullname": "Chacra 1",
+    "typ": "smes",
+    "popis": "Směs pro harmonizaci první čakry (kořenové)",
+    "page": "./smes-chakra-1-esencialni-olej.html"
+  },
+  {
+    "name": "CHAKRA 2",
+    "fullname": "Chacra 2",
+    "typ": "smes",
+    "popis": "Směs pro harmonizaci druhé - sakrální čakry",
+    "page": "./smes-chakra-2-esencialni-olej.html"
+  },
+  {
+    "name": "CHAKRA 3",
+    "fullname": "Chacra 3",
+    "typ": "smes",
+    "popis": "Harmonizační směs pro třetí čakru - solar plexus",
+    "page": "./smes-bewit-chakra-3-esencialni-olej.html"
+  },
+  {
+    "name": "CHAKRA 4",
+    "fullname": "Chacra 4",
+    "typ": "smes",
+    "popis": "Směs laděná na čtvrtou - srdeční čakru",
+    "page": "./smes-bewit-chakra-4-esencialni-olej.html"
+  },
+  {
+    "name": "CHAKRA 5",
+    "fullname": "Chacra 5",
+    "typ": "smes",
+    "popis": "Směs laděná na pátou - krční čakru",
+    "page": "./smes-chakra-5-esencialni-olej.html"
+  },
+  {
+    "name": "CHAKRA 6",
+    "fullname": "Chacra 6",
+    "typ": "smes",
+    "popis": "Směs pro harmonizaci šesté čakry (třetí oko)",
+    "page": "./smes-bewit-chakra-6-esencialni-olej.html"
+  },
+  {
+    "name": "CHAKRA 7",
+    "fullname": "Chacra 7",
+    "typ": "smes",
+    "popis": "Vysoce spirituální směs pro harmonizaci sedmé - korunní",
+    "page": "./smes-bewit-chakra-7-esencialni-olej.html"
+  },
+  {
+    "name": "CHOLBAL",
+    "fullname": "Cholesterol balancing",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu vyrovnané hladiny cholesterolu a",
+    "page": "./smes-cholbal-esencialni-olej.html"
+  },
+  {
+    "name": "I AM",
+    "fullname": "I am",
+    "typ": "smes",
+    "popis": "Meditativní směs podporující spojení se",
+    "page": "./smes-i-am-esencialni-olej.html"
+  },
+  {
+    "name": "I DON'T SMOKE",
+    "fullname": "I don't smoke",
+    "typ": "smes",
+    "popis": "Směs pro podporu při odvykání kouření a uvolňování",
+    "page": "./smes-i-dont-smoke-esencialni-olej.html"
+  },
+  {
+    "name": "I'M HAPPY",
+    "fullname": "I'm happy",
+    "typ": "smes",
+    "popis": "Harmonizační směs pro obnovu vnitřní radosti a lehkosti",
+    "page": "./smes-im-happy-esencialni-olej.html"
+  },
+  {
+    "name": "IMM",
+    "fullname": "Immunity",
+    "typ": "smes",
+    "popis": "Směs na podporu přirozené",
+    "page": "./smes-imm-esencialni-olej.html"
+  },
+  {
+    "name": "INF",
+    "fullname": "Inflammation",
+    "typ": "smes",
+    "popis": "Cílená směs na podporu při akutních i chronických zánětech",
+    "page": "./smes-bewit-inf-esencialni-olej.html"
+  },
+  {
+    "name": "INNER CHILD",
+    "fullname": "Inner child",
+    "typ": "smes",
+    "popis": "Jemná",
+    "page": "./smes-inner-child-esencialni-olej.html"
+  },
+  {
+    "name": "INNER WOMAN",
+    "fullname": "Inner woman",
+    "typ": "smes",
+    "popis": "Směs zaměřená na hluboké propojení s vnitřní ženou - tou",
+    "page": "./smes-bewit-inner-woman-esencialni-olej.html"
+  },
+  {
+    "name": "INSECT STOP",
+    "fullname": "Insect stop",
+    "typ": "smes",
+    "popis": "Přírodní repelentní směs určená k ochraně před hmyzem -",
+    "page": "./smes-insect-stop-esencialni-olej.html"
+  },
+  {
+    "name": "INSPIRATION",
+    "fullname": "Inspiration",
+    "typ": "smes",
+    "popis": "Povznášející směs pro probuzení",
+    "page": "./smes-inspiration-esencialni-olej.html"
+  },
+  {
+    "name": "INTEGRITY",
+    "fullname": "Integrity",
+    "typ": "smes",
+    "popis": "Směs pro posílení vnitřní",
+    "page": "./smes-integrity-esencialni-olej.html"
+  },
+  {
+    "name": "INTUITION",
+    "fullname": "Intuition",
+    "typ": "smes",
+    "popis": "Jemná směs podporující vnitřní",
+    "page": "./smes-intuition-esencialni-olej.html"
+  },
+  {
+    "name": "JOY",
+    "fullname": "Joy",
+    "typ": "smes",
+    "popis": "Povznášející směs pro radost, klid a vnitřní pohodu",
+    "page": "./smes-bewit-joy-esencialni-olej.html"
+  },
+  {
+    "name": "KING",
+    "fullname": "King",
+    "typ": "smes",
+    "popis": "Směs ztělesňující mužskou sílu, moudrost a klidné vedení",
+    "page": "./smes-bewit-king-esencialni-olej.html"
+  },
+  {
+    "name": "LAUNDRY CITRUS",
+    "fullname": "Laundry citrus",
+    "typ": "smes",
+    "popis": "Osvěžující citrusová směs určená pro praní prádla a domácí",
+    "page": "./smes-laundry-citrus-esencialni-olej.html"
+  },
+  {
+    "name": "LAVENDER DEUX",
+    "fullname": "Lavender",
+    "typ": "smes",
+    "popis": "Harmonická směs jednoho druhu levandule získaného dvěma",
+    "page": "./smes-lavender-deux-esencialni-olej.html"
+  },
+  {
+    "name": "LEADER",
+    "fullname": "Leader",
+    "typ": "smes",
+    "popis": "Směs pro všechny, kdo nesou zodpovědnost - lídry",
+    "page": "./smes-leader-esencialni-olej.html"
+  },
+  {
+    "name": "LEARNING",
+    "fullname": "Learning",
+    "typ": "smes",
+    "popis": "Směs pro podporu učení, soustředění a duševní výkonnosti",
+    "page": "./smes-learning-esencialni-olej.html"
+  },
+  {
+    "name": "LEGUT",
+    "fullname": "Leaky gut",
+    "typ": "smes",
+    "popis": "Cílená směs pro podporu při syndromu zvýšené propustnosti",
+    "page": "./smes-bewit-legut-esencialni-olej.html"
+  },
+  {
+    "name": "LET GO",
+    "fullname": "Let go",
+    "typ": "smes",
+    "popis": "Směs pro uvolnění",
+    "page": "./smes-let-go-esencialni-olej.html"
+  },
+  {
+    "name": "LICE",
+    "fullname": "Lice",
+    "typ": "smes",
+    "popis": "Směs pro přirozenou pomoc při výskytu vší a pro o pokožku",
+    "page": "./smes-lice.html"
+  },
+  {
+    "name": "LIFE",
+    "fullname": "Life",
+    "typ": "smes",
+    "popis": "Celostní směs ztělesňující samotnou podstatu života -",
+    "page": "./smes-life-esencialni-olej.html"
+  },
+  {
+    "name": "LOVE",
+    "fullname": "Love",
+    "typ": "smes",
+    "popis": "Hluboká, výživná směs lásky pro srdce i duši",
+    "page": "./smes-bewit-love-esencialni-olej.html"
+  },
+  {
+    "name": "LYM",
+    "fullname": "Lymph",
+    "typ": "smes",
+    "popis": "Očistná směs podporující tok lymfy, detoxikaci a odvodnění",
+    "page": "./smes-bewit-lym-esencialni-olej.html"
+  },
+  {
+    "name": "MAGIC",
+    "fullname": "Magic",
+    "typ": "smes",
+    "popis": "Jemný, tajuplný parfém s nádechem magie",
+    "page": "./smes-bewit-magic-esencialni-olej.html"
+  },
+  {
+    "name": "MAN NO. 1",
+    "fullname": "Man no. 1",
+    "typ": "smes",
+    "popis": "Elegantní parfém pro muže, vyzařující",
+    "page": "./smes-man-no-1-prirodni-parfem-esencialni-olej.html"
+  },
+  {
+    "name": "MAN PR",
+    "fullname": "Man prostate",
+    "typ": "smes",
+    "popis": "Elegantní přírodní parfém pro muže, vyzařující",
+    "page": "./smes-man-pr-esencialni-olej.html"
+  },
+  {
+    "name": "MANIFESTOR",
+    "fullname": "Manifestor - Human design",
+    "typ": "smes",
+    "popis": "Směs inspirovaná typem Manifestor v Human Design",
+    "page": "./smes-bewit-manifestor-esencialni-olej.html"
+  },
+  {
+    "name": "MERRY CHRISTMAS",
+    "fullname": "Merry christmas",
+    "typ": "smes",
+    "popis": "Slavnostní směs pro vytvoření pravé vánoční atmosféry",
+    "page": "./smes-merry-christmas-esencialni-olej.html"
+  },
+  {
+    "name": "MASSAGE KIDS",
+    "fullname": "Massage kids",
+    "typ": "smes",
+    "popis": "Jemná a bezpečná směs určená pro masáže dětí",
+    "page": "./smes-massage-kids-esencialni-olej.html"
+  },
+  {
+    "name": "MEDITATION",
+    "fullname": "Meditation",
+    "typ": "smes",
+    "popis": "Směs vytvořená pro hluboké ztišení, meditaci a kontemplaci",
+    "page": "./smes-meditation-esencialni-olej.html"
+  },
+  {
+    "name": "MEMORY",
+    "fullname": "Memory",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu",
+    "page": "./smes-memory-esencialni-olej.html"
+  },
+  {
+    "name": "METAL",
+    "fullname": "Metal",
+    "typ": "smes",
+    "popis": "Prvek kov podle tradiční čínské medicíny",
+    "page": "./smes-metal-esencialni-olej.html"
+  },
+  {
+    "name": "MIG",
+    "fullname": "Migraine",
+    "typ": "smes",
+    "popis": "Směs zaměřená na úlevu při",
+    "page": "./smes-mig-esencialni-olej.html"
+  },
+  {
+    "name": "MIRACLE",
+    "fullname": "Miracle",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při překyselení organismu a",
+    "page": "./smes-miracle-esencialni-olej.html"
+  },
+  {
+    "name": "MONEY",
+    "fullname": "Money",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu",
+    "page": "./smes-money-esencialni-olej.html"
+  },
+  {
+    "name": "MOON",
+    "fullname": "Moon",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu menstruačního",
+    "page": "./smes-moon-esencialni-olej.html"
+  },
+  {
+    "name": "MOTIVATION",
+    "fullname": "Motivation",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro nastartování",
+    "page": "./smes-bewit-motivation-esencialni-olej.html"
+  },
+  {
+    "name": "MOVE GT",
+    "fullname": "Move gout",
+    "typ": "smes",
+    "popis": "Podpora při dně (pakostnici)",
+    "page": "./smes-move-gt-esencialni-olej.html"
+  },
+  {
+    "name": "MOVE IT",
+    "fullname": "Move it",
+    "typ": "smes",
+    "popis": "Směs pro klouby a celý pohybový aparát",
+    "page": "./smes-move-it-esencialni-olej.html"
+  },
+  {
+    "name": "MUCRA",
+    "fullname": "Muscle cramps and aches",
+    "typ": "smes",
+    "popis": "Úleva při svalových křečích, napětí a namožení",
+    "page": "./smes-bewit-mucra-esencialni-olej.html"
+  },
+  {
+    "name": "MYSTERY",
+    "fullname": "Mystery",
+    "typ": "smes",
+    "popis": "Záhadný, přitažlivý parfém, který probouzí ženské",
+    "page": "./smes-mystery-esencialni-olej.html"
+  },
+  {
+    "name": "NASE",
+    "fullname": "Nausea",
+    "typ": "smes",
+    "popis": "Jemná směs pro úlevu při",
+    "page": "./smes-bewit-nase-esencialni-olej.html"
+  },
+  {
+    "name": "NIRVANA",
+    "fullname": "Nirvana",
+    "typ": "smes",
+    "popis": "Aromaterapeutická kompozice podporující hluboký vnitřní",
+    "page": "./smes-nirvana.html"
+  },
+  {
+    "name": "NO",
+    "fullname": "No",
+    "typ": "smes",
+    "popis": "Směs pro jasné vymezení",
+    "page": "./smes-no-esencialni-olej.html"
+  },
+  {
+    "name": "NOBAPA",
+    "fullname": "No back pain",
+    "typ": "smes",
+    "popis": "Směs zaměřená na úlevu od bolestí",
+    "page": "./smes-bewit-nobapa-esencialni-olej.html"
+  },
+  {
+    "name": "NOCON",
+    "fullname": "No constipacion",
+    "typ": "smes",
+    "popis": "Podpora při",
+    "page": "./smes-bewit-nocon-esencialni-olej.html"
+  },
+  {
+    "name": "NOHEPA",
+    "fullname": "No head pain",
+    "typ": "smes",
+    "popis": "Úleva při bolestech hlavy, tenzních stavech a migrénách",
+    "page": "./smes-bewit-nohepa-esencialni-olej.html"
+  },
+  {
+    "name": "NOMAD FROM",
+    "fullname": "THE STARS",
+    "typ": "smes",
+    "popis": "Nomad from the stars",
+    "page": "./smes-nomad-from-the-stars-esencialni-olej.html"
+  },
+  {
+    "name": "NOPA",
+    "fullname": "No pain",
+    "typ": "smes",
+    "popis": "Jedna z nejoblíbenějších a nejuniverzálnějších směsí pro",
+    "page": "./smes-nopa-esencialni-olej.html"
+  },
+  {
+    "name": "NOPA NR",
+    "fullname": "Nopa nervous",
+    "typ": "smes",
+    "popis": "Směs určená pro bolesti nervového původu –",
+    "page": "./smes-bewit-nopa-nr-esencialni-olej.html"
+  },
+  {
+    "name": "NOSE",
+    "fullname": "Nose",
+    "typ": "smes",
+    "popis": "Směs na uvolnění nosních dutin při",
+    "page": "./smes-nose-esencialni-olej.html"
+  },
+  {
+    "name": "NOW",
+    "fullname": "Now",
+    "typ": "smes",
+    "popis": "Meditativní směs pro přítomnost a bezčasovost",
+    "page": "./smes-bewit-now-esencialni-olej.html"
+  },
+  {
+    "name": "O2 MAX",
+    "fullname": "Oxygen max",
+    "typ": "smes",
+    "popis": "Směs pro lepší okysličení krve, mozku a tělesných tkání",
+    "page": "./smes-o-2-max-esencialni-olej.html"
+  },
+  {
+    "name": "OK DIG",
+    "fullname": "OK digestion",
+    "typ": "smes",
+    "popis": "Komplexní směs na podporu trávení - vhodná při",
+    "page": "./smes-ok-dig-esencialni-olej.html"
+  },
+  {
+    "name": "ONLY ONE",
+    "fullname": "Only one",
+    "typ": "smes",
+    "popis": "Parfém ztělesňující jedinečnost, oddanost a hluboké spojení",
+    "page": "./smes-only-one-esencialni-olej.html"
+  },
+  {
+    "name": "OPEN HEART",
+    "fullname": "Open heart",
+    "typ": "smes",
+    "popis": "Parfémová směs pro otevření",
+    "page": "./smes-bewit-open-heart-esencialni-olej.html"
+  },
+  {
+    "name": "ORACLE",
+    "fullname": "Oracle",
+    "typ": "smes",
+    "popis": "ORACLE je parfémová směs věnovaná menstruační fázi - období",
+    "page": "./smes-bewit-oracle-esencialni-olej.html"
+  },
+  {
+    "name": "OSPO",
+    "fullname": "Osteoporosis",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu kostní",
+    "page": "./smes-bewit-ospo-esencialni-olej.html"
+  },
+  {
+    "name": "PARTNERSHIP",
+    "fullname": "Partnership",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu partnerských a milostných vztahů",
+    "page": "./smes-partnership-esencialni-olej.html"
+  },
+  {
+    "name": "PEACE",
+    "fullname": "Peace",
+    "typ": "smes",
+    "popis": "Směs vnitřního míru a uvolnění",
+    "page": "./smes-peace-esencialni-olej.html"
+  },
+  {
+    "name": "PIGMENT SPOTS",
+    "fullname": "Pigment spots",
+    "typ": "smes",
+    "popis": "Směs pro zklidnění a sjednocení tónu",
+    "page": "./smes-bewit-pigment-spots-esencialni-olej.html"
+  },
+  {
+    "name": "PO-W-ER",
+    "fullname": "Power",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro výkon, vitalitu a bdělost",
+    "page": "./smes-po-w-er-esencialni-olej.html"
+  },
+  {
+    "name": "POLOS",
+    "fullname": "Polycystic ovary syntrome",
+    "typ": "smes",
+    "popis": "Směs cílená na podporu při syndromu polycystických vaječníků",
+    "page": "./smes-bewit-polos-esencialni-olej.html"
+  },
+  {
+    "name": "PRANA",
+    "fullname": "Prana",
+    "typ": "smes",
+    "popis": "Vitalizační směs inspirovaná životní energií pránou",
+    "page": "./smes-prana-esencialni-olej.html"
+  },
+  {
+    "name": "PRAYER",
+    "fullname": "Prayer",
+    "typ": "smes",
+    "popis": "Jemná spirituální směs pro ztišení, klid a modlitbu",
+    "page": "./smes-prayer-esencialni-olej.html"
+  },
+  {
+    "name": "PRENA",
+    "fullname": "Pregnancy nausea",
+    "typ": "smes",
+    "popis": "Úleva při těhotenské nevolnosti a zvracení",
+    "page": "./smes-prena-esencialni-olej.html"
+  },
+  {
+    "name": "PRO NO",
+    "fullname": "Nitric oxide",
+    "typ": "smes",
+    "popis": "Podporuje tvorbu oxidu dusnatého v",
+    "page": "./smes-pro-no-esencialni-olej.html"
+  },
+  {
+    "name": "PROJECTOR",
+    "fullname": "Projector - Human design",
+    "typ": "smes",
+    "popis": "Směs inspirovaná Human Design typem Projektor",
+    "page": "./smes-bewit-projector-esencialni-olej.html"
+  },
+  {
+    "name": "PROTECT",
+    "fullname": "Protect",
+    "typ": "smes",
+    "popis": "Jedna z nejoblíbenějších a nejsilnějších směsí pro",
+    "page": "./smes-protect-esencialni-olej.html"
+  },
+  {
+    "name": "PROTECT B",
+    "fullname": "Protect bacteria, borellia",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu při bakteriálních a virových",
+    "page": "./smes-bewit-protect-b-esencialni-olej.html"
+  },
+  {
+    "name": "PURE",
+    "fullname": "Pure",
+    "typ": "smes",
+    "popis": "Očistná, univerzální směs pro prostor i tělo",
+    "page": "./smes-pure-esencialni-olej.html"
+  },
+  {
+    "name": "PX",
+    "fullname": "Smallpox",
+    "typ": "smes",
+    "popis": "Podpora v období výskytu neštovic u dětí i dospělých",
+    "page": "./smes-px.html"
+  },
+  {
+    "name": "QUEEN",
+    "fullname": "Queen",
+    "typ": "smes",
+    "popis": "QUEEN je parfémová směs věnovaná ovulační fázi období",
+    "page": "./smes-bewit-queen-esencialni-olej.html"
+  },
+  {
+    "name": "REFLECTOR",
+    "fullname": "Reflector",
+    "typ": "smes",
+    "popis": "Směs inspirovaná Human Design typem Reflektor",
+    "page": "./smes-bewit-reflector-esencialni-olej.html"
+  },
+  {
+    "name": "RELAX",
+    "fullname": "Relax",
+    "typ": "smes",
+    "popis": "Uvolňující směs pro zklidnění těla i mysli",
+    "page": "./smes-bewit-relax-esencialni-olej.html"
+  },
+  {
+    "name": "RELES",
+    "fullname": "Restless legs syndrome",
+    "typ": "smes",
+    "popis": "Úleva při syndromu neklidných nohou",
+    "page": "./smes-bewit-reles-esencialni-olej.html"
+  },
+  {
+    "name": "RESOLUTION",
+    "fullname": "Resolution",
+    "typ": "smes",
+    "popis": "Směs pro podporu rozhodnosti, jasnosti a odvahy ke změně",
+    "page": "./smes-resolution-esencialni-olej.html"
+  },
+  {
+    "name": "RHE",
+    "fullname": "Rheumatism",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu pohybového aparátu při",
+    "page": "./smes-rhe.html"
+  },
+  {
+    "name": "ROSA VIBE",
+    "fullname": "Rosa vibe",
+    "typ": "smes",
+    "popis": "Jemný a ženský parfém s růžovou",
+    "page": "./smes-rosa-vibe-esencialni-olej.html"
+  },
+  {
+    "name": "S STOP",
+    "fullname": "Snoring stop",
+    "typ": "smes",
+    "popis": "Podpora při chrápání",
+    "page": "./smes-bewit-s-stop-esencialni-olej.html"
+  },
+  {
+    "name": "SAUNA",
+    "fullname": "Sauna",
+    "typ": "smes",
+    "popis": "Aromaterapeutická směs navržená speciálně pro použití v",
+    "page": "./smes-sauna.html"
+  },
+  {
+    "name": "SELF LOVE",
+    "fullname": "Self love",
+    "typ": "smes",
+    "popis": "Oblíbený parfém pro podporu",
+    "page": "./smes-bewit-self-love-esencialni-olej.html"
+  },
+  {
+    "name": "SHOES",
+    "fullname": "Shoes",
+    "typ": "smes",
+    "popis": "Praktická směs pro dezinfekci obuvi",
+    "page": "./smes-bewit-shoes-esencialni-olej.html"
+  },
+  {
+    "name": "SO HAPPY TOGETHER",
+    "fullname": "So happy together",
+    "typ": "smes",
+    "popis": "Radostná směs podporující harmonické",
+    "page": "./smes-so-happy-together-esencialni-olej.html"
+  },
+  {
+    "name": "SOULGUARD",
+    "fullname": "Soulguard",
+    "typ": "smes",
+    "popis": "Ochranný parfém na emoční i energetické úrovni",
+    "page": "./smes-soulguard-esencialni-olej.html"
+  },
+  {
+    "name": "STEM PLUS",
+    "fullname": "Stem cell",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu přirozené tvorby kmenových buněk v",
+    "page": "./smes-stem-plus-esencialni-olej.html"
+  },
+  {
+    "name": "STOP ADD",
+    "fullname": "Stop addiction",
+    "typ": "smes",
+    "popis": "Směs pro podporu při překonávání závislostí – na",
+    "page": "./smes-stop-add-esencialni-olej.html"
+  },
+  {
+    "name": "SUBY C-1",
+    "fullname": "Support by cancer",
+    "typ": "smes",
+    "popis": "Směs určená pro ranní harmonizaci organismu při",
+    "page": "./smes-bewit-suby-c-1-esencialni-olej.html"
+  },
+  {
+    "name": "SUBY C-2",
+    "fullname": "Support by cancer",
+    "typ": "smes",
+    "popis": "Směs vhodná pro denní",
+    "page": "./smes-bewit-suby-c-2-esencialni-olej.html"
+  },
+  {
+    "name": "SUBY C-3",
+    "fullname": "Support by cancer",
+    "typ": "smes",
+    "popis": "Směs určená pro večerní",
+    "page": "./smes-bewit-suby-c-3-esencialni-olej.html"
+  },
+  {
+    "name": "SUNSHINE",
+    "fullname": "Sunschine",
+    "typ": "smes",
+    "popis": "Rozjasňující parfémová směs plná optimismu, tepla a radosti",
+    "page": "./smes-bewit-sunshine-esencialni-olej.html"
+  },
+  {
+    "name": "SUP-ER-MAN",
+    "fullname": "Support erectiom man",
+    "typ": "smes",
+    "popis": "Směs pro podporu erekce a mužského sebevědomí",
+    "page": "./smes-bewit-sup-er-man-esencialni-olej.html"
+  },
+  {
+    "name": "SW",
+    "fullname": "Swelling",
+    "typ": "smes",
+    "popis": "Podpora při otocích a zadržování vody v těle",
+    "page": "./smes-bewit-sw-esencialni-olej.html"
+  },
+  {
+    "name": "TANTRA",
+    "fullname": "Tantra",
+    "typ": "smes",
+    "popis": "Smyslný a hluboce laděný parfém pro spojení",
+    "page": "./smes-bewit-tantra-esencialni-olej.html"
+  },
+  {
+    "name": "TATTOO",
+    "fullname": "Tattoo",
+    "typ": "smes",
+    "popis": "Regenerační směs určená pro péči o čerstvá i starší tetování",
+    "page": "./smes-tattoo.html"
+  },
+  {
+    "name": "THANK YOU",
+    "fullname": "Thank you",
+    "typ": "smes",
+    "popis": "Směs vděčnosti a celistvosti",
+    "page": "./smes-thank-you-esencialni-olej.html"
+  },
+  {
+    "name": "TIN",
+    "fullname": "Tinnitus",
+    "typ": "smes",
+    "popis": "Směs zaměřená na úlevu při tinnitu -",
+    "page": "./smes-tin-esencialni-olej.html"
+  },
+  {
+    "name": "TONAFU",
+    "fullname": "Toenail fungus",
+    "typ": "smes",
+    "popis": "Cílená směs pro podporu při plísni na nehtech rukou i nohou",
+    "page": "./smes-bewit-tonafu-esencialni-olej.html"
+  },
+  {
+    "name": "TRANSFORMATION",
+    "fullname": "Transformation",
+    "typ": "smes",
+    "popis": "Hluboká směs pro podporu vnitřní proměny a osobního růstu",
+    "page": "./smes-transformation-esencialni-olej.html"
+  },
+  {
+    "name": "TRAUMA FREE",
+    "fullname": "Trauma free",
+    "typ": "smes",
+    "popis": "Podpůrná směs pro zpracování emočních",
+    "page": "./smes-bewit-trauma-free-esencialni-olej.html"
+  },
+  {
+    "name": "TRAVELLING",
+    "fullname": "Traveling",
+    "typ": "smes",
+    "popis": "Směs pro pohodlné a klidné cestování",
+    "page": "./smes-travelling-esencialni-olej.html"
+  },
+  {
+    "name": "VAHE",
+    "fullname": "Varicose help",
+    "typ": "smes",
+    "popis": "Podpora při křečových",
+    "page": "./smes-vahe-esencialni-olej.html"
+  },
+  {
+    "name": "VIBE",
+    "fullname": "Vibe",
+    "typ": "smes",
+    "popis": "Energetizující parfém pro zvednutí vibrace a naladění se na",
+    "page": "./smes-bewit-vibe-esencialni-olej.html"
+  },
+  {
+    "name": "VIRGIN",
+    "fullname": "Virgin",
+    "typ": "smes",
+    "popis": "VIRGIN je parfémová směs věnovaná dynamické fázi",
+    "page": "./smes-bewit-virgin-esencialni-olej.html"
+  },
+  {
+    "name": "VITA",
+    "fullname": "Vital cell",
+    "typ": "smes",
+    "popis": "Směs zaměřená na regeneraci a výživu buněk",
+    "page": "./smes-bewit-vita-esencialni-olej.html"
+  },
+  {
+    "name": "VITALITY",
+    "fullname": "Vitality",
+    "typ": "smes",
+    "popis": "Povzbuzující směs pro obnovu životní",
+    "page": "./smes-bewit-vitality-esencialni-olej.html"
+  },
+  {
+    "name": "WARRIOR",
+    "fullname": "Warrior",
+    "typ": "smes",
+    "popis": "Směs bojovníka pro aktivaci odvahy, síly a odhodlání",
+    "page": "./smes-bewit-warrior-esencialni-olej.html"
+  },
+  {
+    "name": "WATER",
+    "fullname": "Water",
+    "typ": "smes",
+    "popis": "Prvek voda podle TCM",
+    "page": "./smes-water-esencialni-olej.html"
+  },
+  {
+    "name": "WET C",
+    "fullname": "Wet cough",
+    "typ": "smes",
+    "popis": "Směs pro uvolnění vlhkého kašle a podporu vykašlávání hlenů",
+    "page": "./smes-wet-c-esencialni-olej.html"
+  },
+  {
+    "name": "WILD WOMAN",
+    "fullname": "Wild woman",
+    "typ": "smes",
+    "popis": "Parfémová směs ztělesňující",
+    "page": "./smes-wild-woman-esencialni-olej.html"
+  },
+  {
+    "name": "WINNER",
+    "fullname": "Winner",
+    "typ": "smes",
+    "popis": "Silná směs pro motivaci, odvahu a překonání prokrastinace",
+    "page": "./smes-winner-esencialni-olej.html"
+  },
+  {
+    "name": "WLOSS",
+    "fullname": "Weight loss",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu štíhlé",
+    "page": "./smes-wloss-esencialni-olej.html"
+  },
+  {
+    "name": "WOFERT",
+    "fullname": "Woman fertility",
+    "typ": "smes",
+    "popis": "Směs zaměřená na podporu ženské",
+    "page": "./smes-bewit-wofert-esencialni-olej.html"
+  },
+  {
+    "name": "WOMAN M",
+    "fullname": "Menopauza",
+    "typ": "smes",
+    "popis": "Harmonizační směs zaměřená na podporu ženy v období",
+    "page": "./smes-woman-m-esencialni-olej.html"
+  },
+  {
+    "name": "WOMAN No. 1",
+    "fullname": "Woman no. 1",
+    "typ": "smes",
+    "popis": "Jemný parfém podporující",
+    "page": "./smes-woman-no-1-esencialni-olej.html"
+  },
+  {
+    "name": "WOOD",
+    "fullname": "Wood",
+    "typ": "smes",
+    "popis": "Prvek dřevo podle TCM symbolizuje růst",
+    "page": "./smes-wood-esencialni-olej.html"
+  },
+  {
+    "name": "YES",
+    "fullname": "Yes",
+    "typ": "smes",
+    "popis": "Směs přijetí, souznění a důvěry v život",
+    "page": "./smes-yes-esencialni-olej.html"
+  }
+];
+
+const TOTAL = OLEJE.length;
+let activeFilter = 'vse';
+let searchQuery = '';
+
+const oilList   = document.getElementById('oilList');
+const noResults = document.getElementById('noResults');
+const countLine = document.getElementById('countLine');
+const searchInput = document.getElementById('searchInput');
+
+function bewitUrl(name) {
+  return 'https://bewit.love/hledat?q=' + encodeURIComponent(name) + '&i=3fqlzp0xrllj7';
+}
+
+function render() {
+  const q = searchQuery.toLowerCase().trim();
+  const filtered = OLEJE.filter(o => {
+    const matchTyp = activeFilter === 'vse' || o.typ === activeFilter;
+    if (!matchTyp) return false;
+    if (!q) return true;
+    const haystack = (o.name + ' ' + (o.fullname || '') + ' ' + o.popis).toLowerCase();
+    return haystack.includes(q);
+  });
+
+  oilList.innerHTML = '';
+
+  if (filtered.length === 0) {
+    noResults.style.display = 'block';
+    countLine.textContent = 'Zobrazeno 0 z ' + TOTAL;
+    return;
+  }
+
+  noResults.style.display = 'none';
+  countLine.textContent = 'Zobrazeno ' + filtered.length + ' z ' + TOTAL;
+
+  filtered.forEach(o => {
+    const li = document.createElement('li');
+    const a  = document.createElement('a');
+    a.className = 'oil-item';
+    a.href = o.page || bewitUrl(o.name);
+    if (!o.page) { a.target = '_blank'; a.rel = 'noopener'; }
+
+    const icon = o.typ === 'olej' ? '🌿' : '🧴';
+    const badge = o.typ === 'olej' ? 'Olej' : 'Směs';
+
+    a.innerHTML =
+      '<span class="oil-icon">' + icon + '</span>' +
+      '<span class="oil-body">' +
+        '<span class="oil-name-row">' +
+          '<span class="oil-name">' + escHtml(o.name) + '</span>' +
+          (o.fullname ? '<span class="oil-fullname">' + escHtml(o.fullname) + '</span>' : '') +
+          '<span class="oil-badge">' + badge + '</span>' +
+        '</span>' +
+        '<p class="oil-popis">' + escHtml(o.popis) + '</p>' +
+      '</span>';
+
+    li.appendChild(a);
+    oilList.appendChild(li);
+  });
+}
+
+function escHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    render();
+  });
+});
+
+// Search input
+searchInput.addEventListener('input', () => {
+  searchQuery = searchInput.value;
+  render();
+});
+
+// Initial render
+render();
 </script>
 </body>
 </html>
