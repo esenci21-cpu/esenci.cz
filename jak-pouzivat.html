@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jak používat esenciální oleje — Esenci.cz</title>
-  <meta name="description" content="Průvodce používáním esenciálních olejů. Inhalace, difuzér, masáž, koupel a další způsoby jak využít sílu přírody.">
+  <meta name="description" content="Průvodce používáním esenciálních olejů — inhalace, difuzér, masáž, koupel, obklady a tabulka ředění.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -26,11 +26,11 @@
         <li><a href="./index.html">Úvod</a></li>
         <li><a href="./pruvodce-zacatecnice.html">Jak začít</a></li>
         <li><a href="./temata.html">Témata</a></li>
-        <li><a href="./jak-pouzivat.html">Jak používat</a></li>
+        <li><a href="./jak-pouzivat.html" class="active">Jak používat</a></li>
         <li><a href="./pruvodce.html">Průvodkyně</a></li>
         <li><a href="./blog.html">Blog</a></li>
       </ul>
-      <a href="./temata.html" class="btn-back" style="margin-left:1rem;">← Zpět na témata</a>
+      <a href="./blog.html" class="btn-back" style="margin-left:1rem;">← Blog</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -42,12 +42,13 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
+      <p style="font-size:0.82rem; color:var(--orange); font-weight:500; margin:0 0 0.5rem;">📖 Průvodce · červen 2026</p>
       <h1 class="hero-title">Jak používat esenciální oleje</h1>
       <p class="hero-subtitle">jednoduše a bezpečně</p>
       <p class="hero-desc">
         Esenciální oleje lze použít mnoha způsoby — každý má své místo a své kouzlo.
         Ať už hledáte rychlou úlevu, relaxaci nebo každodenní rituál,
-        tady najdete vše, co potřebujete vědět pro bezpečný začátek.
+        tady najdete vše, co potřebujete vědět.
       </p>
     </div>
     <div class="hero-image">
@@ -56,125 +57,136 @@
   </div>
 </section>
 
-<!-- ── Důležitá poznámka ── -->
-<section style="background:#FDF8EE; padding:1.5rem 0;">
-  <div class="section-inner">
-    <p style="text-align:center; color:var(--brown); font-size:1rem; max-width:600px; margin:0 auto;">
-      ⚠️ <strong>Základní pravidlo:</strong> Esenciální oleje jsou velmi koncentrované — před aplikací na kůži je doporučujeme ředit v nosném oleji (např. <a href="https://bewit.love/produkt/jojoba-oil?i=3fqlzp0xrllj7" target="_blank" rel="noopener" style="color:var(--orange); text-decoration:underline;">jojobový</a>, <a href="https://bewit.love/produkt/mandlovy-olej?i=3fqlzp0xrllj7" target="_blank" rel="noopener" style="color:var(--orange); text-decoration:underline;">mandlový</a>, <a href="https://bewit.love/produkt/coconut-fractioned-oil-mct?i=3fqlzp0xrllj7" target="_blank" rel="noopener" style="color:var(--orange); text-decoration:underline;">kokosový</a>).    </p>
-    <p style="text-align:center; color:var(--brown); font-size:1rem; max-width:600px; margin:0.75rem auto 0;">
-      🌿 Při prvním použití nového oleje vyzkoušejte nejdříve malé množství na citlivém místě pokožky. Začněte s nižší koncentrací — tělo si na olej postupně zvykne a vy zjistíte, co mu nejlépe vyhovuje.
+<!-- ── Článek ── -->
+<section style="padding: 3rem 0; background: #fff;">
+  <div class="section-inner" style="max-width: 720px;">
+
+    <p style="font-size: 1.05rem; line-height: 1.9; color: var(--text-light); margin-bottom: 2rem;">
+      Esenciální oleje se do těla dostávají dvěma cestami — vdechováním a pokožkou. Každá cesta působí trochu jinak, a právě jejich kombinací dosáhnete nejlepších výsledků.
     </p>
-  </div>
-</section>
 
-<!-- ── Metody použití ── -->
-<section class="vyber-sekce">
-  <div class="section-inner">
-    <h2 class="vyber-title">Způsoby použití</h2>
-    <div class="vyber-grid">
+    <!-- Varování -->
+    <div style="background:#FDF8EE; border-left:3px solid var(--orange); border-radius:0 0.5rem 0.5rem 0; padding:1rem 1.25rem; margin-bottom:2rem;">
+      <p style="font-size:0.95rem; color:var(--brown); line-height:1.7; margin:0;">
+        ⚠️ <strong>Základní pravidlo:</strong> Esenciální oleje jsou velmi koncentrované — před aplikací na kůži je ředěte v nosném oleji (jojobový, mandlový, kokosový). Při prvním použití nového oleje vyzkoušejte malé množství na vnitřní straně zápěstí nebo lokte.
+      </p>
+    </div>
 
-      <div class="vyber-card" style="background:#FDF5EE;">
-        <div class="vyber-icon" style="background:#FAE8D8;">🤲</div>
-        <div class="vyber-name">Inhalace z dlaní</div>
-        <div class="vyber-desc">
-          Nejrychlejší způsob — účinek nastupuje během vteřin. Ideální při stresu, nevolnosti nebo akutní potřebě.
-        </div>
-        <p class="vyber-jak">💧 Jak na to: nakapejte 1–2 kapky do dlaně, třete dlaně o sebe, přiložte k nosu a ústům a zhluboka dýchejte 3–5× po sobě.</p>
+    <!-- Inhalace -->
+    <h2 style="font-size: 1.35rem; color: var(--dark); margin: 2rem 0 0.75rem; font-family: 'Playfair Display', serif;">Inhalace</h2>
+
+    <p style="font-size: 1rem; line-height: 1.9; color: var(--text-light); margin-bottom: 1rem;">
+      Vdechováním se složky oleje dostávají přímo do krevního oběhu a ovlivňují celý organismus — především mozek a jeho limbickou část, kde jsou uloženy emocionální vzpomínky, paměť i hormony.
+    </p>
+
+    <p style="font-size: 0.9rem; font-weight: 600; color: var(--dark); margin-bottom: 0.5rem;">Inhalací lze ovlivnit:</p>
+    <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.85; padding-left: 1.25rem; margin-bottom: 1.75rem;">
+      <li>okysličení mozku a funkce paměti</li>
+      <li>hladinu stresu a dobrou náladu</li>
+      <li>staré vzorce chování v podvědomí</li>
+      <li>úroveň energie a dlouhověkost</li>
+      <li>koncentraci a schopnost učení</li>
+      <li>kvalitu spánku</li>
+      <li>krevní tlak, dýchání a srdeční rytmus</li>
+    </ul>
+
+    <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem;">
+
+      <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+        <span style="color: var(--orange); font-size: 1.1rem; flex-shrink: 0;">✦</span>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-light); margin: 0;"><strong style="color: var(--dark);">Z dlaní</strong> — nejrychlejší způsob, účinek nastupuje během vteřin. Nakapejte 1–3 kapky do dlaně, rozetřete, přiložte k nosu a zhluboka se nadechněte. Na chvíli dech zadržte a pomalu vydechujte. Zopakujte 2–3×.</p>
       </div>
 
-      <div class="vyber-card" style="background:#F5F5F5;">
-        <div class="vyber-icon" style="background:#EBEBEB;">🧣</div>
-        <div class="vyber-name">Z kousku látky</div>
-        <div class="vyber-desc">
-          Praktické na cesty — nakapejte olej na kapesník nebo kousek látky a mějte ho po ruce kdykoliv potřebujete.
-        </div>
-        <p class="vyber-jak">💧 Jak na to: nakapejte 1–2 kapky na kapesník nebo kousek látky, přiložte k nosu a pomalu vdechujte dle potřeby.</p>
+      <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+        <span style="color: var(--orange); font-size: 1.1rem; flex-shrink: 0;">✦</span>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-light); margin: 0;"><strong style="color: var(--dark);">Z kousku látky nebo kapesníku</strong> — praktické na cesty, vůně vydrží hodiny. Nakapejte 1–2 kapky a přiložte k nosu dle potřeby.</p>
       </div>
 
-      <div class="vyber-card" style="background:#EEF1F8;">
-        <div class="vyber-icon" style="background:#E0E4EE;">🌬️</div>
-        <div class="vyber-name"><a href="https://bewit.love/produkt/cichatko?i=3fqlzp0xrllj7" target="_blank" rel="noopener" style="color:var(--orange); text-decoration:underline;">Inhalační tyčinka</a></div>
-        <div class="vyber-desc">
-          Malá tyčinka s vůní vždy po ruce — nenápadný společník do kabelky, do práce nebo na cesty.
-        </div>
-        <p class="vyber-jak">💧 Jak na to: nakapejte 3–5 kapek na bavlněnou tyčinku umístěnou uvnitř inhalátoru. Vůně se vdechuje jemným přičichnutím skrze inhalační otvor.</p>
+      <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+        <span style="color: var(--orange); font-size: 1.1rem; flex-shrink: 0;">✦</span>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-light); margin: 0;"><strong style="color: var(--dark);"><a href="https://bewit.love/produkt/cichatko?i=3fqlzp0xrllj7" target="_blank" rel="noopener" style="color:var(--dark);">Inhalační tyčinka</a></strong> — malý inhalátor do kabelky nebo do práce. Nakapejte 3–5 kapek na bavlněnou tyčinku uvnitř a vůně vydrží měsíce.</p>
       </div>
 
-      <div class="vyber-card" style="background:#F5F0FB;">
-        <div class="vyber-icon" style="background:#EBE0F5;">🛏️</div>
-        <div class="vyber-name">Z polštáře</div>
-        <div class="vyber-desc">
-          Jemná noční inhalace — ideální pro podporu spánku nebo dýchacích cest.
-        </div>
-        <p class="vyber-jak">💧 Jak na to: nakapejte 1–2 kapky na roh polštáře nebo na kapesník položený pod polštářem. Vůně bude působit po celou noc.</p>
+      <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+        <span style="color: var(--orange); font-size: 1.1rem; flex-shrink: 0;">✦</span>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-light); margin: 0;"><strong style="color: var(--dark);">Z polštáře</strong> — jemná noční inhalace pro podporu spánku nebo dýchacích cest. Nakapejte 1–2 kapky na roh polštáře nebo kapesník pod polštářem.</p>
       </div>
 
-      <div class="vyber-card" style="background:#F0FAF5;">
-        <div class="vyber-icon" style="background:#D8F0E8;">💨</div>
-        <div class="vyber-name"><a href="https://bewit.love/produkt/aroma-difuzer-favorit-300?i=3fqlzp0xrllj7" target="_blank" rel="noopener" style="color:var(--orange); text-decoration:underline;">Difuzér</a></div>
-        <div class="vyber-desc">
-          Nejpohodlnější způsob pro celou místnost — provoní prostor a vytvoří atmosféru.
-        </div>
-        <p class="vyber-jak">💧 Jak na to: přidejte 3–8 kapek do difuzéru s vodou a zapněte na 30–60 minut.</p>
+      <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+        <span style="color: var(--orange); font-size: 1.1rem; flex-shrink: 0;">✦</span>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-light); margin: 0;"><strong style="color: var(--dark);"><a href="https://bewit.love/produkt/aroma-difuzer-favorit-300?i=3fqlzp0xrllj7" target="_blank" rel="noopener" style="color:var(--dark);">Difuzér</a></strong> — nejpohodlnější způsob pro celou místnost. Funguje na principu studené difuze — oleje se nezahřívají a neznehodnocují. Zároveň čistí vzduch od patogenů a zvlhčuje ho. Nalijte destilovanou vodu, přidejte cca 5 kapek a začněte s 15–30 minutami.</p>
       </div>
 
-      <div class="vyber-card" style="background:#FDF8EE;">
-        <div class="vyber-icon" style="background:#FBF0DC;">♨️</div>
-        <div class="vyber-name">Napařování</div>
-        <div class="vyber-desc">
-          Účinná pomoc při ucpaném nose, sinusitidě nebo nachlazení — olej se dostane přímo do dýchacích cest.
-        </div>
-        <p class="vyber-jak">💧 Jak na to: nakapejte esenciální olej do misky s vodou o teplotě 40 °C — pro lepší rozptýlení je lze nejdříve smíchat s trochou mléka nebo soli. Nakloňte se nad misku, zakryjte hlavu ručníkem a vdechujte. Oči mějte zavřené.</p>
-      </div>
-
-      <div class="vyber-card" style="background:#F3F6EE;">
-        <div class="vyber-icon" style="background:#E8EDE0;">🖐️</div>
-        <div class="vyber-name">Povrchová aplikace a masáž</div>
-        <div class="vyber-desc">
-          Přímý kontakt s pokožkou — olej působí lokálně i přes kůži do organismu.
-        </div>
-        <p class="vyber-jak">💧 Jak na to: Naneste trochu nosného oleje (např. <a href="https://bewit.love/produkt/bio-jojoba-oil?i=3fqlzp0xrllj7" target="_blank" rel="noopener" style="color:var(--orange); text-decoration:underline;">jojobového</a>) na pokožku, přidejte 1–2 kapky a rozetřete. Na větší plochu nebo při bolestech použijte trochu více nosného oleje a 2–6 kapek.</p>
-      </div>
-
-      <div class="vyber-card" style="background:#FBF2F5;">
-        <div class="vyber-icon" style="background:#F5E8EC;">🛁</div>
-        <div class="vyber-name">Koupel</div>
-        <div class="vyber-desc">
-          Relaxační rituál pro tělo i mysl — vůně i účinné látky působí zároveň.
-        </div>
-        <p class="vyber-jak">💧 Jak na to: přidejte 1–3 kapky do lžíce smetany, tekutého mýdla nebo soli a vmíchejte do vany s teplou vodou. Nikdy nepřidávejte čistý olej přímo do vody.</p>
-      </div>
-
-      <div class="vyber-card" style="background:#EEF1F8;">
-        <div class="vyber-icon" style="background:#E0E4EE;">🩹</div>
-        <div class="vyber-name">Obklady</div>
-        <div class="vyber-desc">
-          Cílená pomoc na konkrétní místo — teplý obklad prohřívá a uvolňuje, studený zklidňuje záněty.
-        </div>
-        <p class="vyber-jak">💧 Jak na to: smíchejte esenciální olej s nosným olejem (např. <a href="https://bewit.love/produkt/bio-jojoba-oil?i=3fqlzp0xrllj7" target="_blank" rel="noopener" style="color:var(--orange); text-decoration:underline;">jojobový</a>), naneste na místo a přiložte teplý nebo studený vlhký ručník. Nechte působit 10–15 minut.</p>
+      <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+        <span style="color: var(--orange); font-size: 1.1rem; flex-shrink: 0;">✦</span>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-light); margin: 0;"><strong style="color: var(--dark);">Napařování</strong> — účinná pomoc při ucpaném nose, sinusitidě nebo rýmě. Do nádoby s teplou vodou (cca 40 °C) přidejte pár kapek nejlépe rozmíchaných v mléce nebo soli. Zakryjte hlavu ručníkem a inhalujte 5–15 minut se zavřenýma očima. Výborné také pro hloubkové čištění pleti.</p>
       </div>
 
     </div>
+
+    <!-- Povrchová aplikace -->
+    <h2 style="font-size: 1.35rem; color: var(--dark); margin: 2rem 0 0.75rem; font-family: 'Playfair Display', serif;">Povrchová aplikace</h2>
+
+    <p style="font-size: 1rem; line-height: 1.9; color: var(--text-light); margin-bottom: 1rem;">
+      Esenciální oleje pronikají skrz vrstvy kůže až do vnitřního prostředí těla — lokálně působí na pokožku, svaly, měkké tkáně, klouby a kosti. Nosný olej zvlhčuje pokožku a prodlužuje vstřebávání.
+    </p>
+
+    <p style="font-size: 0.9rem; font-weight: 600; color: var(--dark); margin-bottom: 0.5rem;">Povrchovou aplikací lze ovlivnit:</p>
+    <ul style="font-size: 0.95rem; color: var(--text-light); line-height: 1.85; padding-left: 1.25rem; margin-bottom: 1.75rem;">
+      <li>vitalitu orgánů a prokrvení</li>
+      <li>funkčnost pohybového ústrojí</li>
+      <li>vyplavení toxinů</li>
+      <li>zmírnění zánětů</li>
+      <li>zdraví a krásu pokožky, vyhlazení vrásek</li>
+      <li>hojení ran, jizev, akné, popálenin</li>
+      <li>dýchací cesty a trávení</li>
+    </ul>
+
+    <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem;">
+
+      <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+        <span style="color: var(--orange); font-size: 1.1rem; flex-shrink: 0;">✦</span>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-light); margin: 0;"><strong style="color: var(--dark);">Masáž</strong> — zahřejte si dlaně třením, naneste nosný olej s 4–5 kapkami esence a masírujte postižené místo nebo celé tělo. Nejčastější místa: dlaně, chodidla, čelo, spánky, krk, hruď, břicho a energetické body.</p>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+        <span style="color: var(--orange); font-size: 1.1rem; flex-shrink: 0;">✦</span>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-light); margin: 0;"><strong style="color: var(--dark);">Masáž chodidel</strong> — chodidla jsou nejpropustnějším místem na těle (bez tukových žláz) a mají nejméně citlivou pokožku. Skvělé pro rychlé vstřebání. V mnoha případech zde není nutné oleje ředit.</p>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+        <span style="color: var(--orange); font-size: 1.1rem; flex-shrink: 0;">✦</span>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-light); margin: 0;"><strong style="color: var(--dark);">Koupel</strong> — jeden z nejpříjemnějších způsobů. Oleje vždy nejdříve rozmíchejte v nosiči — mořské soli, himalájské soli, Epsom soli, smetaně, mléce nebo nosném oleji. Teprve pak přidejte do vany. 5–10 kapek vleže, 2–3 kapky vsedě.</p>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+        <span style="color: var(--orange); font-size: 1.1rem; flex-shrink: 0;">✦</span>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-light); margin: 0;"><strong style="color: var(--dark);">Teplý obklad</strong> — při chronických bolestech zad, revmatických bolestech nebo bolestivé menstruaci. Naneste olej a přiložte ručník namočený v teplé vodě na 10–30 minut.</p>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+        <span style="color: var(--orange); font-size: 1.1rem; flex-shrink: 0;">✦</span>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-light); margin: 0;"><strong style="color: var(--dark);">Studený obklad</strong> — při akutních zánětech, otocích nebo neurologických problémech. Naneste olej a přiložte látku namočenou ve studené vodě.</p>
+      </div>
+
+    </div>
+
+    <p style="font-size: 1.15rem; line-height: 1.9; color: var(--dark); font-weight: 500; border-left: 3px solid var(--orange); padding-left: 1.25rem; margin: 2rem 0;">
+      Neexistuje jediný správný způsob. Zkoušejte, co vám sedí — a poslouchejte své tělo.
+    </p>
+
   </div>
 </section>
 
-<!-- ── Katalog olejů ── -->
-<section style="background:#f7f4f0; padding:2rem 0;">
-  <div class="section-inner" style="text-align:center;">
-    <p style="font-size:1rem; color:var(--dark); margin-bottom:0.75rem;">🌿 Víte jak oleje používat, ale nevíte který zvolit?</p>
-    <a href="./katalog.html" style="display:inline-block; background:var(--orange); color:#fff; padding:0.6rem 1.5rem; border-radius:20px; font-size:0.95rem; text-decoration:none; font-weight:500;">Průvodce oleji A–Z — 350 olejů a směsí →</a>
-  </div>
-</section>
-
-<!-- ── Osobní poznámka ── -->
+<!-- ── CTA ── -->
 <section class="poznamka">
   <div class="poznamka-inner">
     <div>
       <div class="poznamka-icon">🌿</div>
       <p class="poznamka-text">
-        Neexistuje jediný správný způsob. Zkoušejte, co vám sedí, a poslouchejte své tělo.
-        Esenciální oleje jsou mocní pomocníci — stačí jim trochu prostoru a pravidelnost.
+        Víte jak oleje používat, ale nevíte který zvolit? Projděte si <a href="./temata.html" style="color: var(--orange); font-weight: 500;">Témata</a> — oleje seřazené podle situací, ne podle abecedy.
       </p>
+      <a href="./temata.html" class="btn-orange" style="margin-top: 1rem; display: inline-block;">Procházet témata →</a>
     </div>
     <div class="poznamka-img">
       <img src="./images/esence_dlane.jpg" alt="Jak používat esenciální oleje">
@@ -182,16 +194,18 @@
   </div>
 </section>
 
-
+<!-- ── Disclaimer ── -->
+<p style="text-align:center; font-size:0.8rem; color:#8a7a6a; padding:0.75rem 1rem; background:var(--cream);">
+  Informace na této stránce mají výhradně informační charakter. · Odkazy vedou na partnerský e-shop Bewit.
+</p>
 
 <!-- ── Footer ── -->
 <footer class="footer">
   <div class="footer-botanical">🌿 ✦ 🌸 ✦ 🌿</div>
   <p class="footer-quote">„Tady nejde o výkon ani dokonalost. Jen o návrat k sobě."</p>
-
   <p class="footer-heart">♥</p>
-    <p class="footer-copy" style="font-size:0.75rem; opacity:0.7;">Esenci.cz provozuje Rita Drabinová · <a href="mailto:eft.joga@gmail.com" style="color:inherit;">eft.joga@gmail.com</a></p>
-<p class="footer-copy">© 2026 esenci.cz</p>
+  <p class="footer-copy" style="font-size:0.75rem; opacity:0.7;">Esenci.cz provozuje Rita Drabinová · <a href="mailto:eft.joga@gmail.com" style="color:inherit;">eft.joga@gmail.com</a></p>
+  <p class="footer-copy">© 2026 esenci.cz</p>
 </footer>
 
 <script>
