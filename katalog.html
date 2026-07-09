@@ -170,7 +170,7 @@
   <div class="hero-inner">
     <div class="hero-text">
       <h1 class="hero-title">Průvodce oleji A–Z</h1>
-      <p class="hero-subtitle">350 olejů a směsí BEWIT</p>
+      <p class="hero-subtitle">355 olejů a směsí BEWIT</p>
       <p class="hero-desc">
         Přehled všech jednodruhových olejů a směsí.
         Vyhledejte podle názvu nebo účinku.
@@ -198,13 +198,7 @@
       >
     </div>
 
-    <div class="filter-row">
-      <button class="filter-btn active" data-filter="vse">Vše (350)</button>
-      <button class="filter-btn" data-filter="olej">Jednodruhové (100)</button>
-      <button class="filter-btn" data-filter="smes">Směsi (250)</button>
-    </div>
-
-    <p class="count-line" id="countLine">Zobrazeno 350 z 350</p>
+<p class="count-line" id="countLine">Zobrazeno 355 z 355</p>
 
     <ul class="oil-list" id="oilList"></ul>
 
@@ -251,636 +245,6 @@
 
 <script>
 const OLEJE = [
-  {
-    "name": "Andělika lékařská",
-    "typ": "olej",
-    "popis": "Ochrana, uvolnění, stabilita, očista, duchovní síla",
-    "page": "./olej-andelika-esencialni-olej.html"
-  },
-  {
-    "name": "Anýz",
-    "typ": "olej",
-    "popis": "Trávení, uvolnění, ženský cyklus, zklidnění, energie",
-    "page": "./olej-anyz-esencialni-olej.html"
-  },
-  {
-    "name": "Akácie",
-    "typ": "olej",
-    "popis": "Akácie je spojována s vnitřní",
-    "page": "./olej-acacia-esencialni-olej.html"
-  },
-  {
-    "name": "Aksamitník rozkladitý",
-    "typ": "olej",
-    "popis": "Očista, paraziti, pokožka, ochrana, zklidnění",
-    "page": "./olej-aksamitnik-rozkladity-esencialni-olej.html"
-  },
-  {
-    "name": "Alpinie",
-    "typ": "olej",
-    "popis": "Alpinie podporuje proudění",
-    "page": "./olej-alpinia-esencialni-olej.html"
-  },
-  {
-    "name": "Amyris",
-    "typ": "olej",
-    "popis": "Klid, hloubka, meditace, uzemnění, uvolnění",
-    "page": "./olej-amyris-esencialni-olej.html"
-  },
-  {
-    "name": "Badyán pravý",
-    "typ": "olej",
-    "popis": "Trávení, imunita, ženská síla, uvolnění, vnitřní teplo",
-    "page": "./olej-badyan-pravy-esencialni-olej.html"
-  },
-  {
-    "name": "Bay St. Thomas",
-    "typ": "olej",
-    "popis": "Mužská síla, oheň, tonizace, jasnost, povzbuzení",
-    "page": "./olej-bay-st.-thomas-esencialni-olej.html"
-  },
-  {
-    "name": "Bazalka kafrová",
-    "typ": "olej",
-    "popis": "Prokrvení, očista, svaly, nachlazení, stimulace",
-    "page": "./olej-bazalka-kafrova-esencialni-olej.html"
-  },
-  {
-    "name": "Bazalka pravá",
-    "typ": "olej",
-    "popis": "Jasnost, koncentrace, svěžest, nervy, úleva",
-    "page": "./olej-bazalka-esencialni-olej.html"
-  },
-  {
-    "name": "Benzoin",
-    "typ": "olej",
-    "popis": "Klid, výživa, stabilita, zahojení, útěcha",
-    "page": "./olej-benzoin-absolue-esencialni-olej.html"
-  },
-  {
-    "name": "Bergamot",
-    "typ": "olej",
-    "popis": "Uvolnění, lehkost, radost, tok energie, emoční obnova",
-    "page": "./olej-bergamot.html"
-  },
-  {
-    "name": "Borovice banksová",
-    "typ": "olej",
-    "popis": "Očista, dýchání, vitalita, čerstvost, imunita",
-    "page": "./olej-borovice-banksova-bio.html"
-  },
-  {
-    "name": "Borovice lesní",
-    "typ": "olej",
-    "popis": "Sebevědomí, očista, vitalita, dech, pozitivita",
-    "page": "./olej-borovice-lesni-esencialni-olej.html"
-  },
-  {
-    "name": "Cedr atlaský",
-    "typ": "olej",
-    "popis": "Uzemnění, stabilita, mužská síla, detoxikace, ochrana",
-    "page": "./olej-cedr-atlasky-esencialni-olej.html"
-  },
-  {
-    "name": "Cedr himálajský",
-    "typ": "olej",
-    "popis": "Síla, stabilita, uzemnění, očista, odolnost",
-    "page": "./olej-cedr-himalajsky-esencialni-olej.html"
-  },
-  {
-    "name": "Celer – semena",
-    "typ": "olej",
-    "popis": "Očista, klouby, detoxikace, trávení, rovnováha",
-    "page": "./olej-celer-semena-esencialni-olej.html"
-  },
-  {
-    "name": "Citron",
-    "typ": "olej",
-    "popis": "Osvěžení, očista, jasnost, důvěra, povzbuzení",
-    "page": "./olej-bewit-citron-bio-raw-esencialni-olej.html"
-  },
-  {
-    "name": "Citronela",
-    "typ": "olej",
-    "popis": "Ochrana, očista, uvolnění, repelent, svěžest",
-    "page": "./olej-citronela-esencialni-olej.html"
-  },
-  {
-    "name": "Citronová tráva",
-    "typ": "olej",
-    "popis": "Očista, energie, rovnováha, regenerace, osvěžení",
-    "page": "./olej-citronova-trava-esencialni-olej.html"
-  },
-  {
-    "name": "Copaiba",
-    "typ": "olej",
-    "popis": "Klid, úleva, regenerace, protizánět, vyrovnání",
-    "page": "./olej-kopaiva-esencialni-olej.html"
-  },
-  {
-    "name": "Cubeb – pepř kubebový",
-    "typ": "olej",
-    "popis": "Očista, dýchání, mužská síla, vylučování, povzbuzení",
-    "page": "./olej-cubeb-esencialni-olej.html"
-  },
-  {
-    "name": "Cypriol",
-    "typ": "olej",
-    "popis": "Očista, uzemnění, detoxikace, klid, rovnováha",
-    "page": "./olej-cypriol-esencialni-olej.html"
-  },
-  {
-    "name": "Cypřiš",
-    "typ": "olej",
-    "popis": "Přechod, stabilita, obnova, očista, tok",
-    "page": "./olej-cypris1-esencialni-olej.html"
-  },
-  {
-    "name": "Česnek",
-    "typ": "olej",
-    "popis": "Imunita, očista, antiparazit, vitalita, odvaha",
-    "page": "./olej-garlic-esencialni-olej.html"
-  },
-  {
-    "name": "Drmek",
-    "typ": "olej",
-    "popis": "Hormonální rovnováha, ženský cyklus, klid, přijetí, víra",
-    "page": "./olej-drmek-esencialni-olej.html"
-  },
-  {
-    "name": "Elemi",
-    "typ": "olej",
-    "popis": "Jasnost, dech, meditace, klid, regenerace",
-    "page": "./olej-elemi-esencialni-olej.html"
-  },
-  {
-    "name": "Eukalyptus",
-    "typ": "olej",
-    "popis": "Volnost, dech, očista, vitalita, otevřenost",
-    "page": "./olej-eukalyptus-esencialni-olej.html"
-  },
-  {
-    "name": "Eukalyptus blue",
-    "typ": "olej",
-    "popis": "Dech, imunita, jasnost, ochrana, svěžest",
-    "page": "./olej-eukalyptus-blue-esencialni-olej.html"
-  },
-  {
-    "name": "Eukalyptus camaldulensis",
-    "typ": "olej",
-    "popis": "Očista, vitalita, dýchání, ochrana, svěžest",
-    "page": "./olej-eukalyptus-camaldulensis-esencialni-olej.html"
-  },
-  {
-    "name": "Eukalyptus staigeriana",
-    "typ": "olej",
-    "popis": "Lehkost, radost, dech, očista, jemnost",
-    "page": "./olej-eukalyptus-staigeriana-esencialni-olej.html"
-  },
-  {
-    "name": "Eukalyptus radiata",
-    "typ": "olej",
-    "popis": "Jemnost, dýchání, imunita, uvolnění, bezpečí",
-    "page": "./olej-eukalyptus-radiata-esencialni-olej.html"
-  },
-  {
-    "name": "Fenykl",
-    "typ": "olej",
-    "popis": "Sebevyjádření, trávení, proudění, rovnováha, ženská",
-    "page": "./olej-fenykl-esencialni-olej.html"
-  },
-  {
-    "name": "Fenykl sladký",
-    "typ": "olej",
-    "popis": "Trávení, očista, ženskost, jasnost, odvaha",
-    "page": "./olej-bewit-fenykl-obecny-esencialni-olej.html"
-  },
-  {
-    "name": "Galbanum",
-    "typ": "olej",
-    "popis": "Hloubka, uvolnění, propojení, harmonie, stabilita",
-    "page": "./olej-galbanum-esencialni-olej.html"
-  },
-  {
-    "name": "Galgán",
-    "typ": "olej",
-    "popis": "Trávení, vitalita, prohřátí, aktivace, obranyschopnost",
-    "page": "./olej-galangal-esencialni-olej.html"
-  },
-  {
-    "name": "Geranium bourbon",
-    "typ": "olej",
-    "popis": "Ženskost, srdce, rovnováha, harmonie, jemnost",
-    "page": "./olej-geranium-bourbon-esencialni-olej.html"
-  },
-  {
-    "name": "Ginger lily - zázvorová lilie",
-    "typ": "olej",
-    "popis": "Jemnost, klid, ženskost, harmonie, dech",
-    "page": "./olej-ginger-lily-esencialni-olej.html"
-  },
-  {
-    "name": "Grapefruit",
-    "typ": "olej",
-    "popis": "Lehkost, detoxikace, osvěžení, radost, metabolismus",
-    "page": "./olej-bewit-grapefruit-sun-esencialni-olej.html"
-  },
-  {
-    "name": "Grapefruit bílý",
-    "typ": "olej",
-    "popis": "Objasnění, svěžest, čistota, detoxikace, dobrá nálada",
-    "page": "./olej-grapefruit-bily-esencialni-olej.html"
-  },
-  {
-    "name": "Grapefruit růžový",
-    "typ": "olej",
-    "popis": "Odlehčení, oživení, rozptýlení, hubnutí, detoxikace",
-    "page": "./olej-grapefruit-ruzovy-esencialni-olej.html"
-  },
-  {
-    "name": "Gurjum balsam",
-    "typ": "olej",
-    "popis": "Dýchání, uzemnění, klid, regenerace, ochrana",
-    "page": "./olej-gurjun-balsam-esencialni-olej.html"
-  },
-  {
-    "name": "Heřmánek pravý",
-    "typ": "olej",
-    "popis": "Klid, přijetí, regenerace, jemnost, uvolnění",
-    "page": "./olej-hermanek-pravy-esencialni-olej.html"
-  },
-  {
-    "name": "Heřmánek římský",
-    "typ": "olej",
-    "popis": "Emocionální stabilita, zklidnění, nespavost, citlivá pokožka",
-    "page": "./olej-hermanek-rimsky-esencialni-olej.html"
-  },
-  {
-    "name": "Hinoki",
-    "typ": "olej",
-    "popis": "Klid, posvátnost, očista, stabilita, ticho",
-    "page": "./olej-bewit-hinoki-esencialni-olej.html"
-  },
-  {
-    "name": "Hřebíček",
-    "typ": "olej",
-    "popis": "Síla, ochrana, prohřátí, imunita, stabilita",
-    "page": "./olej-clove-esencialni-olej.html"
-  },
-  {
-    "name": "Chmel",
-    "typ": "olej",
-    "popis": "Uvolnění, ženskost, spánek, hormonální rovnováha, klid",
-    "page": "./olej-chmel-esencialni-olej.html"
-  },
-  {
-    "name": "Ibiškovec pižmový –",
-    "typ": "olej",
-    "popis": "Smyslnost, uvolnění, klid, harmonie, spojení",
-    "page": "./olej-ibiskovec-pizmovy-esencialni-olej.html"
-  },
-  {
-    "name": "Jalovec",
-    "typ": "olej",
-    "popis": "Očista, volnost, odvaha, prostor, nový začátek",
-    "page": "./olej-jalovec-leaf-esencialni-olej.html"
-  },
-  {
-    "name": "Jasmín",
-    "typ": "olej",
-    "popis": "Radost, intuice, tvořivost, ženskost, harmonie",
-    "page": "./olej-jasmine-absolue-esencialni-olej.html"
-  },
-  {
-    "name": "Jedle balzámová",
-    "typ": "olej",
-    "popis": "Klid, dech, čistota, duchovní síla, úleva",
-    "page": "./olej-jedle-balzamova-esencialni-olej.html"
-  },
-  {
-    "name": "Jedle sibiřská",
-    "typ": "olej",
-    "popis": "Čistota, dech, jasnost, vitalita, lehkost",
-    "page": "./olej-jedle-sibirska-jehlici-esencialni-olej.html"
-  },
-  {
-    "name": "Kadidlo carterii",
-    "typ": "olej",
-    "popis": "Klid, duch, víra, posvátnost, dýchání",
-    "page": "./olej-frankincense-carterii-esencialni-olej.html"
-  },
-  {
-    "name": "Kadidlo sacra",
-    "typ": "olej",
-    "popis": "Duch, světlo, čistota, přítomnost, posvátnost",
-    "page": "./olej-boswellia-sacra-esencialni-olej.html"
-  },
-  {
-    "name": "Kadidlo frereana",
-    "typ": "olej",
-    "popis": "Odvaha, povznesení, světlo, ochrana, jasnost",
-    "page": "./olej-frankincense-frereana-esencialni-olej.html"
-  },
-  {
-    "name": "Kadidlo serrata",
-    "typ": "olej",
-    "popis": "Klid, spojení, regenerace, spiritualita, posvátnost",
-    "page": "./olej-kadidlo-esencialni-olej.html"
-  },
-  {
-    "name": "Kafrovník (ravintsara)",
-    "typ": "olej",
-    "popis": "Očista, síla, imunita, volnost, rovnováha",
-    "page": "./olej-kafr-esencialni-olej.html"
-  },
-  {
-    "name": "Kardamom",
-    "typ": "olej",
-    "popis": "Chuť do života, rovnováha, zažehnutí, spokojenost, vitalita",
-    "page": "./olej-kardamom-cerny-esencialni-olej.html"
-  },
-  {
-    "name": "Klementinka",
-    "typ": "olej",
-    "popis": "Radost, lehkost, uvolnění, hravost, optimismus",
-    "page": "./olej-clementina-esencialni-olej.html"
-  },
-  {
-    "name": "Kmín koptský",
-    "typ": "olej",
-    "popis": "Trávení, očista, síla, prohřátí, odvaha",
-    "page": "./olej-ajowan-esencialni-olej.html"
-  },
-  {
-    "name": "Kmín kořenný",
-    "typ": "olej",
-    "popis": "Klid, trávení, uvolnění, vřelost, důvěra",
-    "page": "./olej-caraway-esencialni-olej.html"
-  },
-  {
-    "name": "Kmín římský",
-    "typ": "olej",
-    "popis": "Odhodlání, vitalita, zažehnutí, vytrvalost, jistota",
-    "page": "./olej-kmin-esencialni-olej.html"
-  },
-  {
-    "name": "Kopaiva",
-    "typ": "olej",
-    "popis": "Klid, regenerace, úleva, protizánět, bezpečí",
-    "page": "./olej-kopaiva-esencialni-olej.html"
-  },
-  {
-    "name": "Kopál vonný (Palo Santo)",
-    "typ": "olej",
-    "popis": "Očista, duch, vnitřní ticho, ochrana, rovnováha",
-    "page": "./olej-palo-santo-esencialni-olej.html"
-  },
-  {
-    "name": "Kopr",
-    "typ": "olej",
-    "popis": "Klid, trávení, jemnost, uvolnění, důvěra",
-    "page": "./olej-dill-seed-esencialni-olej.html"
-  },
-  {
-    "name": "Koriandr",
-    "typ": "olej",
-    "popis": "Klid, tvořivost, stabilita, radost, zažívání",
-    "page": "./olej-bewit-koriandr-sety-esencialni-olej.html"
-  },
-  {
-    "name": "Kozlík lékařský",
-    "typ": "olej",
-    "popis": "Klid, útlum, uvolnění, regenerace, vyrovnání",
-    "page": "./olej-kozlik-esencialni-olej.html"
-  },
-  {
-    "name": "Kurkuma – kořen",
-    "typ": "olej",
-    "popis": "Očista, síla, protizánět, světlo, vitalita",
-    "page": "./olej-turmeric-leaves-esencialni-olej.html"
-  },
-  {
-    "name": "Kurkuma zedoary",
-    "typ": "olej",
-    "popis": "Očista, odvaha, hojení, síla, zažívání",
-    "page": "./olej-zedoary-esencialni-olej.html"
-  },
-  {
-    "name": "Labdanum",
-    "typ": "olej",
-    "popis": "Uzemnění, stabilita, hloubka, ženská síla, uzdravení",
-    "page": "./olej-labdanum-esencialni-olej.html"
-  },
-  {
-    "name": "Lavandin",
-    "typ": "olej",
-    "popis": "Klid, očista, pohyb, síla, stabilita",
-    "page": "./olej-lavandin-esencialni-olej.html"
-  },
-  {
-    "name": "Levandule lékařská",
-    "typ": "olej",
-    "popis": "Klid, sebevyjádření, regenerace, rovnováha, bezpečí",
-    "page": "./olej-levandule-esencialni-olej.html"
-  },
-  {
-    "name": "Levandule spike",
-    "typ": "olej",
-    "popis": "Dech, síla, odvaha, očista, uvolnění",
-    "page": "./olej-spike-lavender-esencialni-olej.html"
-  },
-  {
-    "name": "Libavka",
-    "typ": "olej",
-    "popis": "Úleva, pohyb, prohřátí, uvolnění, regenerace",
-    "page": "./olej-libavka-esencialni-olej.html"
-  },
-  {
-    "name": "Libora měnivá",
-    "typ": "olej",
-    "popis": "Změna, odvaha, očista, vnitřní přechod, stabilizace",
-    "page": "./olej-libora-meniva-esencialni-olej.html"
-  },
-  {
-    "name": "Limetka",
-    "typ": "olej",
-    "popis": "Radost, svěžest, odvaha, očista, lehkost",
-    "page": "./olej-limetka-esencialni-olej.html"
-  },
-  {
-    "name": "Litsea cubeba",
-    "typ": "olej",
-    "popis": "Jasnost, radost, lehkost, svěžest, přítomnost.",
-    "page": "./olej-litsea-cubeba-esencialni-olej.html"
-  },
-  {
-    "name": "Majoránka zahradní",
-    "typ": "olej",
-    "popis": "Uvolnění, soucit, srdečnost, klid, vyrovnání",
-    "page": "./olej-majoranka-esencialni-olej.html"
-  },
-  {
-    "name": "Mandarinka",
-    "typ": "olej",
-    "popis": "Radost, hravost, uvolnění, vnitřní dítě, lehkost",
-    "page": "./olej-zluta-mandarinka-esencialni-olej.html"
-  },
-  {
-    "name": "Mandle hořká",
-    "typ": "olej",
-    "popis": "Klid, jemnost, důvěra, uvolnění, sladké uzdravení",
-    "page": "./olej-prunus-amygdalus-esencialni-olej.html"
-  },
-  {
-    "name": "Manuka",
-    "typ": "olej",
-    "popis": "Ochrana, síla, očista, imunita, rovnováha",
-    "page": "./olej-manuka-esencialni-olej.html"
-  },
-  {
-    "name": "Massoia",
-    "typ": "olej",
-    "popis": "Dotek, vřelost, ženskost, sladkost, péče",
-    "page": "./olej-massoia-bark-esencialni-olej.html"
-  },
-  {
-    "name": "Meduňka lékařská",
-    "typ": "olej",
-    "popis": "Mír, srdce, uvolnění, stabilita, ztišení",
-    "page": "./olej-melissa-esencialni-olej.html"
-  },
-  {
-    "name": "Máta peprná",
-    "typ": "olej",
-    "popis": "Osvěžení, bdělost, proudění, koncentrace, uvolnění",
-    "page": "./olej-mata-peprna-esencialni-olej.html"
-  },
-  {
-    "name": "Myrha",
-    "typ": "olej",
-    "popis": "Hloubka, uzemnění, ztišení, hojení, duchovní spojení",
-    "page": "./olej-myrha-esencialni-olej.html"
-  },
-  {
-    "name": "Nard (jatamansi)",
-    "typ": "olej",
-    "popis": "Hlubina, usebrání, klid, přijetí, duchovní integrace",
-    "page": "./olej-spikenard-esencialni-olej.html"
-  },
-  {
-    "name": "Neroli",
-    "typ": "olej",
-    "popis": "Něha, přijetí, radost, rovnováha, otevřenost",
-    "page": "./olej-neroli-esencialni-olej.html"
-  },
-  {
-    "name": "Pačuli",
-    "typ": "olej",
-    "popis": "Uzemnění, stabilita, smyslnost, regenerace, přijetí",
-    "page": "./olej-paculi-esencialni-olej.html"
-  },
-  {
-    "name": "Pelargonie růžová",
-    "typ": "olej",
-    "popis": "Rovnováha, jemnost, srdečnost, ženskost, stabilita",
-    "page": "./olej-geranie-esencialni-olej.html"
-  },
-  {
-    "name": "Pomeranč červený",
-    "typ": "olej",
-    "popis": "Uvolnění, energie, radost, povzbuzení, pozitivní nálada",
-    "page": "./olej-pomeranc-cerveny-esencialni-olej.html"
-  },
-  {
-    "name": "Pomeranč sladký",
-    "typ": "olej",
-    "popis": "Radost, uvolnění, optimismus, důvěra, dětská lehkost",
-    "page": "./olej-pomeranc-esencialni-olej.html"
-  },
-  {
-    "name": "Puškvorec",
-    "typ": "olej",
-    "popis": "Koncentrace, mysl, trávení, uzemnění, mentální síla",
-    "page": "./olej-calamus-esencialni-olej.html"
-  },
-  {
-    "name": "Rozmarýn",
-    "typ": "olej",
-    "popis": "Jasná mysl, energie, sebedůvěra, vlasy, soustředění",
-    "page": "./olej-rozmaryn-esencialni-olej.html"
-  },
-  {
-    "name": "Růže damašská",
-    "typ": "olej",
-    "popis": "Láska, přijetí, hojivost, něha, ženská esence",
-    "page": "./olej-rosa-damascena-esencialni-olej.html"
-  },
-  {
-    "name": "Santalové dřevo",
-    "typ": "olej",
-    "popis": "Ticho, meditace, soustředění, klid, duchovní spojení",
-    "page": "./olej-sandalwood-esencialni-olej.html"
-  },
-  {
-    "name": "Skořice pravá (kůra)",
-    "typ": "olej",
-    "popis": "Vášeň, teplo, aktivace, energie, odvaha",
-    "page": "./olej-skorice-kura-esencialni-olej.html"
-  },
-  {
-    "name": "Šalvěj lékařská",
-    "typ": "olej",
-    "popis": "Jasnost, očista, síla, ženská rovnováha, transformace",
-    "page": "./olej-salvej-esencialni-olej.html"
-  },
-  {
-    "name": "Tea tree",
-    "typ": "olej",
-    "popis": "Očista, ochrana, imunita, síla, bdělost",
-    "page": "./olej-tea-tree-esencialni-olej.html"
-  },
-  {
-    "name": "Tulsi (bazalka posvátná)",
-    "typ": "olej",
-    "popis": "Očista, víra, ochrana, povznesení, vitalita",
-    "page": "./olej-bazalka-posvatna-esencialni-olej.html"
-  },
-  {
-    "name": "Tymián obecný",
-    "typ": "olej",
-    "popis": "Síla, odvaha, očista, imunita, prodyšnost",
-    "page": "./olej-tymian-esencialni-olej.html"
-  },
-  {
-    "name": "Vanilka",
-    "typ": "olej",
-    "popis": "Klid, útěcha, něha, sladkost, důvěra",
-    "page": "./olej-vanilla-esencialni-olej.html"
-  },
-  {
-    "name": "Vetiver",
-    "typ": "olej",
-    "popis": "Uzemnění, stabilita, ochrana, klid, hloubka",
-    "page": "./olej-vetiver-esencialni-olej.html"
-  },
-  {
-    "name": "Vratič modrý",
-    "typ": "olej",
-    "popis": "Zánět, klid, alergie, pokožka, jemnost",
-    "page": "./olej-blue-tansy-esencialni-olej.html"
-  },
-  {
-    "name": "Ylang-ylang",
-    "typ": "olej",
-    "popis": "Radost, uvolnění, smyslnost, srdce, rovnováha",
-    "page": "./olej-ylang-ylang-esencialni-olej.html"
-  },
-  {
-    "name": "Zázvor",
-    "typ": "olej",
-    "popis": "Odvaha, zahřátí, aktivace, trávení, odhodlání",
-    "page": "./olej-zazvor-esencialni-olej.html"
-  },
   {
     "name": "33",
     "fullname": "33",
@@ -2002,13 +1366,6 @@ const OLEJE = [
     "page": "./smes-bewit-manifestor-esencialni-olej.html"
   },
   {
-    "name": "MERRY CHRISTMAS",
-    "fullname": "Merry christmas",
-    "typ": "smes",
-    "popis": "Vánoční atmosféra – koření, jehličí a hřejivá pohoda",
-    "page": "./smes-merry-christmas-esencialni-olej.html"
-  },
-  {
     "name": "MASSAGE KIDS",
     "fullname": "Massage kids",
     "typ": "smes",
@@ -2028,6 +1385,13 @@ const OLEJE = [
     "typ": "smes",
     "popis": "Podpora paměti, soustředění a schopnosti učit se",
     "page": "./smes-memory-esencialni-olej.html"
+  },
+  {
+    "name": "MERRY CHRISTMAS",
+    "fullname": "Merry christmas",
+    "typ": "smes",
+    "popis": "Vánoční atmosféra – koření, jehličí a hřejivá pohoda",
+    "page": "./smes-merry-christmas-esencialni-olej.html"
   },
   {
     "name": "METAL",
@@ -2630,6 +1994,636 @@ const OLEJE = [
     "typ": "smes",
     "popis": "Přijetí změn, souznění a důvěra v život",
     "page": "./smes-yes-esencialni-olej.html"
+  },
+  {
+    "name": "Akácie",
+    "typ": "olej",
+    "popis": "Akácie je spojována s vnitřní",
+    "page": "./olej-acacia-esencialni-olej.html"
+  },
+  {
+    "name": "Aksamitník rozkladitý",
+    "typ": "olej",
+    "popis": "Očista, paraziti, pokožka, ochrana, zklidnění",
+    "page": "./olej-aksamitnik-rozkladity-esencialni-olej.html"
+  },
+  {
+    "name": "Alpinie",
+    "typ": "olej",
+    "popis": "Alpinie podporuje proudění",
+    "page": "./olej-alpinia-esencialni-olej.html"
+  },
+  {
+    "name": "Amyris",
+    "typ": "olej",
+    "popis": "Klid, hloubka, meditace, uzemnění, uvolnění",
+    "page": "./olej-amyris-esencialni-olej.html"
+  },
+  {
+    "name": "Andělika lékařská",
+    "typ": "olej",
+    "popis": "Ochrana, uvolnění, stabilita, očista, duchovní síla",
+    "page": "./olej-andelika-esencialni-olej.html"
+  },
+  {
+    "name": "Anýz",
+    "typ": "olej",
+    "popis": "Trávení, uvolnění, ženský cyklus, zklidnění, energie",
+    "page": "./olej-anyz-esencialni-olej.html"
+  },
+  {
+    "name": "Badyán pravý",
+    "typ": "olej",
+    "popis": "Trávení, imunita, ženská síla, uvolnění, vnitřní teplo",
+    "page": "./olej-badyan-pravy-esencialni-olej.html"
+  },
+  {
+    "name": "Bay St. Thomas",
+    "typ": "olej",
+    "popis": "Mužská síla, oheň, tonizace, jasnost, povzbuzení",
+    "page": "./olej-bay-st.-thomas-esencialni-olej.html"
+  },
+  {
+    "name": "Bazalka kafrová",
+    "typ": "olej",
+    "popis": "Prokrvení, očista, svaly, nachlazení, stimulace",
+    "page": "./olej-bazalka-kafrova-esencialni-olej.html"
+  },
+  {
+    "name": "Bazalka pravá",
+    "typ": "olej",
+    "popis": "Jasnost, koncentrace, svěžest, nervy, úleva",
+    "page": "./olej-bazalka-esencialni-olej.html"
+  },
+  {
+    "name": "Benzoin",
+    "typ": "olej",
+    "popis": "Klid, výživa, stabilita, zahojení, útěcha",
+    "page": "./olej-benzoin-absolue-esencialni-olej.html"
+  },
+  {
+    "name": "Bergamot",
+    "typ": "olej",
+    "popis": "Uvolnění, lehkost, radost, tok energie, emoční obnova",
+    "page": "./olej-bergamot.html"
+  },
+  {
+    "name": "Borovice banksová",
+    "typ": "olej",
+    "popis": "Očista, dýchání, vitalita, čerstvost, imunita",
+    "page": "./olej-borovice-banksova-bio.html"
+  },
+  {
+    "name": "Borovice lesní",
+    "typ": "olej",
+    "popis": "Sebevědomí, očista, vitalita, dech, pozitivita",
+    "page": "./olej-borovice-lesni-esencialni-olej.html"
+  },
+  {
+    "name": "Cedr atlaský",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, mužská síla, detoxikace, ochrana",
+    "page": "./olej-cedr-atlasky-esencialni-olej.html"
+  },
+  {
+    "name": "Cedr himálajský",
+    "typ": "olej",
+    "popis": "Síla, stabilita, uzemnění, očista, odolnost",
+    "page": "./olej-cedr-himalajsky-esencialni-olej.html"
+  },
+  {
+    "name": "Celer – semena",
+    "typ": "olej",
+    "popis": "Očista, klouby, detoxikace, trávení, rovnováha",
+    "page": "./olej-celer-semena-esencialni-olej.html"
+  },
+  {
+    "name": "Citron",
+    "typ": "olej",
+    "popis": "Osvěžení, očista, jasnost, důvěra, povzbuzení",
+    "page": "./olej-bewit-citron-bio-raw-esencialni-olej.html"
+  },
+  {
+    "name": "Citronela",
+    "typ": "olej",
+    "popis": "Ochrana, očista, uvolnění, repelent, svěžest",
+    "page": "./olej-citronela-esencialni-olej.html"
+  },
+  {
+    "name": "Citronová tráva",
+    "typ": "olej",
+    "popis": "Očista, energie, rovnováha, regenerace, osvěžení",
+    "page": "./olej-citronova-trava-esencialni-olej.html"
+  },
+  {
+    "name": "Copaiba",
+    "typ": "olej",
+    "popis": "Klid, úleva, regenerace, protizánět, vyrovnání",
+    "page": "./olej-kopaiva-esencialni-olej.html"
+  },
+  {
+    "name": "Cubeb – pepř kubebový",
+    "typ": "olej",
+    "popis": "Očista, dýchání, mužská síla, vylučování, povzbuzení",
+    "page": "./olej-cubeb-esencialni-olej.html"
+  },
+  {
+    "name": "Cypriol",
+    "typ": "olej",
+    "popis": "Očista, uzemnění, detoxikace, klid, rovnováha",
+    "page": "./olej-cypriol-esencialni-olej.html"
+  },
+  {
+    "name": "Cypřiš",
+    "typ": "olej",
+    "popis": "Přechod, stabilita, obnova, očista, tok",
+    "page": "./olej-cypris1-esencialni-olej.html"
+  },
+  {
+    "name": "Česnek",
+    "typ": "olej",
+    "popis": "Imunita, očista, antiparazit, vitalita, odvaha",
+    "page": "./olej-garlic-esencialni-olej.html"
+  },
+  {
+    "name": "Drmek",
+    "typ": "olej",
+    "popis": "Hormonální rovnováha, ženský cyklus, klid, přijetí, víra",
+    "page": "./olej-drmek-esencialni-olej.html"
+  },
+  {
+    "name": "Elemi",
+    "typ": "olej",
+    "popis": "Jasnost, dech, meditace, klid, regenerace",
+    "page": "./olej-elemi-esencialni-olej.html"
+  },
+  {
+    "name": "Eukalyptus",
+    "typ": "olej",
+    "popis": "Volnost, dech, očista, vitalita, otevřenost",
+    "page": "./olej-eukalyptus-esencialni-olej.html"
+  },
+  {
+    "name": "Eukalyptus blue",
+    "typ": "olej",
+    "popis": "Dech, imunita, jasnost, ochrana, svěžest",
+    "page": "./olej-eukalyptus-blue-esencialni-olej.html"
+  },
+  {
+    "name": "Eukalyptus camaldulensis",
+    "typ": "olej",
+    "popis": "Očista, vitalita, dýchání, ochrana, svěžest",
+    "page": "./olej-eukalyptus-camaldulensis-esencialni-olej.html"
+  },
+  {
+    "name": "Eukalyptus radiata",
+    "typ": "olej",
+    "popis": "Jemnost, dýchání, imunita, uvolnění, bezpečí",
+    "page": "./olej-eukalyptus-radiata-esencialni-olej.html"
+  },
+  {
+    "name": "Eukalyptus staigeriana",
+    "typ": "olej",
+    "popis": "Lehkost, radost, dech, očista, jemnost",
+    "page": "./olej-eukalyptus-staigeriana-esencialni-olej.html"
+  },
+  {
+    "name": "Fenykl",
+    "typ": "olej",
+    "popis": "Sebevyjádření, trávení, proudění, rovnováha, ženská",
+    "page": "./olej-fenykl-esencialni-olej.html"
+  },
+  {
+    "name": "Fenykl sladký",
+    "typ": "olej",
+    "popis": "Trávení, očista, ženskost, jasnost, odvaha",
+    "page": "./olej-bewit-fenykl-obecny-esencialni-olej.html"
+  },
+  {
+    "name": "Galbanum",
+    "typ": "olej",
+    "popis": "Hloubka, uvolnění, propojení, harmonie, stabilita",
+    "page": "./olej-galbanum-esencialni-olej.html"
+  },
+  {
+    "name": "Galgán",
+    "typ": "olej",
+    "popis": "Trávení, vitalita, prohřátí, aktivace, obranyschopnost",
+    "page": "./olej-galangal-esencialni-olej.html"
+  },
+  {
+    "name": "Geranium bourbon",
+    "typ": "olej",
+    "popis": "Ženskost, srdce, rovnováha, harmonie, jemnost",
+    "page": "./olej-geranium-bourbon-esencialni-olej.html"
+  },
+  {
+    "name": "Ginger lily - zázvorová lilie",
+    "typ": "olej",
+    "popis": "Jemnost, klid, ženskost, harmonie, dech",
+    "page": "./olej-ginger-lily-esencialni-olej.html"
+  },
+  {
+    "name": "Grapefruit",
+    "typ": "olej",
+    "popis": "Lehkost, detoxikace, osvěžení, radost, metabolismus",
+    "page": "./olej-bewit-grapefruit-sun-esencialni-olej.html"
+  },
+  {
+    "name": "Grapefruit bílý",
+    "typ": "olej",
+    "popis": "Objasnění, svěžest, čistota, detoxikace, dobrá nálada",
+    "page": "./olej-grapefruit-bily-esencialni-olej.html"
+  },
+  {
+    "name": "Grapefruit růžový",
+    "typ": "olej",
+    "popis": "Odlehčení, oživení, rozptýlení, hubnutí, detoxikace",
+    "page": "./olej-grapefruit-ruzovy-esencialni-olej.html"
+  },
+  {
+    "name": "Gurjum balsam",
+    "typ": "olej",
+    "popis": "Dýchání, uzemnění, klid, regenerace, ochrana",
+    "page": "./olej-gurjun-balsam-esencialni-olej.html"
+  },
+  {
+    "name": "Heřmánek pravý",
+    "typ": "olej",
+    "popis": "Klid, přijetí, regenerace, jemnost, uvolnění",
+    "page": "./olej-hermanek-pravy-esencialni-olej.html"
+  },
+  {
+    "name": "Heřmánek římský",
+    "typ": "olej",
+    "popis": "Emocionální stabilita, zklidnění, nespavost, citlivá pokožka",
+    "page": "./olej-hermanek-rimsky-esencialni-olej.html"
+  },
+  {
+    "name": "Hinoki",
+    "typ": "olej",
+    "popis": "Klid, posvátnost, očista, stabilita, ticho",
+    "page": "./olej-bewit-hinoki-esencialni-olej.html"
+  },
+  {
+    "name": "Hřebíček",
+    "typ": "olej",
+    "popis": "Síla, ochrana, prohřátí, imunita, stabilita",
+    "page": "./olej-clove-esencialni-olej.html"
+  },
+  {
+    "name": "Chmel",
+    "typ": "olej",
+    "popis": "Uvolnění, ženskost, spánek, hormonální rovnováha, klid",
+    "page": "./olej-chmel-esencialni-olej.html"
+  },
+  {
+    "name": "Ibiškovec pižmový –",
+    "typ": "olej",
+    "popis": "Smyslnost, uvolnění, klid, harmonie, spojení",
+    "page": "./olej-ibiskovec-pizmovy-esencialni-olej.html"
+  },
+  {
+    "name": "Jalovec",
+    "typ": "olej",
+    "popis": "Očista, volnost, odvaha, prostor, nový začátek",
+    "page": "./olej-jalovec-leaf-esencialni-olej.html"
+  },
+  {
+    "name": "Jasmín",
+    "typ": "olej",
+    "popis": "Radost, intuice, tvořivost, ženskost, harmonie",
+    "page": "./olej-jasmine-absolue-esencialni-olej.html"
+  },
+  {
+    "name": "Jedle balzámová",
+    "typ": "olej",
+    "popis": "Klid, dech, čistota, duchovní síla, úleva",
+    "page": "./olej-jedle-balzamova-esencialni-olej.html"
+  },
+  {
+    "name": "Jedle sibiřská",
+    "typ": "olej",
+    "popis": "Čistota, dech, jasnost, vitalita, lehkost",
+    "page": "./olej-jedle-sibirska-jehlici-esencialni-olej.html"
+  },
+  {
+    "name": "Kadidlo carterii",
+    "typ": "olej",
+    "popis": "Klid, duch, víra, posvátnost, dýchání",
+    "page": "./olej-frankincense-carterii-esencialni-olej.html"
+  },
+  {
+    "name": "Kadidlo frereana",
+    "typ": "olej",
+    "popis": "Odvaha, povznesení, světlo, ochrana, jasnost",
+    "page": "./olej-frankincense-frereana-esencialni-olej.html"
+  },
+  {
+    "name": "Kadidlo sacra",
+    "typ": "olej",
+    "popis": "Duch, světlo, čistota, přítomnost, posvátnost",
+    "page": "./olej-boswellia-sacra-esencialni-olej.html"
+  },
+  {
+    "name": "Kadidlo serrata",
+    "typ": "olej",
+    "popis": "Klid, spojení, regenerace, spiritualita, posvátnost",
+    "page": "./olej-kadidlo-esencialni-olej.html"
+  },
+  {
+    "name": "Kafrovník (ravintsara)",
+    "typ": "olej",
+    "popis": "Očista, síla, imunita, volnost, rovnováha",
+    "page": "./olej-kafr-esencialni-olej.html"
+  },
+  {
+    "name": "Kardamom",
+    "typ": "olej",
+    "popis": "Chuť do života, rovnováha, zažehnutí, spokojenost, vitalita",
+    "page": "./olej-kardamom-cerny-esencialni-olej.html"
+  },
+  {
+    "name": "Klementinka",
+    "typ": "olej",
+    "popis": "Radost, lehkost, uvolnění, hravost, optimismus",
+    "page": "./olej-clementina-esencialni-olej.html"
+  },
+  {
+    "name": "Kmín koptský",
+    "typ": "olej",
+    "popis": "Trávení, očista, síla, prohřátí, odvaha",
+    "page": "./olej-ajowan-esencialni-olej.html"
+  },
+  {
+    "name": "Kmín kořenný",
+    "typ": "olej",
+    "popis": "Klid, trávení, uvolnění, vřelost, důvěra",
+    "page": "./olej-caraway-esencialni-olej.html"
+  },
+  {
+    "name": "Kmín římský",
+    "typ": "olej",
+    "popis": "Odhodlání, vitalita, zažehnutí, vytrvalost, jistota",
+    "page": "./olej-kmin-esencialni-olej.html"
+  },
+  {
+    "name": "Kopaiva",
+    "typ": "olej",
+    "popis": "Klid, regenerace, úleva, protizánět, bezpečí",
+    "page": "./olej-kopaiva-esencialni-olej.html"
+  },
+  {
+    "name": "Kopál vonný (Palo Santo)",
+    "typ": "olej",
+    "popis": "Očista, duch, vnitřní ticho, ochrana, rovnováha",
+    "page": "./olej-palo-santo-esencialni-olej.html"
+  },
+  {
+    "name": "Kopr",
+    "typ": "olej",
+    "popis": "Klid, trávení, jemnost, uvolnění, důvěra",
+    "page": "./olej-dill-seed-esencialni-olej.html"
+  },
+  {
+    "name": "Koriandr",
+    "typ": "olej",
+    "popis": "Klid, tvořivost, stabilita, radost, zažívání",
+    "page": "./olej-bewit-koriandr-sety-esencialni-olej.html"
+  },
+  {
+    "name": "Kozlík lékařský",
+    "typ": "olej",
+    "popis": "Klid, útlum, uvolnění, regenerace, vyrovnání",
+    "page": "./olej-kozlik-esencialni-olej.html"
+  },
+  {
+    "name": "Kurkuma – kořen",
+    "typ": "olej",
+    "popis": "Očista, síla, protizánět, světlo, vitalita",
+    "page": "./olej-turmeric-leaves-esencialni-olej.html"
+  },
+  {
+    "name": "Kurkuma zedoary",
+    "typ": "olej",
+    "popis": "Očista, odvaha, hojení, síla, zažívání",
+    "page": "./olej-zedoary-esencialni-olej.html"
+  },
+  {
+    "name": "Labdanum",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, hloubka, ženská síla, uzdravení",
+    "page": "./olej-labdanum-esencialni-olej.html"
+  },
+  {
+    "name": "Lavandin",
+    "typ": "olej",
+    "popis": "Klid, očista, pohyb, síla, stabilita",
+    "page": "./olej-lavandin-esencialni-olej.html"
+  },
+  {
+    "name": "Levandule lékařská",
+    "typ": "olej",
+    "popis": "Klid, sebevyjádření, regenerace, rovnováha, bezpečí",
+    "page": "./olej-levandule-esencialni-olej.html"
+  },
+  {
+    "name": "Levandule spike",
+    "typ": "olej",
+    "popis": "Dech, síla, odvaha, očista, uvolnění",
+    "page": "./olej-spike-lavender-esencialni-olej.html"
+  },
+  {
+    "name": "Libavka",
+    "typ": "olej",
+    "popis": "Úleva, pohyb, prohřátí, uvolnění, regenerace",
+    "page": "./olej-libavka-esencialni-olej.html"
+  },
+  {
+    "name": "Libora měnivá",
+    "typ": "olej",
+    "popis": "Změna, odvaha, očista, vnitřní přechod, stabilizace",
+    "page": "./olej-libora-meniva-esencialni-olej.html"
+  },
+  {
+    "name": "Limetka",
+    "typ": "olej",
+    "popis": "Radost, svěžest, odvaha, očista, lehkost",
+    "page": "./olej-limetka-esencialni-olej.html"
+  },
+  {
+    "name": "Litsea cubeba",
+    "typ": "olej",
+    "popis": "Jasnost, radost, lehkost, svěžest, přítomnost.",
+    "page": "./olej-litsea-cubeba-esencialni-olej.html"
+  },
+  {
+    "name": "Majoránka zahradní",
+    "typ": "olej",
+    "popis": "Uvolnění, soucit, srdečnost, klid, vyrovnání",
+    "page": "./olej-majoranka-esencialni-olej.html"
+  },
+  {
+    "name": "Mandarinka",
+    "typ": "olej",
+    "popis": "Radost, hravost, uvolnění, vnitřní dítě, lehkost",
+    "page": "./olej-zluta-mandarinka-esencialni-olej.html"
+  },
+  {
+    "name": "Mandle hořká",
+    "typ": "olej",
+    "popis": "Klid, jemnost, důvěra, uvolnění, sladké uzdravení",
+    "page": "./olej-prunus-amygdalus-esencialni-olej.html"
+  },
+  {
+    "name": "Manuka",
+    "typ": "olej",
+    "popis": "Ochrana, síla, očista, imunita, rovnováha",
+    "page": "./olej-manuka-esencialni-olej.html"
+  },
+  {
+    "name": "Massoia",
+    "typ": "olej",
+    "popis": "Dotek, vřelost, ženskost, sladkost, péče",
+    "page": "./olej-massoia-bark-esencialni-olej.html"
+  },
+  {
+    "name": "Máta peprná",
+    "typ": "olej",
+    "popis": "Osvěžení, bdělost, proudění, koncentrace, uvolnění",
+    "page": "./olej-mata-peprna-esencialni-olej.html"
+  },
+  {
+    "name": "Meduňka lékařská",
+    "typ": "olej",
+    "popis": "Mír, srdce, uvolnění, stabilita, ztišení",
+    "page": "./olej-melissa-esencialni-olej.html"
+  },
+  {
+    "name": "Myrha",
+    "typ": "olej",
+    "popis": "Hloubka, uzemnění, ztišení, hojení, duchovní spojení",
+    "page": "./olej-myrha-esencialni-olej.html"
+  },
+  {
+    "name": "Nard (jatamansi)",
+    "typ": "olej",
+    "popis": "Hlubina, usebrání, klid, přijetí, duchovní integrace",
+    "page": "./olej-spikenard-esencialni-olej.html"
+  },
+  {
+    "name": "Neroli",
+    "typ": "olej",
+    "popis": "Něha, přijetí, radost, rovnováha, otevřenost",
+    "page": "./olej-neroli-esencialni-olej.html"
+  },
+  {
+    "name": "Pačuli",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, smyslnost, regenerace, přijetí",
+    "page": "./olej-paculi-esencialni-olej.html"
+  },
+  {
+    "name": "Pelargonie růžová",
+    "typ": "olej",
+    "popis": "Rovnováha, jemnost, srdečnost, ženskost, stabilita",
+    "page": "./olej-geranie-esencialni-olej.html"
+  },
+  {
+    "name": "Pomeranč červený",
+    "typ": "olej",
+    "popis": "Uvolnění, energie, radost, povzbuzení, pozitivní nálada",
+    "page": "./olej-pomeranc-cerveny-esencialni-olej.html"
+  },
+  {
+    "name": "Pomeranč sladký",
+    "typ": "olej",
+    "popis": "Radost, uvolnění, optimismus, důvěra, dětská lehkost",
+    "page": "./olej-pomeranc-esencialni-olej.html"
+  },
+  {
+    "name": "Puškvorec",
+    "typ": "olej",
+    "popis": "Koncentrace, mysl, trávení, uzemnění, mentální síla",
+    "page": "./olej-calamus-esencialni-olej.html"
+  },
+  {
+    "name": "Rozmarýn",
+    "typ": "olej",
+    "popis": "Jasná mysl, energie, sebedůvěra, vlasy, soustředění",
+    "page": "./olej-rozmaryn-esencialni-olej.html"
+  },
+  {
+    "name": "Růže damašská",
+    "typ": "olej",
+    "popis": "Láska, přijetí, hojivost, něha, ženská esence",
+    "page": "./olej-rosa-damascena-esencialni-olej.html"
+  },
+  {
+    "name": "Santalové dřevo",
+    "typ": "olej",
+    "popis": "Ticho, meditace, soustředění, klid, duchovní spojení",
+    "page": "./olej-sandalwood-esencialni-olej.html"
+  },
+  {
+    "name": "Skořice pravá (kůra)",
+    "typ": "olej",
+    "popis": "Vášeň, teplo, aktivace, energie, odvaha",
+    "page": "./olej-skorice-kura-esencialni-olej.html"
+  },
+  {
+    "name": "Šalvěj lékařská",
+    "typ": "olej",
+    "popis": "Jasnost, očista, síla, ženská rovnováha, transformace",
+    "page": "./olej-salvej-esencialni-olej.html"
+  },
+  {
+    "name": "Tea tree",
+    "typ": "olej",
+    "popis": "Očista, ochrana, imunita, síla, bdělost",
+    "page": "./olej-tea-tree-esencialni-olej.html"
+  },
+  {
+    "name": "Tulsi (bazalka posvátná)",
+    "typ": "olej",
+    "popis": "Očista, víra, ochrana, povznesení, vitalita",
+    "page": "./olej-bazalka-posvatna-esencialni-olej.html"
+  },
+  {
+    "name": "Tymián obecný",
+    "typ": "olej",
+    "popis": "Síla, odvaha, očista, imunita, prodyšnost",
+    "page": "./olej-tymian-esencialni-olej.html"
+  },
+  {
+    "name": "Vanilka",
+    "typ": "olej",
+    "popis": "Klid, útěcha, něha, sladkost, důvěra",
+    "page": "./olej-vanilla-esencialni-olej.html"
+  },
+  {
+    "name": "Vetiver",
+    "typ": "olej",
+    "popis": "Uzemnění, stabilita, ochrana, klid, hloubka",
+    "page": "./olej-vetiver-esencialni-olej.html"
+  },
+  {
+    "name": "Vratič modrý",
+    "typ": "olej",
+    "popis": "Zánět, klid, alergie, pokožka, jemnost",
+    "page": "./olej-blue-tansy-esencialni-olej.html"
+  },
+  {
+    "name": "Ylang-ylang",
+    "typ": "olej",
+    "popis": "Radost, uvolnění, smyslnost, srdce, rovnováha",
+    "page": "./olej-ylang-ylang-esencialni-olej.html"
+  },
+  {
+    "name": "Zázvor",
+    "typ": "olej",
+    "popis": "Odvaha, zahřátí, aktivace, trávení, odhodlání",
+    "page": "./olej-zazvor-esencialni-olej.html"
   }
 ];
 
