@@ -26,10 +26,9 @@
         <li><a href="./index.html" class="active">Úvod</a></li>
         <li><a href="./pruvodce-zacatecnice.html">Jak začít</a></li>
         <li><a href="./temata.html">Témata</a></li>
-        <li><a href="./katalog.html">Všechny oleje</a></li>
+        <li><a href="./katalog.html">Katalog</a></li>
         
         <li><a href="./pruvodce.html">Průvodkyně</a></li>
-        <li><a href="./blog.html">Blog</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -46,8 +45,10 @@
       <p class="hero-subtitle">pro vaši rovnováhu</p>
       <p class="hero-desc">
         Vítejte na stránkách, kde vás provedu krok za krokem, jak využívat esenciální oleje v běžném
-        životě – jednoduše a přirozeně. Ukážu vám, jak si vybrat správnou
-        esenci a používat ji v situacích, které řešíte každý den.
+        životě – jednoduše a přirozeně.<br><br>
+        Možná jste právě dostali svůj první esenciální olej, nebo vás jen láká vůně levandule či citronu
+        a přemýšlíte, jak je správně použít.<br><br>
+        Budeme začínat od úplných základů a postupně se naučíte oleje bezpečně používat.
       </p>
     </div>
     <div class="hero-image">
@@ -56,82 +57,18 @@
   </div>
 </section>
 
-<!-- ── Kde začít ── -->
+<!-- ── Začněte zde ── -->
 <section style="padding:3rem 0; background:var(--cream-dk);">
-  <div class="section-inner">
-    <h2 class="section-title">Kde začít?</h2>
-    <div style="display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; margin-top:2rem;">
-
-      <a href="./temata.html" style="flex:1; min-width:200px; max-width:280px; text-align:center; padding:1.5rem; background:#F3F6EE; border-radius:1rem; border:1px solid var(--border); text-decoration:none; color:inherit; display:block; transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">🌿</div>
-        <div style="font-family:var(--font-h); font-size:1.1rem; font-weight:700; color:var(--dark); margin-bottom:0.5rem;">Zjistěte, co potřebujete</div>
-        <p style="font-size:0.9rem; color:var(--brown); line-height:1.6; margin:0 0 1rem;">Vyberte téma, které vás právě trápí — stres, spánek, energie nebo bolest.</p>
-        <span class="btn-orange" style="font-size:0.75rem; padding:0.45rem 1rem;">Vybrat téma →</span>
-      </a>
-
-      <a href="./jak-pouzivat.html" style="flex:1; min-width:200px; max-width:280px; text-align:center; padding:1.5rem; background:#FBF2F5; border-radius:1rem; border:1px solid var(--border); text-decoration:none; color:inherit; display:block; transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">💧</div>
-        <div style="font-family:var(--font-h); font-size:1.1rem; font-weight:700; color:var(--dark); margin-bottom:0.5rem;">Naučte se ho používat</div>
-        <p style="font-size:0.9rem; color:var(--brown); line-height:1.6; margin:0 0 1rem;">Difuzér, masáž nebo koupel — ukážu vám, kdy a jak na to.</p>
-        <span class="btn-orange" style="font-size:0.75rem; padding:0.45rem 1rem;">Jak používat →</span>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── Co právě potřebujete ── -->
-<section class="potrebujete" id="potrebujete">
-  <div class="section-inner">
-    <h2 class="section-title">Co právě potřebujete?</h2>
-    <div class="kategorie-grid">
-
-      <a href="./stres.html" class="kategorie-card" style="background:#F3F6EE;">
-        <div class="kat-icon" style="background:#E8EDE0; color:#4A5C2A;">🌿</div>
-        <div class="kat-title">Stres a přetížení</div>
-        <div class="kat-desc">Když je toho na vás moc a potřebujete zklidnit mysl.</div>
-        <span class="btn-orange" style="font-size:0.75rem; padding:0.45rem 1rem; margin-top:0.25rem;">Chci se zklidnit</span>
-      </a>
-
-      <a href="./spanek.html" class="kategorie-card" style="background:#EEF1F8;">
-        <div class="kat-icon" style="background:#E0E4EE; color:#1E3060;">🌙</div>
-        <div class="kat-title">Spánek a zklidnění</div>
-        <div class="kat-desc">Když večer nemůžete vypnout hlavu nebo se budíte unavení.</div>
-        <span class="btn-orange" style="font-size:0.75rem; padding:0.45rem 1rem; margin-top:0.25rem;">Chci lépe spát</span>
-      </a>
-
-      <a href="./zensky-cyklus.html" class="kategorie-card" style="background:#FBF2F5;">
-        <div class="kat-icon" style="background:#F5E8EC; color:#A05060;">🌸</div>
-        <div class="kat-title">Ženský cyklus</div>
-        <div class="kat-desc">Když tělo potřebuje jemnou podporu a větší rovnováhu.</div>
-        <span class="btn-orange" style="font-size:0.75rem; padding:0.45rem 1rem; margin-top:0.25rem;">Chci rovnováhu</span>
-      </a>
-
-      <a href="./zvladani-zavislosti.html" class="kategorie-card" style="background:#FDF8EE;">
-        <div class="kat-icon" style="background:#FBF0DC; color:#A07020;">🦋</div>
-        <div class="kat-title">Zvládání závislosti</div>
-        <div class="kat-desc">Když cítíte, že je čas změnit své návyky.</div>
-        <span class="btn-orange" style="font-size:0.75rem; padding:0.45rem 1rem; margin-top:0.25rem;">Chci změnu</span>
-      </a>
-
-      <a href="./vice-energie.html" class="kategorie-card" style="background:#F4F6F2;">
-        <div class="kat-icon" style="background:#EAECE8; color:#5C6B5A;">☀️</div>
-        <div class="kat-title">Více energie</div>
-        <div class="kat-desc">Když se cítíte unaveni a bez vitality.</div>
-        <span class="btn-orange" style="font-size:0.75rem; padding:0.45rem 1rem; margin-top:0.25rem;">Chci energii</span>
-      </a>
-
-      <a href="./bolest.html" class="kategorie-card" style="background:#FEF4F3;">
-        <div class="kat-icon" style="background:#FDECEA; color:#A03030;">🫶</div>
-        <div class="kat-title">Bolest</div>
-        <div class="kat-desc">Když vás něco fyzicky nebo vnitřně omezuje.</div>
-        <span class="btn-orange" style="font-size:0.75rem; padding:0.45rem 1rem; margin-top:0.25rem;">Chci úlevu</span>
-      </a>
-
-    </div>
-    <div style="text-align:center; margin-top:2rem;">
-      <a href="./temata.html" class="btn-orange">Zobrazit další témata →</a>
-    </div>
+  <div class="section-inner" style="text-align:center;">
+    <div style="font-size:2.5rem; margin-bottom:0.5rem;">🌿</div>
+    <h2 class="section-title" style="margin-bottom:1rem;">Začněte zde</h2>
+    <p style="font-size:1.1rem; color:var(--brown); line-height:1.7; max-width:600px; margin:0 auto 1.5rem;">
+      Povedu vás od první lekce.
+    </p>
+    <a href="./pruvodce-zacatecnice.html" class="btn-orange">Jak začít →</a>
+    <p style="margin-top:1rem;">
+      <a href="./temata.html" style="font-size:0.85rem; color:var(--brown); opacity:0.8;">Nebo si vyberte téma, které vás zajímá →</a>
+    </p>
   </div>
 </section>
 
@@ -139,11 +76,12 @@
 <section class="naucte">
   <div class="naucte-inner">
     <div class="naucte-text">
-      <h2 class="naucte-title">Naučte se využívat sílu esencí přirozeně a jednoduše.</h2>
+      <h2 class="naucte-title">Postupně objevíte, co vám sedí.</h2>
       <p class="naucte-desc">
         Bez složitostí, bez tlaku.<br>
         Jen to, co dává smysl ve vašem každodenním životě.
       </p>
+      <a href="./pruvodce-zacatecnice.html" class="btn-orange" style="margin-top:1rem; display:inline-block;">Jak začít →</a>
     </div>
     <div class="naucte-image">
       <img src="./images/uvod6.jpg" alt="Přírodní esence a kosmetika">
@@ -158,7 +96,7 @@
   <p class="footer-quote">„Tady nejde o výkon ani dokonalost. Jen o návrat k sobě."</p>
 
   <!-- ── Disclaimer ── -->
-<p style="text-align:center; font-size:0.8rem; color:#8a7a6a; padding:0.75rem 1rem 0; background:var(--cream);">Odkazy vedou na partnerský e-shop Bewit.</p>
+<p style="text-align:center; font-size:0.8rem; color:#8a7a6a; padding:0.75rem 1rem 0; background:var(--cream);">Informace na tomto webu mají výlučně informační charakter a nejsou náhradou odborné lékařské péče.</p>
   <p class="footer-heart">♥</p>
     <p class="footer-copy" style="font-size:0.75rem; opacity:0.7;">Esenci.cz provozuje Rita Drabinová · <a href="mailto:eft.joga@gmail.com" style="color:inherit;">eft.joga@gmail.com</a></p>
 <p class="footer-copy">
