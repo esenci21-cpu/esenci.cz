@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Průvodce oleji A–Z — Esenci.cz</title>
-  <meta name="description" content="Přehled všech jednodruhových olejů, směsí a nosných olejů BEWIT. Vyhledejte podle názvu nebo účinku.">
+  <meta name="description" content="Přehled všech jednodruhových olejů, směsí, nosných olejů a PRAWTEIN doplňků BEWIT. Vyhledejte podle názvu nebo účinku.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -56,14 +56,16 @@
       cursor: pointer;
       transition: background 0.15s, color 0.15s, border-color 0.15s, opacity 0.15s;
     }
-    .filter-btn.color-vse   { border-color: var(--orange); color: var(--dark); }
-    .filter-btn.color-olej  { border-color: #7A9B5C; color: var(--dark); }
-    .filter-btn.color-smes  { border-color: #9B7FC7; color: var(--dark); }
-    .filter-btn.color-nosny { border-color: #C99A3E; color: var(--dark); }
-    .filter-btn.color-vse.active   { background: var(--orange); color: #fff; }
-    .filter-btn.color-olej.active  { background: #7A9B5C; color: #fff; }
-    .filter-btn.color-smes.active  { background: #9B7FC7; color: #fff; }
-    .filter-btn.color-nosny.active { background: #C99A3E; color: #fff; }
+    .filter-btn.color-vse      { border-color: var(--orange); color: var(--dark); }
+    .filter-btn.color-olej     { border-color: #7A9B5C; color: var(--dark); }
+    .filter-btn.color-smes     { border-color: #9B7FC7; color: var(--dark); }
+    .filter-btn.color-nosny    { border-color: #C99A3E; color: var(--dark); }
+    .filter-btn.color-prawtein { border-color: #8B5E3C; color: var(--dark); }
+    .filter-btn.color-vse.active      { background: var(--orange); color: #fff; }
+    .filter-btn.color-olej.active     { background: #7A9B5C; color: #fff; }
+    .filter-btn.color-smes.active     { background: #9B7FC7; color: #fff; }
+    .filter-btn.color-nosny.active    { background: #C99A3E; color: #fff; }
+    .filter-btn.color-prawtein.active { background: #8B5E3C; color: #fff; }
     .filter-btn:hover:not(.active) {
       opacity: 0.7;
     }
@@ -172,9 +174,9 @@
   <div class="hero-inner">
     <div class="hero-text">
       <h1 class="hero-title">Průvodce oleji A–Z</h1>
-      <p class="hero-subtitle">361 olejů, směsí a nosných olejů BEWIT</p>
+      <p class="hero-subtitle">387 olejů, směsí, nosných olejů a doplňků BEWIT</p>
       <p class="hero-desc">
-        Přehled všech jednodruhových olejů, směsí a nosných olejů.
+        Přehled všech jednodruhových olejů, směsí, nosných olejů a PRAWTEIN doplňků.
         Vyhledejte podle názvu nebo účinku.
       </p>
     </div>
@@ -205,6 +207,7 @@
       <button type="button" class="filter-btn color-olej" data-filter="olej">Esenciální oleje — jednodruhové</button>
       <button type="button" class="filter-btn color-smes" data-filter="smes">Esenciální oleje — směsi</button>
       <button type="button" class="filter-btn color-nosny" data-filter="nosny">Nosné oleje</button>
+      <button type="button" class="filter-btn color-prawtein" data-filter="prawtein">PRAWTEIN doplňky</button>
     </div>
 
 <p class="count-line" id="countLine">Zobrazeno 361 z 361</p>
@@ -2666,6 +2669,162 @@ const OLEJE = [
     "typ": "nosny",
     "popis": "Podpora jater, trávení, detoxikace",
     "page": "./nosny-olej-ostropestrec-marianskeho.html"
+  },
+  {
+    "name": "PRAWTEIN OK DIG",
+    "typ": "prawtein",
+    "popis": "Trávení, lehkost a zdravá funkce jater zevnitř",
+    "page": "./p-ok-dig.html"
+  },
+  {
+    "name": "PRAWTEIN HAIR",
+    "typ": "prawtein",
+    "popis": "Výživa a posílení vlasů zevnitř",
+    "page": "./p-hair.html"
+  },
+  {
+    "name": "PRAWTEIN DETOL",
+    "typ": "prawtein",
+    "popis": "Detoxikace jater, únava a přetížení zevnitř",
+    "page": "./p-detol.html"
+  },
+  {
+    "name": "PRAWTEIN WOFERT",
+    "typ": "prawtein",
+    "popis": "Hormonální podpora ženy zevnitř",
+    "page": "./p-wofert.html"
+  },
+  {
+    "name": "PRAWTEIN PROTECT",
+    "typ": "prawtein",
+    "popis": "Podpora imunity zevnitř",
+    "page": "./p-protect.html"
+  },
+  {
+    "name": "PRAWTEIN MOVE IT",
+    "typ": "prawtein",
+    "popis": "Podpora pohybového aparátu zevnitř",
+    "page": "./p-move-it.html"
+  },
+  {
+    "name": "PRAWTEIN MOON",
+    "typ": "prawtein",
+    "popis": "Menstruační cyklus a hormonální rovnováha zevnitř",
+    "page": "./p-moon.html"
+  },
+  {
+    "name": "PRAWTEIN MIG",
+    "typ": "prawtein",
+    "popis": "Migréna a bolest hlavy zevnitř",
+    "page": "./p-mig.html"
+  },
+  {
+    "name": "PRAWTEIN I'M HAPPY",
+    "typ": "prawtein",
+    "popis": "Radost a lehkost zevnitř",
+    "page": "./p-im-happy.html"
+  },
+  {
+    "name": "PRAWTEIN DX",
+    "typ": "prawtein",
+    "popis": "Celková detoxikace jater, ledvin a střev zevnitř",
+    "page": "./p-dx.html"
+  },
+  {
+    "name": "PRAWTEIN COLDET",
+    "typ": "prawtein",
+    "popis": "Detoxikace a regenerace střev zevnitř",
+    "page": "./p-coldet.html"
+  },
+  {
+    "name": "PRAWTEIN BODYGUARD",
+    "typ": "prawtein",
+    "popis": "Ochrana organismu proti infekcím zevnitř",
+    "page": "./p-bodyguard.html"
+  },
+  {
+    "name": "PRAWTEIN ALG",
+    "typ": "prawtein",
+    "popis": "Úleva při citlivosti na okolní vlivy zevnitř",
+    "page": "./p-alg.html"
+  },
+  {
+    "name": "PRAWTEIN WOMAN M",
+    "typ": "prawtein",
+    "popis": "Podpora ženské harmonie zevnitř",
+    "page": "./p-woman-m.html"
+  },
+  {
+    "name": "PRAWTEIN WLOSS",
+    "typ": "prawtein",
+    "popis": "Zvládání chutí na sladké zevnitř",
+    "page": "./p-wloss.html"
+  },
+  {
+    "name": "PRAWTEIN SUP-ER-MAN",
+    "typ": "prawtein",
+    "popis": "Mužská energie a vitalita zevnitř",
+    "page": "./p-sup-er-man.html"
+  },
+  {
+    "name": "PRAWTEIN PO-W-ER",
+    "typ": "prawtein",
+    "popis": "Síla, energie a výkon zevnitř",
+    "page": "./p-po-w-er.html"
+  },
+  {
+    "name": "PRAWTEIN LOVE",
+    "typ": "prawtein",
+    "popis": "Vnitřní klid a harmonie zevnitř",
+    "page": "./p-love.html"
+  },
+  {
+    "name": "PRAWTEIN KIDS",
+    "typ": "prawtein",
+    "popis": "Zdravá svačinka pro dětský jídelníček",
+    "page": "./p-kids.html"
+  },
+  {
+    "name": "PRAWTEIN HYP",
+    "typ": "prawtein",
+    "popis": "Klid a vyrovnaný rytmus zevnitř",
+    "page": "./p-hyp.html"
+  },
+  {
+    "name": "PRAWTEIN HELP H",
+    "typ": "prawtein",
+    "popis": "Podpora srdce a cév zevnitř",
+    "page": "./p-help-h.html"
+  },
+  {
+    "name": "PRAWTEIN FRANKINCENSE PLUS",
+    "typ": "prawtein",
+    "popis": "Podpora kloubů a celkové harmonie zevnitř",
+    "page": "./p-frankincense-plus.html"
+  },
+  {
+    "name": "PRAWTEIN CHOLBAL",
+    "typ": "prawtein",
+    "popis": "Podpora vyrovnané hladiny cholesterolu zevnitř",
+    "page": "./p-cholbal.html"
+  },
+  {
+    "name": "PRAWTEIN BYDIA",
+    "typ": "prawtein",
+    "popis": "Podpora rovnováhy organismu zevnitř",
+    "page": "./p-bydia.html"
+  },
+  {
+    "name": "PRAWTEIN BO",
+    "typ": "prawtein",
+    "popis": "Zdraví kostí, pružnost a pevnost zevnitř",
+    "page": "./p-bo.html"
+  },
+  {
+    "name": "PRAWTEIN ALOE VERA PLUS",
+    "typ": "prawtein",
+    "popis": "Trávení a celková rovnováha zevnitř",
+    "page": "./p-aloe-vera-plus.html"
   }
 ];
 
@@ -2723,8 +2882,8 @@ function render() {
     a.href = o.page || bewitUrl(o.name);
     if (!o.page) { a.target = '_blank'; a.rel = 'noopener'; }
 
-    const icon = o.typ === 'olej' ? '🌿' : o.typ === 'smes' ? '🧴' : '💧';
-    const badge = o.typ === 'olej' ? 'Olej' : o.typ === 'smes' ? 'Směs' : 'Nosný olej';
+    const icon = o.typ === 'olej' ? '🌿' : o.typ === 'smes' ? '🧴' : o.typ === 'nosny' ? '💧' : '🍫';
+    const badge = o.typ === 'olej' ? 'Olej' : o.typ === 'smes' ? 'Směs' : o.typ === 'nosny' ? 'Nosný olej' : 'PRAWTEIN';
 
     a.innerHTML =
       '<span class="oil-icon">' + icon + '</span>' +
