@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Průvodce oleji A–Z — Esenci.cz</title>
-  <meta name="description" content="Přehled všech jednodruhových olejů a směsí BEWIT. Vyhledejte podle názvu nebo účinku.">
+  <meta name="description" content="Přehled všech jednodruhových olejů, směsí a nosných olejů BEWIT. Vyhledejte podle názvu nebo účinku.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@
       margin-bottom: 0.75rem;
     }
     .filter-btn {
-      border: 1px solid var(--border);
+      border: 2px solid var(--border);
       background: #fff;
       color: var(--dark);
       border-radius: 20px;
@@ -54,16 +54,18 @@
       font-size: 0.85rem;
       font-family: 'Inter', sans-serif;
       cursor: pointer;
-      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      transition: background 0.15s, color 0.15s, border-color 0.15s, opacity 0.15s;
     }
-    .filter-btn.active {
-      background: var(--orange);
-      color: #fff;
-      border-color: var(--orange);
-    }
+    .filter-btn.color-vse   { border-color: var(--orange); color: var(--dark); }
+    .filter-btn.color-olej  { border-color: #7A9B5C; color: var(--dark); }
+    .filter-btn.color-smes  { border-color: #9B7FC7; color: var(--dark); }
+    .filter-btn.color-nosny { border-color: #C99A3E; color: var(--dark); }
+    .filter-btn.color-vse.active   { background: var(--orange); color: #fff; }
+    .filter-btn.color-olej.active  { background: #7A9B5C; color: #fff; }
+    .filter-btn.color-smes.active  { background: #9B7FC7; color: #fff; }
+    .filter-btn.color-nosny.active { background: #C99A3E; color: #fff; }
     .filter-btn:hover:not(.active) {
-      border-color: var(--orange);
-      color: var(--orange);
+      opacity: 0.7;
     }
     .count-line {
       font-size: 0.82rem;
@@ -170,9 +172,9 @@
   <div class="hero-inner">
     <div class="hero-text">
       <h1 class="hero-title">Průvodce oleji A–Z</h1>
-      <p class="hero-subtitle">355 olejů a směsí BEWIT</p>
+      <p class="hero-subtitle">361 olejů, směsí a nosných olejů BEWIT</p>
       <p class="hero-desc">
-        Přehled všech jednodruhových olejů a směsí.
+        Přehled všech jednodruhových olejů, směsí a nosných olejů.
         Vyhledejte podle názvu nebo účinku.
       </p>
     </div>
@@ -198,7 +200,14 @@
       >
     </div>
 
-<p class="count-line" id="countLine">Zobrazeno 355 z 355</p>
+    <div class="filter-row">
+      <button type="button" class="filter-btn color-vse active" data-filter="vse">Vše</button>
+      <button type="button" class="filter-btn color-olej" data-filter="olej">Esenciální oleje — jednodruhové</button>
+      <button type="button" class="filter-btn color-smes" data-filter="smes">Esenciální oleje — směsi</button>
+      <button type="button" class="filter-btn color-nosny" data-filter="nosny">Nosné oleje</button>
+    </div>
+
+<p class="count-line" id="countLine">Zobrazeno 361 z 361</p>
 
     <ul class="oil-list" id="oilList"></ul>
 
@@ -2621,6 +2630,42 @@ const OLEJE = [
     "typ": "olej",
     "popis": "Odvaha, zahřátí, aktivace, trávení, odhodlání",
     "page": "./olej-zazvor-esencialni-olej.html"
+  },
+  {
+    "name": "Jojobový olej",
+    "typ": "nosny",
+    "popis": "Univerzální, dlouhá trvanlivost, hydratace, vlasy, parfémy",
+    "page": "./nosny-olej-jojobovy.html"
+  },
+  {
+    "name": "Kokosový olej frakcionovaný",
+    "typ": "nosny",
+    "popis": "Masáže, odličovač, rychlé vstřebání, bez vůně",
+    "page": "./nosny-olej-kokosovy-frakcionovany.html"
+  },
+  {
+    "name": "Arganový olej",
+    "typ": "nosny",
+    "popis": "Hydratace, jizvy, vlasy, nehty, stárnoucí pleť",
+    "page": "./nosny-olej-arganovy.html"
+  },
+  {
+    "name": "BEWIT Essential Base Oil",
+    "typ": "nosny",
+    "popis": "Hotová směs, kompletní výživa, ideální pro začátečníky",
+    "page": "./nosny-olej-essential-base-oil.html"
+  },
+  {
+    "name": "Nimbový olej",
+    "typ": "nosny",
+    "popis": "Repelent, aknózní pleť, hojení, vlasy",
+    "page": "./nosny-olej-nimbovy.html"
+  },
+  {
+    "name": "Olej z ostropestřce mariánského",
+    "typ": "nosny",
+    "popis": "Podpora jater, trávení, detoxikace",
+    "page": "./nosny-olej-ostropestrec-marianskeho.html"
   }
 ];
 
@@ -2637,14 +2682,27 @@ function bewitUrl(name) {
   return 'https://bewit.love/hledat?q=' + encodeURIComponent(name) + '&i=3fqlzp0xrllj7';
 }
 
+// Čeština slova skloňuje (alergické → alergických), takže porovnáváme jen
+// společný základ slova místo celého přesného tvaru.
+function stemsMatch(a, b) {
+  const len = Math.min(a.length, b.length);
+  if (len < 4) return a === b;
+  const cut = Math.max(4, len - 3);
+  return a.slice(0, cut) === b.slice(0, cut);
+}
+
+function normalizeWords(str) {
+  return str.toLowerCase().trim().split(/\s+/).filter(Boolean);
+}
+
 function render() {
-  const q = searchQuery.toLowerCase().trim();
+  const queryWords = normalizeWords(searchQuery);
   const filtered = OLEJE.filter(o => {
     const matchTyp = activeFilter === 'vse' || o.typ === activeFilter;
     if (!matchTyp) return false;
-    if (!q) return true;
-    const haystack = (o.name + ' ' + (o.fullname || '') + ' ' + o.popis).toLowerCase();
-    return haystack.includes(q);
+    if (queryWords.length === 0) return true;
+    const haystackWords = normalizeWords(o.name + ' ' + (o.fullname || '') + ' ' + o.popis);
+    return queryWords.every(qw => haystackWords.some(hw => stemsMatch(qw, hw)));
   });
 
   oilList.innerHTML = '';
@@ -2665,8 +2723,8 @@ function render() {
     a.href = o.page || bewitUrl(o.name);
     if (!o.page) { a.target = '_blank'; a.rel = 'noopener'; }
 
-    const icon = o.typ === 'olej' ? '🌿' : '🧴';
-    const badge = o.typ === 'olej' ? 'Olej' : 'Směs';
+    const icon = o.typ === 'olej' ? '🌿' : o.typ === 'smes' ? '🧴' : '💧';
+    const badge = o.typ === 'olej' ? 'Olej' : o.typ === 'smes' ? 'Směs' : 'Nosný olej';
 
     a.innerHTML =
       '<span class="oil-icon">' + icon + '</span>' +
