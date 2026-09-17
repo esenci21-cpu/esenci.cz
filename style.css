@@ -420,11 +420,13 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 2rem;
 }
 .vyber-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem;
 }
 .vyber-card {
+  flex: 0 1 calc((100% - 2.5rem) / 3);
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 1rem;
@@ -561,7 +563,7 @@ a { text-decoration: none; color: inherit; }
   .nav-toggle { display: flex; }
   .section-inner, .naucte-inner, .produkt-inner, .vyber-sekce .section-inner, .poznamka-inner { padding: 0 1.25rem; }
   .kategorie-grid { grid-template-columns: repeat(2, 1fr); }
-  .vyber-grid { grid-template-columns: 1fr; }
+  .vyber-card { flex-basis: 100%; }
   .produkt-inner { grid-template-columns: 1fr; }
   .produkt-layout { grid-template-columns: 1fr; }
   .produkt-img img { width: 120px; margin: 0 auto; }
